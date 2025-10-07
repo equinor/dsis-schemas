@@ -1,0 +1,36 @@
+"""
+RefTrajectoryShape Model
+
+Auto-generated from OpenWorks Common Model JSON Schema.
+Schema: OpenWorksCommonModel.RefTrajectoryShape
+Generated on: 2025-10-07T21:17:47.546873
+"""
+
+from typing import Optional, Dict, Any
+from datetime import datetime, date
+from decimal import Decimal
+from pydantic import Field
+from .base import BaseModel
+
+class RefTrajectoryShape(BaseModel):
+    """
+    OpenWorksCommonModel.RefTrajectoryShape model.
+    
+    Represents data from the OpenWorksCommonModel.RefTrajectoryShape schema.
+    """
+    
+    # Schema metadata
+    _schema_title = "OpenWorksCommonModel.RefTrajectoryShape"
+    _schema_id = "#/definitions/OpenWorksCommonModel_RefTrajectoryShape"
+    _sql_table_name = "OpenWorksCommonModel_RefTrajectoryShape"
+    
+    # Model fields
+    trajectory_shape: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
+    trajectory_shape_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
+    ref_value_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    ref_value_status: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
+    create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
+    create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
+    update_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
+    update_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
