@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/OpenWorksCommonModel_Seismic3DSurvey",
+  "title": "OpenWorksCommonModel.Seismic3DSurvey",
+  "type": "object",
+  "properties": {
+    "native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "seismic_survey_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "seismic_geometry_kind": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "data_source": {
+      "type": "string",
+      "maxLength": 5,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "acquired_by": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "acquired_for": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "acquisition_start_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "acquisition_end_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "acquisition_cost": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "currency": {
+      "type": "string",
+      "maxLength": 24,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "survey_environment_kind": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "acquisition_area_name": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "county_name": {
+      "type": "string",
+      "maxLength": 25,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "state_name": {
+      "type": "string",
+      "maxLength": 20,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "country_name": {
+      "type": "string",
+      "maxLength": 25,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "source_total": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "min_channel": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "max_channel": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "channel_incr": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "acquisition_crew": {
+      "type": "string",
+      "maxLength": 80,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "acquisition_survey": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "vertical_misclosure_factor": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "vertical_misclosure_factor_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "horizontal_misclosure_factor": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "horizontal_misclosure_factor_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "azimuth_misclosure_factor": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "azimuth_misclosure_factor_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "min_source_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "max_source_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "source_index_incr": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "source_index_total": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "azm_surfloc": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "min_surfloc_x": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "min_surfloc_y": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "min_surfloc_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "max_surfloc_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "surfloc_index_incr": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "surfloc_total": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "z_datum": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "z_datum_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "restricted_data_ind": {
+      "type": "string",
+      "maxLength": 1,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "remark": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "create_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "create_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "update_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "update_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "alternate_uid": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    }
+  }
+}

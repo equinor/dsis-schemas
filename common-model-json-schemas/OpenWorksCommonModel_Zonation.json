@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/OpenWorksCommonModel_Zonation",
+  "title": "OpenWorksCommonModel.Zonation",
+  "type": "object",
+  "properties": {
+    "native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "zonation_type": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "zonation_version": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "wellbore_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellbore_uwi": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "attribute_update": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "comment": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "creator": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "date_stamp": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "depth_reference": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "file_name": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "file_size": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "folder": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "hierarchy_child": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "hierarchy_childpath": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "hierarchy_parent": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "hierarchy_parentpath": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "link_type": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "program_name": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "recall_zonation_id": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "security_access_list": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "security_flag": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "security_grade": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "security_user_count": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "zone_contiguity": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "alternate_uid": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/OpenWorksCommonModel_Target",
+  "title": "OpenWorksCommonModel.Target",
+  "type": "object",
+  "properties": {
+    "native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellplanproject_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "project_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_name": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_x": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "target_y": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "target_xy_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_crs": {
+      "type": "string",
+      "maxLength": 80,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_z": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "target_z_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_time": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "target_time_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "time_datum": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "time_datum_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "fixed_target_ind": {
+      "type": "string",
+      "maxLength": 1,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_type": {
+      "type": "string",
+      "maxLength": 24,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "target_subtype": {
+      "type": "string",
+      "maxLength": 24,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "color_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "feature_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "application": {
+      "type": "string",
+      "maxLength": 10,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "interpreter": {
+      "type": "string",
+      "maxLength": 5,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "remark": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "create_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "create_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "update_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "update_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "alternate_uid": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    }
+  }
+}

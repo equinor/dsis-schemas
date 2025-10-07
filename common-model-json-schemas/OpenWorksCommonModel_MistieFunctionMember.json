@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/OpenWorksCommonModel_MistieFunctionMember",
+  "title": "OpenWorksCommonModel.MistieFunctionMember",
+  "type": "object",
+  "properties": {
+    "native_uid": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "mistie_function_hdr_id": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "seis_geom_set_id": {
+      "type": "string",
+      "maxLength": 10,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "shift_hdr_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "trace_number": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "shift_domain": {
+      "type": "string",
+      "maxLength": 12,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "mistie_value": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "mistie_value_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    }
+  }
+}

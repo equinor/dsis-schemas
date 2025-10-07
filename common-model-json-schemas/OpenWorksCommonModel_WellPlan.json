@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/OpenWorksCommonModel_WellPlan",
+  "title": "OpenWorksCommonModel.WellPlan",
+  "type": "object",
+  "properties": {
+    "native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellplanproject_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellplan_site_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "project_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "well_plan_name": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "well_plan_version": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "planparameterset_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "plan_parameter_set_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellbore_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "wellbore_uwi": {
+      "type": "string",
+      "maxLength": 26,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "location_type": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "method_index": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "platformslot_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "platform_code": {
+      "type": "string",
+      "maxLength": 20,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "platform_slot_no": {
+      "type": "string",
+      "maxLength": 12,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "tie_pt_x": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "tie_pt_y": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "tie_pt_z": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "tie_pt_md": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.0001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "tie_pt_xy_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "tie_pt_crs": {
+      "type": "string",
+      "maxLength": 80,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "tie_pt_z_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "tie_pt_md_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "ground_elevation": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "ground_elevation_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_wellbore_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_wellplan_native_uid": {
+      "type": "string",
+      "maxLength": 1024,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_wellbore_uwi": {
+      "type": "string",
+      "maxLength": 26,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_project_name": {
+      "type": "string",
+      "maxLength": 40,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_plan_name": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "parent_plan_version": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "current_status": {
+      "type": "string",
+      "maxLength": 12,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "input_dogleg_severity": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "input_dogleg_severity_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "input_hole_extension": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "input_hole_extension_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "auxiliary_dogleg_severity": {
+      "type": "number",
+      "format": "float",
+      "multipleOf": 0.001,
+      "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
+    },
+    "auxiliary_dogleg_severity_unit": {
+      "type": "string",
+      "maxLength": 64,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "remark": {
+      "type": "string",
+      "maxLength": 200,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "create_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "create_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "update_date": {
+      "type": "string",
+      "format": "time",
+      "maxLength": 29,
+      "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+    },
+    "update_user_id": {
+      "type": "string",
+      "maxLength": 32,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "alternate_uid": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "data": {
+      "type": "string",
+      "format": "binary",
+      "maxLength": 2147483647,
+      "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
+    }
+  }
+}
