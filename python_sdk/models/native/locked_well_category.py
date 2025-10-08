@@ -1,0 +1,35 @@
+"""
+LockedWellCategory Model
+
+Auto-generated from OpenWorks Common Model JSON Schema.
+Schema: OW5000.LockedWellCategory
+Generated on: 2025-10-08T21:10:50.316617
+"""
+
+from typing import Optional, Dict, Any
+from datetime import datetime, date
+from decimal import Decimal
+from pydantic import Field
+from .base import BaseModel
+
+class LockedWellCategory(BaseModel):
+    """
+    OW5000.LockedWellCategory model.
+    
+    Represents data from the OW5000.LockedWellCategory schema.
+    """
+    
+    # Schema metadata
+    _schema_title = "OW5000.LockedWellCategory"
+    _schema_id = "#/definitions/OW5000_LockedWellCategory"
+    _sql_table_name = "OW5000_LockedWellCategory"
+    
+    # Model fields
+    well_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    data_category: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
+    create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
+    create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
+    update_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
+    update_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
+    native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

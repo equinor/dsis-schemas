@@ -16,36 +16,43 @@ from datetime import datetime
 
 class DSISSDKGenerator:
     """Generator for DSIS Python SDK from JSON schemas."""
-    
-    def __init__(self, schemas_dir: str = "common-model-json-schemas", output_dir: str = "dsis_sdk"):
+
+    def __init__(self, schemas_dir: str = "common-model-json-schemas", output_dir: str = "python_sdk", model_group: str = "common"):
         self.schemas_dir = Path(schemas_dir)
         self.output_dir = Path(output_dir)
-        self.models_dir = self.output_dir / "models"
+        self.model_group = model_group
+        self.models_dir = self.output_dir / "models" / model_group
         self.generated_models = []
         
     def generate_sdk(self):
         """Generate the complete SDK."""
-        print("🚀 Starting DSIS SDK generation...")
-        
+        print(f"🚀 Starting DSIS SDK generation for {self.model_group} models...")
+
         # Create output directories
         self._create_directories()
-        
+
         # Load all schemas
         schemas = self._load_schemas()
         print(f"📋 Loaded {len(schemas)} schemas")
-        
+
         # Generate model classes
         self._generate_models(schemas)
-        
+
         # Update __init__.py files with imports
         self._update_init_files()
-        
-        print(f"✅ SDK generation complete! Generated {len(self.generated_models)} models")
-        print(f"📁 Output directory: {self.output_dir}")
+
+        print(f"✅ SDK generation complete! Generated {len(self.generated_models)} {self.model_group} models")
+        print(f"📁 Output directory: {self.models_dir}")
         
     def _create_directories(self):
         """Create necessary directories."""
         self.models_dir.mkdir(parents=True, exist_ok=True)
+
+        # Create __init__.py for the model group
+        group_init_file = self.models_dir / "__init__.py"
+        if not group_init_file.exists():
+            with open(group_init_file, 'w', encoding='utf-8') as f:
+                f.write(f'"""{self.model_group.title()} Models"""\n')
 
         # Create base.py if it doesn't exist
         base_file = self.models_dir / "base.py"
@@ -187,13 +194,47 @@ Generated on: {datetime.now().isoformat()}
     
     def _generate_field_definition(self, field_name: str, field_schema: Dict[str, Any]) -> str:
         """Generate a field definition."""
+        # Handle reserved Python keywords and built-in names
+        safe_field_name = self._make_field_name_safe(field_name)
+
         python_type = self._map_json_schema_type(field_schema)
         field_config = self._generate_field_config(field_schema)
-        
+
+        # Add alias if field name was changed
+        if safe_field_name != field_name:
+            if field_config:
+                field_config += f', alias="{field_name}"'
+            else:
+                field_config = f'alias="{field_name}"'
+
         if field_config:
-            return f"{field_name}: {python_type} = Field({field_config})"
+            return f"{safe_field_name}: {python_type} = Field({field_config})"
         else:
-            return f"{field_name}: {python_type} = None"
+            return f"{safe_field_name}: {python_type} = None"
+
+    def _make_field_name_safe(self, field_name: str) -> str:
+        """Make field name safe by avoiding Python reserved words and built-ins."""
+        # List of Python reserved keywords and common built-ins that cause conflicts
+        reserved_words = {
+            'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else',
+            'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+            'lambda', 'not', 'or', 'pass', 'print', 'raise', 'return', 'try', 'while', 'with',
+            'yield', 'None', 'True', 'False', 'type', 'object', 'str', 'int', 'float', 'bool',
+            'list', 'dict', 'tuple', 'set', 'frozenset', 'bytes', 'bytearray', 'memoryview',
+            'range', 'enumerate', 'zip', 'map', 'filter', 'sorted', 'reversed', 'sum', 'min',
+            'max', 'abs', 'round', 'len', 'hash', 'id', 'repr', 'ascii', 'ord', 'chr', 'bin',
+            'oct', 'hex', 'divmod', 'pow', 'callable', 'isinstance', 'issubclass', 'hasattr',
+            'getattr', 'setattr', 'delattr', 'dir', 'vars', 'locals', 'globals', 'eval', 'exec',
+            'compile', 'open', 'input', 'format', 'property', 'staticmethod', 'classmethod',
+            'super', 'iter', 'next', 'slice', 'complex', 'Optional', 'Union', 'List', 'Dict',
+            'Tuple', 'Set', 'FrozenSet', 'Any', 'Callable', 'Type', 'TypeVar', 'Generic',
+            'Field', 'BaseModel'
+        }
+
+        if field_name in reserved_words:
+            return f"{field_name}_field"
+
+        return field_name
     
     def _map_json_schema_type(self, field_schema: Dict[str, Any]) -> str:
         """Map JSON schema type to Python type string."""
@@ -259,13 +300,24 @@ Generated on: {datetime.now().isoformat()}
         if "." in schema_name:
             entity_name = schema_name.split(".")[-1]
         else:
-            entity_name = schema_name.replace("OpenWorksCommonModel_", "")
-        
+            # Handle different schema naming patterns
+            if self.model_group == "common":
+                entity_name = schema_name.replace("OpenWorksCommonModel_", "")
+            elif self.model_group == "native":
+                # Remove common prefixes for native models
+                entity_name = schema_name.replace("NativeModel_", "").replace("Native_", "")
+            else:
+                entity_name = schema_name
+
         # Convert to PascalCase
         if "_" in entity_name:
             parts = entity_name.split("_")
             entity_name = "".join(word.capitalize() for word in parts)
-        
+
+        # Ensure class name starts with uppercase (PascalCase)
+        if entity_name and entity_name[0].islower():
+            entity_name = entity_name[0].upper() + entity_name[1:]
+
         return entity_name
     
     def _convert_class_name_to_file_name(self, class_name: str) -> str:
@@ -282,21 +334,21 @@ Generated on: {datetime.now().isoformat()}
     
     def _update_init_files(self):
         """Update __init__.py files with generated model imports."""
-        # Generate imports for models/__init__.py
+        # Generate imports for models/{group}/__init__.py
         model_imports = []
         model_names = []
-        
+
         for model in self.generated_models:
             class_name = model['class_name']
             file_name = model['file_name']
             model_imports.append(f"from .{file_name} import {class_name}")
             model_names.append(f'"{class_name}"')
-        
-        # Update models/__init__.py
-        init_content = f'''"""
-DSIS SDK Models
 
-Auto-generated model imports for all OpenWorks Common Model entities.
+        # Update models/{group}/__init__.py
+        init_content = f'''"""
+DSIS SDK {self.model_group.title()} Models
+
+Auto-generated model imports for all {self.model_group} entities.
 Generated on: {datetime.now().isoformat()}
 """
 
@@ -310,11 +362,47 @@ __all__ = [
     {', '.join(model_names)}
 ]
 '''
-        
+
         with open(self.models_dir / "__init__.py", 'w', encoding='utf-8') as f:
             f.write(init_content)
-        
-        print(f"📝 Updated models/__init__.py with {len(self.generated_models)} model imports")
+
+        print(f"📝 Updated models/{self.model_group}/__init__.py with {len(self.generated_models)} model imports")
+
+        # Update main models/__init__.py to include the group
+        self._update_main_models_init()
+
+    def _update_main_models_init(self):
+        """Update the main models/__init__.py to include all model groups."""
+        main_models_dir = self.output_dir / "models"
+        main_init_file = main_models_dir / "__init__.py"
+
+        # Check what model groups exist
+        model_groups = []
+        for item in main_models_dir.iterdir():
+            if item.is_dir() and not item.name.startswith('__'):
+                model_groups.append(item.name)
+
+        # Generate imports for each group
+        group_imports = []
+        for group in sorted(model_groups):
+            group_imports.append(f"from . import {group}")
+
+        content = f'''"""
+DSIS SDK Models
+
+This package contains all model groups for the DSIS SDK.
+Available model groups: {', '.join(sorted(model_groups))}
+"""
+
+{chr(10).join(group_imports)}
+
+__all__ = {sorted(model_groups)}
+'''
+
+        with open(main_init_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+        print(f"📝 Updated main models/__init__.py with {len(model_groups)} model groups")
 
     def _create_base_model_file(self):
         """Create the base model file."""
@@ -494,6 +582,48 @@ class BaseModel(PydanticBaseModel):
         print("📝 Created base.py model file")
 
 
-if __name__ == "__main__":
-    generator = DSISSDKGenerator()
+def generate_common_models():
+    """Generate Common Model SDK (OpenWorks)."""
+    generator = DSISSDKGenerator(
+        schemas_dir="common-model-json-schemas",
+        output_dir="python_sdk",
+        model_group="common"
+    )
     generator.generate_sdk()
+
+def generate_native_models():
+    """Generate Native Model SDK."""
+    generator = DSISSDKGenerator(
+        schemas_dir="native-model-json-schemas",  # Adjust path as needed
+        output_dir="python_sdk",
+        model_group="native"
+    )
+    generator.generate_sdk()
+
+def generate_all_models():
+    """Generate all model groups."""
+    print("🚀 Generating all Python SDK model groups...")
+    generate_common_models()
+    generate_native_models()
+    print("✅ All model groups generated successfully!")
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1:
+        command = sys.argv[1].lower()
+        if command == "common":
+            generate_common_models()
+        elif command == "native":
+            generate_native_models()
+        elif command == "all":
+            generate_all_models()
+        else:
+            print("Usage: python generate_sdk.py [common|native|all]")
+            print("  common - Generate Common Model (OpenWorks) only")
+            print("  native - Generate Native Model only")
+            print("  all    - Generate all model groups")
+            sys.exit(1)
+    else:
+        # Default: generate Common models for backward compatibility
+        generate_common_models()

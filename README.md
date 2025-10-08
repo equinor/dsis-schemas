@@ -1,14 +1,15 @@
 # DSIS Python SDK
 
-A comprehensive Python SDK for the OpenWorks Common Model schemas, providing type-safe data models and utilities for working with DSIS (Data Source Integration Service) data.
+A comprehensive Python SDK for both OpenWorks Common Model and Native Model schemas, providing type-safe data models and utilities for working with DSIS (Data Source Integration Service) data.
 
 ## Features
 
-- 🎯 **Type-Safe Models**: 201+ Pydantic-based models with full type hints
+- 🎯 **Dual Model Support**: 1,160+ Pydantic-based models (201 Common + 959 Native)
 - ✅ **Data Validation**: Automatic validation based on JSON Schema constraints
 - 🔄 **Serialization**: Easy JSON/dict serialization and deserialization
 - 📊 **Schema Introspection**: Utilities to explore model schemas and metadata
 - 🔗 **Integration Ready**: Works seamlessly with existing OData query builders
+- 🛡️ **Reserved Keyword Safe**: Handles Python reserved words with field aliases
 - 📝 **Well Documented**: Comprehensive documentation and examples
 
 ## Installation
@@ -29,36 +30,54 @@ pip install -e .
 
 ## Quick Start
 
-```python
-from dsis_sdk.models import Well, Company, Wellbore
-from dsis_sdk.utils import serialize_to_json, validate_data
-from datetime import date
+### Common Models (OpenWorks Common Model)
 
-# Create a well instance
+```python
+from python_sdk.models.common import Well, Company, Wellbore
+
+# Create a company
+company = Company(
+    native_uid="company_001",
+    company_name="Equinor ASA",
+    company_type="Operator"
+)
+
+# Create a well
 well = Well(
-    native_uid="well_12345",
-    well_name="Test Well A-1",
-    well_uwi="12345678901234567890123456",
-    basin_name="North Sea",
-    field_name="Troll Field",
-    country_name="Norway",
-    spud_date=date(2023, 6, 15),
-    x_coordinate=123456.789,
-    y_coordinate=987654.321
+    native_uid="well_001",
+    well_name="Troll A-1",
+    operator_company_uid="company_001"
 )
 
 # Serialize to JSON
-json_data = serialize_to_json(well, indent=2)
-print(json_data)
+well_json = well.to_json()
+print(well_json)
+```
 
-# Validate data
-data = {
-    "native_uid": "company_equinor",
-    "company_name": "Equinor ASA",
-    "company_abbrev": "EQNR"
-}
-company = validate_data(data, Company)
-print(f"Created: {company.company_name}")
+### Native Models (OW5000 Native Model)
+
+```python
+from python_sdk.models.native import Well, Activity, Basin, RCompany
+
+# Create native models
+company = RCompany(
+    native_uid="native_company_001",
+    company_name="Native Oil Company"
+)
+
+well = Well(
+    native_uid="native_well_001",
+    well_name="Native Test Well"
+)
+
+activity = Activity(
+    native_uid="activity_001",
+    activity_name="Drilling Activity"
+)
+
+# Both model groups work together
+print(f"Native Well Schema: {well.get_schema_title()}")
+print(f"Activity Schema: {activity.get_schema_title()}")
 ```
 
 ## Available Models

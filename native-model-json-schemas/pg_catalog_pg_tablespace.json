@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/definitions/pg_catalog_pg_tablespace",
+  "title": "pg_catalog.pg_tablespace",
+  "type": "object",
+  "properties": {
+    "oid": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "spcname": {
+      "type": "string",
+      "maxLength": 4000,
+      "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+    },
+    "spcowner": {
+      "type": "integer",
+      "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
+    },
+    "spcacl": {
+      "type": "string",
+      "description": "Unknown SQL type: NONE",
+      "maxLength": 2147483647,
+      "sqlType": "NONE"
+    },
+    "spcoptions": {
+      "type": "string",
+      "description": "Unknown SQL type: NONE",
+      "maxLength": 2147483647,
+      "sqlType": "NONE"
+    }
+  }
+}
