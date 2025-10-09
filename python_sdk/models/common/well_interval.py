@@ -3,7 +3,7 @@ WellInterval Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellInterval
-Generated on: 2025-10-08T21:03:38.839283
+Generated on: 2025-10-09T21:14:54.976669
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellInterval(BaseModel):
     """
     OpenWorksCommonModel.WellInterval model.
-    
+
     Represents data from the OpenWorksCommonModel.WellInterval schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellInterval"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellInterval"
     _sql_table_name = "OpenWorksCommonModel_WellInterval"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

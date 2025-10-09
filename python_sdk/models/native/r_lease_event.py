@@ -3,7 +3,7 @@ RLeaseEvent Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RLeaseEvent
-Generated on: 2025-10-08T21:10:50.417555
+Generated on: 2025-10-09T21:15:04.888171
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RLeaseEvent(BaseModel):
     """
     OW5000.RLeaseEvent model.
-    
+
     Represents data from the OW5000.RLeaseEvent schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RLeaseEvent"
     _schema_id = "#/definitions/OW5000_RLeaseEvent"
     _sql_table_name = "OW5000_RLeaseEvent"
-    
+
     # Model fields
-    lease_event: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    lease_event_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    lease_event: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    lease_event_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

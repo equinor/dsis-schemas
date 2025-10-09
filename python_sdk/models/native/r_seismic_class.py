@@ -3,7 +3,7 @@ RSeismicClass Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RSeismicClass
-Generated on: 2025-10-08T21:10:50.434205
+Generated on: 2025-10-09T21:15:04.905734
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RSeismicClass(BaseModel):
     """
     OW5000.RSeismicClass model.
-    
+
     Represents data from the OW5000.RSeismicClass schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RSeismicClass"
     _schema_id = "#/definitions/OW5000_RSeismicClass"
     _sql_table_name = "OW5000_RSeismicClass"
-    
+
     # Model fields
-    seismic_class: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    seismic_class_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    seismic_class: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    seismic_class_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

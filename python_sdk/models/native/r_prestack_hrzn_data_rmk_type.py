@@ -3,7 +3,7 @@ RPrestackHrznDataRmkType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RPrestackHrznDataRmkType
-Generated on: 2025-10-08T21:10:50.429424
+Generated on: 2025-10-09T21:15:04.898190
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RPrestackHrznDataRmkType(BaseModel):
     """
     OW5000.RPrestackHrznDataRmkType model.
-    
+
     Represents data from the OW5000.RPrestackHrznDataRmkType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RPrestackHrznDataRmkType"
     _schema_id = "#/definitions/OW5000_RPrestackHrznDataRmkType"
     _sql_table_name = "OW5000_RPrestackHrznDataRmkType"
-    
+
     # Model fields
-    prestack_hrzn_data_rmk_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    prestack_hrzn_data_rmk_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    prestack_hrzn_data_rmk_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    prestack_hrzn_data_rmk_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

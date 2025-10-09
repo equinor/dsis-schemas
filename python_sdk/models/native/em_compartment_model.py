@@ -3,7 +3,7 @@ EmCompartmentModel Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.EmCompartmentModel
-Generated on: 2025-10-08T21:10:50.152845
+Generated on: 2025-10-09T21:15:04.641970
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class EmCompartmentModel(BaseModel):
     """
     OW5000.EmCompartmentModel model.
-    
+
     Represents data from the OW5000.EmCompartmentModel schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.EmCompartmentModel"
     _schema_id = "#/definitions/OW5000_EmCompartmentModel"
     _sql_table_name = "OW5000_EmCompartmentModel"
-    
+
     # Model fields
-    compartment_model_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    compartment_model_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    structural_model_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    compartment_model_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    compartment_model_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    structural_model_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     num_layers: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     num_fault_blocks: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     z_domain: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

@@ -3,7 +3,7 @@ PolyTarget Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.PolyTarget
-Generated on: 2025-10-08T21:03:38.778046
+Generated on: 2025-10-09T21:14:54.941063
 """
 
 from typing import Optional, Dict, Any
@@ -15,20 +15,20 @@ from .base import BaseModel
 class PolyTarget(BaseModel):
     """
     OpenWorksCommonModel.PolyTarget model.
-    
+
     Represents data from the OpenWorksCommonModel.PolyTarget schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.PolyTarget"
     _schema_id = "#/definitions/OpenWorksCommonModel_PolyTarget"
     _sql_table_name = "OpenWorksCommonModel_PolyTarget"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
-    wellplanproject_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
+    wellplanproject_native_uid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
     project_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
-    target_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=50)
+    target_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=50)
     target_x: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.0001)
     target_y: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.0001)
     target_xy_unit: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)

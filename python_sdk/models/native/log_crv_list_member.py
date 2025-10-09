@@ -3,7 +3,7 @@ LogCrvListMember Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.LogCrvListMember
-Generated on: 2025-10-08T21:10:50.317987
+Generated on: 2025-10-09T21:15:04.776039
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class LogCrvListMember(BaseModel):
     """
     OW5000.LogCrvListMember model.
-    
+
     Represents data from the OW5000.LogCrvListMember schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.LogCrvListMember"
     _schema_id = "#/definitions/OW5000_LogCrvListMember"
     _sql_table_name = "OW5000_LogCrvListMember"
-    
+
     # Model fields
-    list_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
-    log_curve_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    list_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    log_curve_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     list_order: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

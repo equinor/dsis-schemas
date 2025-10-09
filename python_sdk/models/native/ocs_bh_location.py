@@ -3,7 +3,7 @@ OcsBHLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.OcsBHLocation
-Generated on: 2025-10-08T21:10:50.346620
+Generated on: 2025-10-09T21:15:04.811857
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class OcsBHLocation(BaseModel):
     """
     OW5000.OcsBHLocation model.
-    
+
     Represents data from the OW5000.OcsBHLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.OcsBHLocation"
     _schema_id = "#/definitions/OW5000_OcsBHLocation"
     _sql_table_name = "OW5000_OcsBHLocation"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     ocs_no: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=8)
     blk_no: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=8)

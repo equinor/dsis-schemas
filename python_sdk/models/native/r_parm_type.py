@@ -3,7 +3,7 @@ RParmType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RParmType
-Generated on: 2025-10-08T21:10:50.424764
+Generated on: 2025-10-09T21:15:04.895033
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RParmType(BaseModel):
     """
     OW5000.RParmType model.
-    
+
     Represents data from the OW5000.RParmType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RParmType"
     _schema_id = "#/definitions/OW5000_RParmType"
     _sql_table_name = "OW5000_RParmType"
-    
+
     # Model fields
-    parm_type_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    parm_type_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    parm_type_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    parm_type_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

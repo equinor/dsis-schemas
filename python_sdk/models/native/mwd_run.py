@@ -3,7 +3,7 @@ MWDRun Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.MWDRun
-Generated on: 2025-10-08T21:10:50.330017
+Generated on: 2025-10-09T21:15:04.792119
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class MWDRun(BaseModel):
     """
     OW5000.MWDRun model.
-    
+
     Represents data from the OW5000.MWDRun schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.MWDRun"
     _schema_id = "#/definitions/OW5000_MWDRun"
     _sql_table_name = "OW5000_MWDRun"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
-    log_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)
-    mwd_run_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    log_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)
+    mwd_run_no: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     tool_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     company: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     top_depth: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.01)

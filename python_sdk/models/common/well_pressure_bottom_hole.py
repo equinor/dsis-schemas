@@ -3,7 +3,7 @@ WellPressureBottomHole Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellPressureBottomHole
-Generated on: 2025-10-08T21:03:38.847137
+Generated on: 2025-10-09T21:14:54.984997
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellPressureBottomHole(BaseModel):
     """
     OpenWorksCommonModel.WellPressureBottomHole model.
-    
+
     Represents data from the OpenWorksCommonModel.WellPressureBottomHole schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellPressureBottomHole"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellPressureBottomHole"
     _sql_table_name = "OpenWorksCommonModel_WellPressureBottomHole"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

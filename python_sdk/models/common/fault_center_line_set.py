@@ -3,7 +3,7 @@ FaultCenterLineSet Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.FaultCenterLineSet
-Generated on: 2025-10-08T21:03:38.747176
+Generated on: 2025-10-09T21:14:54.909489
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class FaultCenterLineSet(BaseModel):
     """
     OpenWorksCommonModel.FaultCenterLineSet model.
-    
+
     Represents data from the OpenWorksCommonModel.FaultCenterLineSet schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.FaultCenterLineSet"
     _schema_id = "#/definitions/OpenWorksCommonModel_FaultCenterLineSet"
     _sql_table_name = "OpenWorksCommonModel_FaultCenterLineSet"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     fault_set_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

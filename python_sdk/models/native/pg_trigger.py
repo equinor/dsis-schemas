@@ -3,7 +3,7 @@ PgTrigger Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.pg_trigger
-Generated on: 2025-10-08T21:10:50.553761
+Generated on: 2025-10-09T21:15:05.116247
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class PgTrigger(BaseModel):
     """
     pg_catalog.pg_trigger model.
-    
+
     Represents data from the pg_catalog.pg_trigger schema.
     """
-    
+
     # Schema metadata
     _schema_title = "pg_catalog.pg_trigger"
     _schema_id = "#/definitions/pg_catalog_pg_trigger"
     _sql_table_name = "pg_catalog_pg_trigger"
-    
+
     # Model fields
     oid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     tgconstrrelid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

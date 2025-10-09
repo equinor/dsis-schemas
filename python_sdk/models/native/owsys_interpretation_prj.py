@@ -3,7 +3,7 @@ OwsysInterpretationPrj Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.OwsysInterpretationPrj
-Generated on: 2025-10-08T21:10:50.356321
+Generated on: 2025-10-09T21:15:04.819786
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class OwsysInterpretationPrj(BaseModel):
     """
     OW5000.OwsysInterpretationPrj model.
-    
+
     Represents data from the OW5000.OwsysInterpretationPrj schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.OwsysInterpretationPrj"
     _schema_id = "#/definitions/OW5000_OwsysInterpretationPrj"
     _sql_table_name = "OW5000_OwsysInterpretationPrj"
-    
+
     # Model fields
-    interpretation_project_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
-    interpretation_prj_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    interpretation_project_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
+    interpretation_prj_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     project_database_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
     aoi_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     datum_elevation: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.001)

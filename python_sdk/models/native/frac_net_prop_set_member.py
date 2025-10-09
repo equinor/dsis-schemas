@@ -3,7 +3,7 @@ FracNetPropSetMember Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.FracNetPropSetMember
-Generated on: 2025-10-08T21:10:50.238884
+Generated on: 2025-10-09T21:15:04.694775
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class FracNetPropSetMember(BaseModel):
     """
     OW5000.FracNetPropSetMember model.
-    
+
     Represents data from the OW5000.FracNetPropSetMember schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.FracNetPropSetMember"
     _schema_id = "#/definitions/OW5000_FracNetPropSetMember"
     _sql_table_name = "OW5000_FracNetPropSetMember"
-    
+
     # Model fields
-    fracture_network_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
-    property_set_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    property_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    fracture_network_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    property_set_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    property_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     unit_type_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     data_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

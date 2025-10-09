@@ -3,7 +3,7 @@ XsWell Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.XsWell
-Generated on: 2025-10-08T21:10:50.522933
+Generated on: 2025-10-09T21:15:05.056651
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class XsWell(BaseModel):
     """
     OW5000.XsWell model.
-    
+
     Represents data from the OW5000.XsWell schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.XsWell"
     _schema_id = "#/definitions/OW5000_XsWell"
     _sql_table_name = "OW5000_XsWell"
-    
+
     # Model fields
-    xsec_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
-    xsec_wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
-    segment_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    xsec_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    xsec_wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    segment_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     angle: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.001)
     angle_dsdsunit: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)
     distance: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=1e-05)

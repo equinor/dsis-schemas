@@ -3,7 +3,7 @@ RasterLog Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RasterLog
-Generated on: 2025-10-08T21:03:38.781806
+Generated on: 2025-10-09T21:14:54.945448
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class RasterLog(BaseModel):
     """
     OpenWorksCommonModel.RasterLog model.
-    
+
     Represents data from the OpenWorksCommonModel.RasterLog schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.RasterLog"
     _schema_id = "#/definitions/OpenWorksCommonModel_RasterLog"
     _sql_table_name = "OpenWorksCommonModel_RasterLog"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     log_section_index: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

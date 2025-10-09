@@ -3,7 +3,7 @@ WellboreTotalDepthInformation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellboreTotalDepthInformation
-Generated on: 2025-10-08T21:03:38.849311
+Generated on: 2025-10-09T21:14:54.989149
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellboreTotalDepthInformation(BaseModel):
     """
     OpenWorksCommonModel.WellboreTotalDepthInformation model.
-    
+
     Represents data from the OpenWorksCommonModel.WellboreTotalDepthInformation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellboreTotalDepthInformation"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellboreTotalDepthInformation"
     _sql_table_name = "OpenWorksCommonModel_WellboreTotalDepthInformation"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

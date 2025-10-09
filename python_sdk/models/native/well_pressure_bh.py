@@ -3,7 +3,7 @@ WellPressureBH Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.WellPressureBH
-Generated on: 2025-10-08T21:10:50.514653
+Generated on: 2025-10-09T21:15:05.037286
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class WellPressureBH(BaseModel):
     """
     OW5000.WellPressureBH model.
-    
+
     Represents data from the OW5000.WellPressureBH schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.WellPressureBH"
     _schema_id = "#/definitions/OW5000_WellPressureBH"
     _sql_table_name = "OW5000_WellPressureBH"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
-    press_obs_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
-    bhp_obs_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    press_obs_no: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    bhp_obs_no: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     assigned_field: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=60)
     top_formation: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     pool: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

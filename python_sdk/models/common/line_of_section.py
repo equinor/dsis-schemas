@@ -3,7 +3,7 @@ LineOfSection Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.LineOfSection
-Generated on: 2025-10-08T21:03:38.765102
+Generated on: 2025-10-09T21:14:54.930592
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class LineOfSection(BaseModel):
     """
     OpenWorksCommonModel.LineOfSection model.
-    
+
     Represents data from the OpenWorksCommonModel.LineOfSection schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.LineOfSection"
     _schema_id = "#/definitions/OpenWorksCommonModel_LineOfSection"
     _sql_table_name = "OpenWorksCommonModel_LineOfSection"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     line_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

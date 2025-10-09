@@ -3,7 +3,7 @@ PgType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.pg_type
-Generated on: 2025-10-08T21:10:50.554061
+Generated on: 2025-10-09T21:15:05.116586
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class PgType(BaseModel):
     """
     pg_catalog.pg_type model.
-    
+
     Represents data from the pg_catalog.pg_type schema.
     """
-    
+
     # Schema metadata
     _schema_title = "pg_catalog.pg_type"
     _schema_id = "#/definitions/pg_catalog_pg_type"
     _sql_table_name = "pg_catalog_pg_type"
-    
+
     # Model fields
     oid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     typname: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

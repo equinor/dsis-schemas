@@ -3,7 +3,7 @@ CordTrfmPar Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.CordTrfmPar
-Generated on: 2025-10-08T21:10:50.119623
+Generated on: 2025-10-09T21:15:04.612803
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class CordTrfmPar(BaseModel):
     """
     OW5000.CordTrfmPar model.
-    
+
     Represents data from the OW5000.CordTrfmPar schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.CordTrfmPar"
     _schema_id = "#/definitions/OW5000_CordTrfmPar"
     _sql_table_name = "OW5000_CordTrfmPar"
-    
+
     # Model fields
-    cord_trfm_par_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    cord_trfm_par_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     cord_trfm_mth_nm: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     display_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     r_cord_trfm_par_nm: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

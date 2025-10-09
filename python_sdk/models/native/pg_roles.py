@@ -3,7 +3,7 @@ PgRoles Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.pg_roles
-Generated on: 2025-10-08T21:10:50.552604
+Generated on: 2025-10-09T21:15:05.112474
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class PgRoles(BaseModel):
     """
     pg_catalog.pg_roles model.
-    
+
     Represents data from the pg_catalog.pg_roles schema.
     """
-    
+
     # Schema metadata
     _schema_title = "pg_catalog.pg_roles"
     _schema_id = "#/definitions/pg_catalog_pg_roles"
     _sql_table_name = "pg_catalog_pg_roles"
-    
+
     # Model fields
     oid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     rolname: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

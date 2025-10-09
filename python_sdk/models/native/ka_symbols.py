@@ -3,7 +3,7 @@ KaSymbols Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.KaSymbols
-Generated on: 2025-10-08T21:10:50.309371
+Generated on: 2025-10-09T21:15:04.761804
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class KaSymbols(BaseModel):
     """
     OW5000.KaSymbols model.
-    
+
     Represents data from the OW5000.KaSymbols schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.KaSymbols"
     _schema_id = "#/definitions/OW5000_KaSymbols"
     _sql_table_name = "OW5000_KaSymbols"
-    
+
     # Model fields
-    op_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
-    subcode: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
+    op_code: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
+    subcode: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     symbol_file: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     comments: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     symbol_image_nbytes: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

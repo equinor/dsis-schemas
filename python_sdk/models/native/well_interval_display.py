@@ -3,7 +3,7 @@ WellIntervalDisplay Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.WellIntervalDisplay
-Generated on: 2025-10-08T21:10:50.502085
+Generated on: 2025-10-09T21:15:05.014381
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class WellIntervalDisplay(BaseModel):
     """
     OW5000.WellIntervalDisplay model.
-    
+
     Represents data from the OW5000.WellIntervalDisplay schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.WellIntervalDisplay"
     _schema_id = "#/definitions/OW5000_WellIntervalDisplay"
     _sql_table_name = "OW5000_WellIntervalDisplay"
-    
+
     # Model fields
-    interval_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
+    interval_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    data_source: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     line_color: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     line_color_r: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     line_color_g: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

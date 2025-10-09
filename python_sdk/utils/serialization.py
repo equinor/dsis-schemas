@@ -5,15 +5,17 @@ Provides serialization and deserialization functions for DSIS models.
 """
 
 import json
-from typing import Any, Dict, List, Optional, Type, Union
+from typing import Any, Dict, List, Optional, Type, Union, TYPE_CHECKING
 from datetime import datetime, date
 from decimal import Decimal
-from ..models.base import BaseModel
+
+if TYPE_CHECKING:
+    from pydantic import BaseModel
 
 
 def serialize_to_json(
-    model: BaseModel, 
-    exclude_none: bool = True, 
+    model: 'BaseModel',
+    exclude_none: bool = True,
     by_alias: bool = False, 
     indent: Optional[int] = None
 ) -> str:
@@ -33,46 +35,46 @@ def serialize_to_json(
 
 
 def serialize_to_dict(
-    model: BaseModel, 
-    exclude_none: bool = True, 
+    model: 'BaseModel',
+    exclude_none: bool = True,
     by_alias: bool = False
 ) -> Dict[str, Any]:
     """
     Serialize a DSIS model to dictionary.
-    
+
     Args:
         model: DSIS model instance to serialize
         exclude_none: Whether to exclude None values
         by_alias: Whether to use field aliases
-        
+
     Returns:
         Dictionary representation
     """
     return model.to_dict(exclude_none=exclude_none, by_alias=by_alias)
 
 
-def deserialize_from_json(json_str: str, model_class: Type[BaseModel]) -> BaseModel:
+def deserialize_from_json(json_str: str, model_class: Type['BaseModel']) -> 'BaseModel':
     """
     Deserialize JSON string to DSIS model instance.
-    
+
     Args:
         json_str: JSON string to deserialize
         model_class: DSIS model class to deserialize to
-        
+
     Returns:
         DSIS model instance
     """
     return model_class.from_json(json_str)
 
 
-def deserialize_from_dict(data: Dict[str, Any], model_class: Type[BaseModel]) -> BaseModel:
+def deserialize_from_dict(data: Dict[str, Any], model_class: Type['BaseModel']) -> 'BaseModel':
     """
     Deserialize dictionary to DSIS model instance.
-    
+
     Args:
         data: Dictionary to deserialize
         model_class: DSIS model class to deserialize to
-        
+
     Returns:
         DSIS model instance
     """
@@ -80,9 +82,9 @@ def deserialize_from_dict(data: Dict[str, Any], model_class: Type[BaseModel]) ->
 
 
 def serialize_multiple_to_json(
-    models: List[BaseModel], 
-    exclude_none: bool = True, 
-    by_alias: bool = False, 
+    models: List['BaseModel'],
+    exclude_none: bool = True,
+    by_alias: bool = False,
     indent: Optional[int] = None
 ) -> str:
     """
@@ -105,38 +107,38 @@ def serialize_multiple_to_json(
 
 
 def serialize_multiple_to_dict(
-    models: List[BaseModel], 
-    exclude_none: bool = True, 
+    models: List['BaseModel'],
+    exclude_none: bool = True,
     by_alias: bool = False
 ) -> List[Dict[str, Any]]:
     """
     Serialize multiple DSIS models to list of dictionaries.
-    
+
     Args:
         models: List of DSIS model instances to serialize
         exclude_none: Whether to exclude None values
         by_alias: Whether to use field aliases
-        
+
     Returns:
         List of dictionary representations
     """
     return [
-        model.to_dict(exclude_none=exclude_none, by_alias=by_alias) 
+        model.to_dict(exclude_none=exclude_none, by_alias=by_alias)
         for model in models
     ]
 
 
 def deserialize_multiple_from_json(
-    json_str: str, 
-    model_class: Type[BaseModel]
-) -> List[BaseModel]:
+    json_str: str,
+    model_class: Type['BaseModel']
+) -> List['BaseModel']:
     """
     Deserialize JSON array string to list of DSIS model instances.
-    
+
     Args:
         json_str: JSON array string to deserialize
         model_class: DSIS model class to deserialize to
-        
+
     Returns:
         List of DSIS model instances
     """
@@ -145,9 +147,9 @@ def deserialize_multiple_from_json(
 
 
 def deserialize_multiple_from_dict(
-    data_list: List[Dict[str, Any]], 
-    model_class: Type[BaseModel]
-) -> List[BaseModel]:
+    data_list: List[Dict[str, Any]],
+    model_class: Type['BaseModel']
+) -> List['BaseModel']:
     """
     Deserialize list of dictionaries to list of DSIS model instances.
     

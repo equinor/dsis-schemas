@@ -3,7 +3,7 @@ NominalSeismicGeometry Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.NominalSeismicGeometry
-Generated on: 2025-10-08T21:10:50.343183
+Generated on: 2025-10-09T21:15:04.808131
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class NominalSeismicGeometry(BaseModel):
     """
     OW5000.NominalSeismicGeometry model.
-    
+
     Represents data from the OW5000.NominalSeismicGeometry schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.NominalSeismicGeometry"
     _schema_id = "#/definitions/OW5000_NominalSeismicGeometry"
     _sql_table_name = "OW5000_NominalSeismicGeometry"
-    
+
     # Model fields
-    nominal_seismic_geometry_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    nominal_seismic_geometry_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     seis_geom_set_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     crossline_fold_pct: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.001)

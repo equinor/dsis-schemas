@@ -3,7 +3,7 @@ I3DVDataAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.I3DVDataAll
-Generated on: 2025-10-08T21:10:50.288863
+Generated on: 2025-10-09T21:15:04.744840
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class I3DVDataAll(BaseModel):
     """
     OW5000.I3DVDataAll model.
-    
+
     Represents data from the OW5000.I3DVDataAll schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.I3DVDataAll"
     _schema_id = "#/definitions/OW5000_I3DVDataAll"
     _sql_table_name = "OW5000_I3DVDataAll"
-    
+
     # Model fields
-    i3dv_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    i3dv_data_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    i3dv_data_type: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    i3dv_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    i3dv_data_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    i3dv_data_type: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

@@ -3,7 +3,7 @@ EmStructuralBody Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.EmStructuralBody
-Generated on: 2025-10-08T21:03:38.745538
+Generated on: 2025-10-09T21:14:54.907561
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class EmStructuralBody(BaseModel):
     """
     OpenWorksCommonModel.EmStructuralBody model.
-    
+
     Represents data from the OpenWorksCommonModel.EmStructuralBody schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.EmStructuralBody"
     _schema_id = "#/definitions/OpenWorksCommonModel_EmStructuralBody"
     _sql_table_name = "OpenWorksCommonModel_EmStructuralBody"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     em_structural_body_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

@@ -4,12 +4,14 @@ Schema Utilities
 Provides utilities for working with DSIS model schemas and metadata.
 """
 
-from typing import Any, Dict, List, Optional, Type, get_type_hints
+from typing import Any, Dict, List, Optional, Type, get_type_hints, TYPE_CHECKING
 import inspect
-from ..models.base import BaseModel
+
+if TYPE_CHECKING:
+    from pydantic import BaseModel
 
 
-def get_model_schema(model_class: Type[BaseModel]) -> Dict[str, Any]:
+def get_model_schema(model_class: Type['BaseModel']) -> Dict[str, Any]:
     """
     Get the JSON schema for a DSIS model class.
     
@@ -22,7 +24,7 @@ def get_model_schema(model_class: Type[BaseModel]) -> Dict[str, Any]:
     return model_class.model_json_schema()
 
 
-def get_field_info(model_class: Type[BaseModel], field_name: str) -> Optional[Dict[str, Any]]:
+def get_field_info(model_class: Type['BaseModel'], field_name: str) -> Optional[Dict[str, Any]]:
     """
     Get information about a specific field in a DSIS model.
     
@@ -74,15 +76,19 @@ def list_all_models() -> List[str]:
     model_names = []
     for name in dir(models):
         obj = getattr(models, name)
-        if (inspect.isclass(obj) and 
-            issubclass(obj, BaseModel) and 
-            obj != BaseModel):
-            model_names.append(name)
-    
+        try:
+            from pydantic import BaseModel as PydanticBaseModel
+            if (inspect.isclass(obj) and
+                issubclass(obj, PydanticBaseModel) and
+                obj != PydanticBaseModel):
+                model_names.append(name)
+        except:
+            pass
+
     return sorted(model_names)
 
 
-def get_model_by_name(model_name: str) -> Optional[Type[BaseModel]]:
+def get_model_by_name(model_name: str) -> Optional[Type['BaseModel']]:
     """
     Get a DSIS model class by name.
     
@@ -93,16 +99,20 @@ def get_model_by_name(model_name: str) -> Optional[Type[BaseModel]]:
         Model class, or None if not found
     """
     from .. import models
-    
+
     if hasattr(models, model_name):
         obj = getattr(models, model_name)
-        if inspect.isclass(obj) and issubclass(obj, BaseModel):
-            return obj
-    
+        try:
+            from pydantic import BaseModel as PydanticBaseModel
+            if inspect.isclass(obj) and issubclass(obj, PydanticBaseModel):
+                return obj
+        except:
+            pass
+
     return None
 
 
-def get_model_fields(model_class: Type[BaseModel]) -> Dict[str, Any]:
+def get_model_fields(model_class: Type['BaseModel']) -> Dict[str, Any]:
     """
     Get all fields for a DSIS model class.
     
@@ -131,7 +141,7 @@ def get_model_fields(model_class: Type[BaseModel]) -> Dict[str, Any]:
     return fields
 
 
-def get_model_metadata(model_class: Type[BaseModel]) -> Dict[str, Any]:
+def get_model_metadata(model_class: Type['BaseModel']) -> Dict[str, Any]:
     """
     Get metadata for a DSIS model class.
     
@@ -209,7 +219,7 @@ def get_models_by_domain(domain: str) -> List[str]:
     return matching_models
 
 
-def validate_model_compatibility(model1: Type[BaseModel], model2: Type[BaseModel]) -> Dict[str, Any]:
+def validate_model_compatibility(model1: Type['BaseModel'], model2: Type['BaseModel']) -> Dict[str, Any]:
     """
     Check compatibility between two DSIS model classes.
     

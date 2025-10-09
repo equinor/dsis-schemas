@@ -3,7 +3,7 @@ HorizonParms Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.HorizonParms
-Generated on: 2025-10-08T21:10:50.282240
+Generated on: 2025-10-09T21:15:04.737937
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class HorizonParms(BaseModel):
     """
     OW5000.HorizonParms model.
-    
+
     Represents data from the OW5000.HorizonParms schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.HorizonParms"
     _schema_id = "#/definitions/OW5000_HorizonParms"
     _sql_table_name = "OW5000_HorizonParms"
-    
+
     # Model fields
-    pick_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
-    interpreter: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
+    pick_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
+    interpreter: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     color: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     color_r: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     color_g: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

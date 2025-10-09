@@ -2,7 +2,7 @@
 DSIS SDK Native Models
 
 Auto-generated model imports for all native entities.
-Generated on: 2025-10-08T21:10:50.554806
+Generated on: 2025-10-09T21:15:05.117286
 """
 
 from .base import BaseModel

@@ -3,7 +3,7 @@ MicroseismicMonitorWell Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.MicroseismicMonitorWell
-Generated on: 2025-10-08T21:10:50.335842
+Generated on: 2025-10-09T21:15:04.801916
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class MicroseismicMonitorWell(BaseModel):
     """
     OW5000.MicroseismicMonitorWell model.
-    
+
     Represents data from the OW5000.MicroseismicMonitorWell schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.MicroseismicMonitorWell"
     _schema_id = "#/definitions/OW5000_MicroseismicMonitorWell"
     _sql_table_name = "OW5000_MicroseismicMonitorWell"
-    
+
     # Model fields
-    microseismic_job_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    microseismic_stage_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    well_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    microseismic_job_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    microseismic_stage_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    well_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     num_geophone_depths: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

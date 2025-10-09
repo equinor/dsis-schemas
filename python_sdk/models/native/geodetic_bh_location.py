@@ -3,7 +3,7 @@ GeodeticBHLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.GeodeticBHLocation
-Generated on: 2025-10-08T21:10:50.256643
+Generated on: 2025-10-09T21:15:04.712308
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class GeodeticBHLocation(BaseModel):
     """
     OW5000.GeodeticBHLocation model.
-    
+
     Represents data from the OW5000.GeodeticBHLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.GeodeticBHLocation"
     _schema_id = "#/definitions/OW5000_GeodeticBHLocation"
     _sql_table_name = "OW5000_GeodeticBHLocation"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
     loc_exception: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2)
     event_sequence: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1)
     latitude: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)

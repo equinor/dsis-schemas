@@ -3,7 +3,7 @@ CarterSurfaceLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.CarterSurfaceLocation
-Generated on: 2025-10-08T21:10:50.112505
+Generated on: 2025-10-09T21:15:04.604744
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class CarterSurfaceLocation(BaseModel):
     """
     OW5000.CarterSurfaceLocation model.
-    
+
     Represents data from the OW5000.CarterSurfaceLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.CarterSurfaceLocation"
     _schema_id = "#/definitions/OW5000_CarterSurfaceLocation"
     _sql_table_name = "OW5000_CarterSurfaceLocation"
-    
+
     # Model fields
-    well_location_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    well_location_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     rge_no: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=6)
     rge_dir: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1)
     twp_no: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=6)

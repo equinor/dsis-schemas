@@ -3,7 +3,7 @@ WellMonthlyProduction Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellMonthlyProduction
-Generated on: 2025-10-08T21:03:38.842079
+Generated on: 2025-10-09T21:14:54.979836
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellMonthlyProduction(BaseModel):
     """
     OpenWorksCommonModel.WellMonthlyProduction model.
-    
+
     Represents data from the OpenWorksCommonModel.WellMonthlyProduction schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellMonthlyProduction"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellMonthlyProduction"
     _sql_table_name = "OpenWorksCommonModel_WellMonthlyProduction"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

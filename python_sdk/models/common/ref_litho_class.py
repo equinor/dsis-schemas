@@ -3,7 +3,7 @@ RefLithoClass Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RefLithoClass
-Generated on: 2025-10-08T21:03:38.785002
+Generated on: 2025-10-09T21:14:54.951027
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class RefLithoClass(BaseModel):
     """
     OpenWorksCommonModel.RefLithoClass model.
-    
+
     Represents data from the OpenWorksCommonModel.RefLithoClass schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.RefLithoClass"
     _schema_id = "#/definitions/OpenWorksCommonModel_RefLithoClass"
     _sql_table_name = "OpenWorksCommonModel_RefLithoClass"
-    
+
     # Model fields
-    litho_class: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)
+    litho_class: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)
     litho_class_by: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=10)
     litho_class_symbol: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     litho_foreground_color: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

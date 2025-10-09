@@ -3,7 +3,7 @@ DataDictionary Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.DataDictionary
-Generated on: 2025-10-08T21:10:50.134113
+Generated on: 2025-10-09T21:15:04.625236
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class DataDictionary(BaseModel):
     """
     OW5000.DataDictionary model.
-    
+
     Represents data from the OW5000.DataDictionary schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.DataDictionary"
     _schema_id = "#/definitions/OW5000_DataDictionary"
     _sql_table_name = "OW5000_DataDictionary"
-    
+
     # Model fields
-    table_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
-    column_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
+    table_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
+    column_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
     column_code: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     column_descrip: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=300)
     range_of_values: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=160)

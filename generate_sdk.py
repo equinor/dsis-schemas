@@ -168,37 +168,39 @@ Generated on: {datetime.now().isoformat()}
         """Generate the class definition."""
         properties = schema_data.get('properties', {})
         schema_id = schema_data.get('$id', '')
-        
+        required_fields = schema_data.get('required', [])
+
         # Generate field definitions
         fields = []
         for field_name, field_schema in properties.items():
-            field_def = self._generate_field_definition(field_name, field_schema)
+            is_required = field_name in required_fields
+            field_def = self._generate_field_definition(field_name, field_schema, is_required)
             fields.append(field_def)
-        
+
         fields_code = '\n    '.join(fields) if fields else '    pass'
-        
+
         return f'''class {class_name}(BaseModel):
     """
     {schema_name} model.
-    
+
     Represents data from the {schema_name} schema.
     """
-    
+
     # Schema metadata
     _schema_title = "{schema_name}"
     _schema_id = "{schema_id}"
     _sql_table_name = "{schema_name.replace('.', '_')}"
-    
+
     # Model fields
     {fields_code}'''
     
-    def _generate_field_definition(self, field_name: str, field_schema: Dict[str, Any]) -> str:
+    def _generate_field_definition(self, field_name: str, field_schema: Dict[str, Any], is_required: bool = False) -> str:
         """Generate a field definition."""
         # Handle reserved Python keywords and built-in names
         safe_field_name = self._make_field_name_safe(field_name)
 
-        python_type = self._map_json_schema_type(field_schema)
-        field_config = self._generate_field_config(field_schema)
+        python_type = self._map_json_schema_type(field_schema, is_required)
+        field_config = self._generate_field_config(field_schema, is_required)
 
         # Add alias if field name was changed
         if safe_field_name != field_name:
@@ -210,7 +212,11 @@ Generated on: {datetime.now().isoformat()}
         if field_config:
             return f"{safe_field_name}: {python_type} = Field({field_config})"
         else:
-            return f"{safe_field_name}: {python_type} = None"
+            # For required fields without config, no default value
+            if is_required:
+                return f"{safe_field_name}: {python_type}"
+            else:
+                return f"{safe_field_name}: {python_type} = None"
 
     def _make_field_name_safe(self, field_name: str) -> str:
         """Make field name safe by avoiding Python reserved words and built-ins."""
@@ -236,42 +242,50 @@ Generated on: {datetime.now().isoformat()}
 
         return field_name
     
-    def _map_json_schema_type(self, field_schema: Dict[str, Any]) -> str:
+    def _map_json_schema_type(self, field_schema: Dict[str, Any], is_required: bool = False) -> str:
         """Map JSON schema type to Python type string."""
         json_type = field_schema.get('type', 'string')
         format_type = field_schema.get('format')
-        
+
+        # Determine the base type
         if json_type == "string":
             if format_type == "date":
-                return "Optional[date]"
+                base_type = "date"
             elif format_type in ("time", "date-time"):
-                return "Optional[datetime]"
+                base_type = "datetime"
             elif format_type == "binary":
-                return "Optional[bytes]"
+                base_type = "bytes"
             else:
-                return "Optional[str]"
+                base_type = "str"
         elif json_type == "number":
             if format_type == "float":
-                return "Optional[float]"
+                base_type = "float"
             else:
-                return "Optional[Decimal]"
+                base_type = "Decimal"
         elif json_type == "integer":
-            return "Optional[int]"
+            base_type = "int"
         elif json_type == "boolean":
-            return "Optional[bool]"
+            base_type = "bool"
         elif json_type == "array":
-            return "Optional[list]"
+            base_type = "list"
         elif json_type == "object":
-            return "Optional[Dict[str, Any]]"
+            base_type = "Dict[str, Any]"
         else:
-            return "Optional[Any]"
+            base_type = "Any"
+
+        # Wrap in Optional if not required
+        if is_required:
+            return base_type
+        else:
+            return f"Optional[{base_type}]"
     
-    def _generate_field_config(self, field_schema: Dict[str, Any]) -> str:
+    def _generate_field_config(self, field_schema: Dict[str, Any], is_required: bool = False) -> str:
         """Generate Pydantic Field configuration."""
         config_parts = []
 
-        # Add default value
-        config_parts.append("default=None")
+        # Add default value only for optional fields
+        if not is_required:
+            config_parts.append("default=None")
 
         # Add description
         sql_type = field_schema.get('sqlType', '')

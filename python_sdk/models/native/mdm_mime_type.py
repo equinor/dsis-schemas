@@ -3,7 +3,7 @@ MdmMimeType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.MdmMimeType
-Generated on: 2025-10-08T21:10:50.333386
+Generated on: 2025-10-09T21:15:04.797864
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class MdmMimeType(BaseModel):
     """
     OW5000.MdmMimeType model.
-    
+
     Represents data from the OW5000.MdmMimeType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.MdmMimeType"
     _schema_id = "#/definitions/OW5000_MdmMimeType"
     _sql_table_name = "OW5000_MdmMimeType"
-    
+
     # Model fields
-    suffix: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=8)
+    suffix: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=8)
     suffix_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=240)
     validate_path: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1)
     comments: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=200)

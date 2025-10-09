@@ -3,7 +3,7 @@ LoggingTool Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.LoggingTool
-Generated on: 2025-10-08T21:10:50.325783
+Generated on: 2025-10-09T21:15:04.784457
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class LoggingTool(BaseModel):
     """
     OW5000.LoggingTool model.
-    
+
     Represents data from the OW5000.LoggingTool schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.LoggingTool"
     _schema_id = "#/definitions/OW5000_LoggingTool"
     _sql_table_name = "OW5000_LoggingTool"
-    
+
     # Model fields
-    tool_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    tool_code: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     tool_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     company: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     company_tool_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

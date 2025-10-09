@@ -3,7 +3,7 @@ Seismic2DSurvey Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.Seismic2DSurvey
-Generated on: 2025-10-08T21:03:38.800065
+Generated on: 2025-10-09T21:14:54.957007
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class Seismic2DSurvey(BaseModel):
     """
     OpenWorksCommonModel.Seismic2DSurvey model.
-    
+
     Represents data from the OpenWorksCommonModel.Seismic2DSurvey schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.Seismic2DSurvey"
     _schema_id = "#/definitions/OpenWorksCommonModel_Seismic2DSurvey"
     _sql_table_name = "OpenWorksCommonModel_Seismic2DSurvey"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
-    seismic_survey_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    seismic_survey_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     seismic_geometry_kind: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     acquired_by: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

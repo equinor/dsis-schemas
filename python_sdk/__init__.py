@@ -36,15 +36,13 @@ from . import utils
 from . import exceptions
 
 # Import commonly used classes
-from .models.base import BaseModel
 from .utils.validation import validate_data, ValidationError
 from .utils.serialization import serialize_to_json, deserialize_from_json
 
 __all__ = [
     "models",
-    "utils", 
+    "utils",
     "exceptions",
-    "BaseModel",
     "validate_data",
     "ValidationError",
     "serialize_to_json",

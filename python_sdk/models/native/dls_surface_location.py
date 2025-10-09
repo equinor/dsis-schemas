@@ -3,7 +3,7 @@ DlsSurfaceLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.DlsSurfaceLocation
-Generated on: 2025-10-08T21:10:50.137159
+Generated on: 2025-10-09T21:15:04.628639
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class DlsSurfaceLocation(BaseModel):
     """
     OW5000.DlsSurfaceLocation model.
-    
+
     Represents data from the OW5000.DlsSurfaceLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.DlsSurfaceLocation"
     _schema_id = "#/definitions/OW5000_DlsSurfaceLocation"
     _sql_table_name = "OW5000_DlsSurfaceLocation"
-    
+
     # Model fields
-    well_location_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    well_location_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     loc_exception: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2)
     event_sequence: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1)
     meridian: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2)

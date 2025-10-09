@@ -3,7 +3,7 @@ FaultCenterLine Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.FaultCenterLine
-Generated on: 2025-10-08T21:10:50.181007
+Generated on: 2025-10-09T21:15:04.674746
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class FaultCenterLine(BaseModel):
     """
     OW5000.FaultCenterLine model.
-    
+
     Represents data from the OW5000.FaultCenterLine schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.FaultCenterLine"
     _schema_id = "#/definitions/OW5000_FaultCenterLine"
     _sql_table_name = "OW5000_FaultCenterLine"
-    
+
     # Model fields
-    fault_set_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
-    line_seq_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    fault_set_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    line_seq_no: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     fault: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     data_domain: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     z_domain_qualifier: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)

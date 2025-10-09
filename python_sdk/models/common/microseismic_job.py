@@ -3,7 +3,7 @@ MicroseismicJob Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.MicroseismicJob
-Generated on: 2025-10-08T21:03:38.770308
+Generated on: 2025-10-09T21:14:54.934092
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class MicroseismicJob(BaseModel):
     """
     OpenWorksCommonModel.MicroseismicJob model.
-    
+
     Represents data from the OpenWorksCommonModel.MicroseismicJob schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.MicroseismicJob"
     _schema_id = "#/definitions/OpenWorksCommonModel_MicroseismicJob"
     _sql_table_name = "OpenWorksCommonModel_MicroseismicJob"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     microseismic_job_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

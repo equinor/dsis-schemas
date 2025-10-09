@@ -3,7 +3,7 @@ WellPerforation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellPerforation
-Generated on: 2025-10-08T21:03:38.843562
+Generated on: 2025-10-09T21:14:54.981589
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellPerforation(BaseModel):
     """
     OpenWorksCommonModel.WellPerforation model.
-    
+
     Represents data from the OpenWorksCommonModel.WellPerforation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellPerforation"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellPerforation"
     _sql_table_name = "OpenWorksCommonModel_WellPerforation"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

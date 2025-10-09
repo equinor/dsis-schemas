@@ -3,7 +3,7 @@ VolumetricAlysResult Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.VolumetricAlysResult
-Generated on: 2025-10-08T21:10:50.490593
+Generated on: 2025-10-09T21:15:04.993951
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class VolumetricAlysResult(BaseModel):
     """
     OW5000.VolumetricAlysResult model.
-    
+
     Represents data from the OW5000.VolumetricAlysResult schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.VolumetricAlysResult"
     _schema_id = "#/definitions/OW5000_VolumetricAlysResult"
     _sql_table_name = "OW5000_VolumetricAlysResult"
-    
+
     # Model fields
-    volumetric_alys_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    volume_category: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    volumetric_alys_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    volume_category: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     upper_contact_depth: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.01)
     upper_contact_depth_dsdsunit: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)
     upper_contact_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

@@ -3,7 +3,7 @@ PgIndex Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.pg_index
-Generated on: 2025-10-08T21:10:50.547946
+Generated on: 2025-10-09T21:15:05.107242
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class PgIndex(BaseModel):
     """
     pg_catalog.pg_index model.
-    
+
     Represents data from the pg_catalog.pg_index schema.
     """
-    
+
     # Schema metadata
     _schema_title = "pg_catalog.pg_index"
     _schema_id = "#/definitions/pg_catalog_pg_index"
     _sql_table_name = "pg_catalog_pg_index"
-    
+
     # Model fields
     oid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     indexrelid: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")

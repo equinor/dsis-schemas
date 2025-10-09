@@ -3,7 +3,7 @@ RPetroActType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RPetroActType
-Generated on: 2025-10-08T21:10:50.426001
+Generated on: 2025-10-09T21:15:04.895479
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RPetroActType(BaseModel):
     """
     OW5000.RPetroActType model.
-    
+
     Represents data from the OW5000.RPetroActType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RPetroActType"
     _schema_id = "#/definitions/OW5000_RPetroActType"
     _sql_table_name = "OW5000_RPetroActType"
-    
+
     # Model fields
-    petro_act_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    petro_act_type_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    petro_act_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    petro_act_type_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     long_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")

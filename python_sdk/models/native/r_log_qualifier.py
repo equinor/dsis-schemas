@@ -3,7 +3,7 @@ RLogQualifier Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RLogQualifier
-Generated on: 2025-10-08T21:10:50.418476
+Generated on: 2025-10-09T21:15:04.889456
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RLogQualifier(BaseModel):
     """
     OW5000.RLogQualifier model.
-    
+
     Represents data from the OW5000.RLogQualifier schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RLogQualifier"
     _schema_id = "#/definitions/OW5000_RLogQualifier"
     _sql_table_name = "OW5000_RLogQualifier"
-    
+
     # Model fields
-    qualifier_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    qualifier_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    qualifier_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    qualifier_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

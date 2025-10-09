@@ -3,7 +3,7 @@ WellPressure Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellPressure
-Generated on: 2025-10-08T21:03:38.846755
+Generated on: 2025-10-09T21:14:54.984412
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellPressure(BaseModel):
     """
     OpenWorksCommonModel.WellPressure model.
-    
+
     Represents data from the OpenWorksCommonModel.WellPressure schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellPressure"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellPressure"
     _sql_table_name = "OpenWorksCommonModel_WellPressure"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

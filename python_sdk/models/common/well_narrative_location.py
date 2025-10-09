@@ -3,7 +3,7 @@ WellNarrativeLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellNarrativeLocation
-Generated on: 2025-10-08T21:03:38.842762
+Generated on: 2025-10-09T21:14:54.980676
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class WellNarrativeLocation(BaseModel):
     """
     OpenWorksCommonModel.WellNarrativeLocation model.
-    
+
     Represents data from the OpenWorksCommonModel.WellNarrativeLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellNarrativeLocation"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellNarrativeLocation"
     _sql_table_name = "OpenWorksCommonModel_WellNarrativeLocation"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
-    well_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
+    well_native_uid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
     well_uwi: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=26)
     sequence_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)

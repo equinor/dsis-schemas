@@ -4,20 +4,22 @@ Validation Utilities
 Provides validation functions for DSIS models and data.
 """
 
-from typing import Any, Dict, List, Optional, Type, Union
+from typing import Any, Dict, List, Optional, Type, Union, TYPE_CHECKING
 from pydantic import ValidationError as PydanticValidationError
-from ..models.base import BaseModel
+
+if TYPE_CHECKING:
+    from pydantic import BaseModel
 
 
 class ValidationError(Exception):
     """Custom validation error for DSIS SDK."""
-    
+
     def __init__(self, message: str, errors: Optional[List[Dict[str, Any]]] = None):
         super().__init__(message)
         self.errors = errors or []
 
 
-def validate_data(data: Dict[str, Any], model_class: Type[BaseModel]) -> BaseModel:
+def validate_data(data: Dict[str, Any], model_class: Type['BaseModel']) -> 'BaseModel':
     """
     Validate data against a DSIS model class.
     
@@ -49,7 +51,7 @@ def validate_data(data: Dict[str, Any], model_class: Type[BaseModel]) -> BaseMod
         )
 
 
-def validate_json_data(json_data: str, model_class: Type[BaseModel]) -> BaseModel:
+def validate_json_data(json_data: str, model_class: Type['BaseModel']) -> 'BaseModel':
     """
     Validate JSON string against a DSIS model class.
     
@@ -81,7 +83,7 @@ def validate_json_data(json_data: str, model_class: Type[BaseModel]) -> BaseMode
         )
 
 
-def validate_multiple(data_list: List[Dict[str, Any]], model_class: Type[BaseModel]) -> List[BaseModel]:
+def validate_multiple(data_list: List[Dict[str, Any]], model_class: Type['BaseModel']) -> List['BaseModel']:
     """
     Validate multiple data items against a DSIS model class.
     
@@ -118,7 +120,7 @@ def validate_multiple(data_list: List[Dict[str, Any]], model_class: Type[BaseMod
     return validated_items
 
 
-def is_valid_data(data: Dict[str, Any], model_class: Type[BaseModel]) -> bool:
+def is_valid_data(data: Dict[str, Any], model_class: Type['BaseModel']) -> bool:
     """
     Check if data is valid for a DSIS model class without raising exceptions.
     
@@ -136,14 +138,14 @@ def is_valid_data(data: Dict[str, Any], model_class: Type[BaseModel]) -> bool:
         return False
 
 
-def get_validation_errors(data: Dict[str, Any], model_class: Type[BaseModel]) -> Optional[List[Dict[str, Any]]]:
+def get_validation_errors(data: Dict[str, Any], model_class: Type['BaseModel']) -> Optional[List[Dict[str, Any]]]:
     """
     Get validation errors for data without raising exceptions.
-    
+
     Args:
         data: Dictionary containing data to validate
         model_class: DSIS model class to validate against
-        
+
     Returns:
         List of validation errors, or None if valid
     """
@@ -154,7 +156,7 @@ def get_validation_errors(data: Dict[str, Any], model_class: Type[BaseModel]) ->
         return e.errors
 
 
-def validate_field_value(value: Any, field_name: str, model_class: Type[BaseModel]) -> bool:
+def validate_field_value(value: Any, field_name: str, model_class: Type['BaseModel']) -> bool:
     """
     Validate a single field value against a model's field constraints.
     

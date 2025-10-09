@@ -3,7 +3,7 @@ WellLocationNameHistory Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.WellLocationNameHistory
-Generated on: 2025-10-08T21:10:50.504148
+Generated on: 2025-10-09T21:15:05.017834
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class WellLocationNameHistory(BaseModel):
     """
     OW5000.WellLocationNameHistory model.
-    
+
     Represents data from the OW5000.WellLocationNameHistory schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.WellLocationNameHistory"
     _schema_id = "#/definitions/OW5000_WellLocationNameHistory"
     _sql_table_name = "OW5000_WellLocationNameHistory"
-    
+
     # Model fields
-    well_location_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    well_name_hist_seq_no: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    well_location_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    well_name_hist_seq_no: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     well_name_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     well_lease_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

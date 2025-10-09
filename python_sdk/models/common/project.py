@@ -3,7 +3,7 @@ Project Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.Project
-Generated on: 2025-10-08T21:03:38.779599
+Generated on: 2025-10-09T21:14:54.942353
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class Project(BaseModel):
     """
     OpenWorksCommonModel.Project model.
-    
+
     Represents data from the OpenWorksCommonModel.Project schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.Project"
     _schema_id = "#/definitions/OpenWorksCommonModel_Project"
     _sql_table_name = "OpenWorksCommonModel_Project"
-    
+
     # Model fields
-    project_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
+    project_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
     project_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)
     project_leader: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)
     accounting_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)

@@ -3,7 +3,7 @@ TargetUncertainty Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.TargetUncertainty
-Generated on: 2025-10-08T21:03:38.830039
+Generated on: 2025-10-09T21:14:54.967741
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class TargetUncertainty(BaseModel):
     """
     OpenWorksCommonModel.TargetUncertainty model.
-    
+
     Represents data from the OpenWorksCommonModel.TargetUncertainty schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.TargetUncertainty"
     _schema_id = "#/definitions/OpenWorksCommonModel_TargetUncertainty"
     _sql_table_name = "OpenWorksCommonModel_TargetUncertainty"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
-    target_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
+    target_native_uid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
     project_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     wellplanproject_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=1024)
     target_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=200)

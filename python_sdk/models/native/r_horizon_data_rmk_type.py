@@ -3,7 +3,7 @@ RHorizonDataRmkType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RHorizonDataRmkType
-Generated on: 2025-10-08T21:10:50.413951
+Generated on: 2025-10-09T21:15:04.884430
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RHorizonDataRmkType(BaseModel):
     """
     OW5000.RHorizonDataRmkType model.
-    
+
     Represents data from the OW5000.RHorizonDataRmkType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RHorizonDataRmkType"
     _schema_id = "#/definitions/OW5000_RHorizonDataRmkType"
     _sql_table_name = "OW5000_RHorizonDataRmkType"
-    
+
     # Model fields
-    horizon_data_rmk_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    horizon_data_rmk_type_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    horizon_data_rmk_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    horizon_data_rmk_type_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

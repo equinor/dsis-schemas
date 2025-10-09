@@ -3,7 +3,7 @@ RelativeUncertainty Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RelativeUncertainty
-Generated on: 2025-10-08T21:10:50.462887
+Generated on: 2025-10-09T21:15:04.928926
 """
 
 from typing import Optional, Dict, Any
@@ -15,16 +15,16 @@ from .base import BaseModel
 class RelativeUncertainty(BaseModel):
     """
     OW5000.RelativeUncertainty model.
-    
+
     Represents data from the OW5000.RelativeUncertainty schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RelativeUncertainty"
     _schema_id = "#/definitions/OW5000_RelativeUncertainty"
     _sql_table_name = "OW5000_RelativeUncertainty"
-    
+
     # Model fields
-    target_a_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
-    target_b_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    target_a_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    target_b_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

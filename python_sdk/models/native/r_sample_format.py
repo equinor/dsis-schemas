@@ -3,7 +3,7 @@ RSampleFormat Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RSampleFormat
-Generated on: 2025-10-08T21:10:50.433434
+Generated on: 2025-10-09T21:15:04.902959
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RSampleFormat(BaseModel):
     """
     OW5000.RSampleFormat model.
-    
+
     Represents data from the OW5000.RSampleFormat schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RSampleFormat"
     _schema_id = "#/definitions/OW5000_RSampleFormat"
     _sql_table_name = "OW5000_RSampleFormat"
-    
+
     # Model fields
-    r_sample_fmt_kd: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    r_sample_fmt_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    r_sample_fmt_kd: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    r_sample_fmt_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

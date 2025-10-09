@@ -3,7 +3,7 @@ MicroseismicStage Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.MicroseismicStage
-Generated on: 2025-10-08T21:03:38.771004
+Generated on: 2025-10-09T21:14:54.935246
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class MicroseismicStage(BaseModel):
     """
     OpenWorksCommonModel.MicroseismicStage model.
-    
+
     Represents data from the OpenWorksCommonModel.MicroseismicStage schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.MicroseismicStage"
     _schema_id = "#/definitions/OpenWorksCommonModel_MicroseismicStage"
     _sql_table_name = "OpenWorksCommonModel_MicroseismicStage"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     microseismic_job_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

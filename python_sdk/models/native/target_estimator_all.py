@@ -3,7 +3,7 @@ TargetEstimatorAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.TargetEstimatorAll
-Generated on: 2025-10-08T21:10:50.481808
+Generated on: 2025-10-09T21:15:04.977061
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class TargetEstimatorAll(BaseModel):
     """
     OW5000.TargetEstimatorAll model.
-    
+
     Represents data from the OW5000.TargetEstimatorAll schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.TargetEstimatorAll"
     _schema_id = "#/definitions/OW5000_TargetEstimatorAll"
     _sql_table_name = "OW5000_TargetEstimatorAll"
-    
+
     # Model fields
-    target_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    wp_project_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    target_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    wp_project_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     calc_mode: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     intersect_mode: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     driller_int_u: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=1e-05)

@@ -3,7 +3,7 @@ WellNortheastLoc Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.WellNortheastLoc
-Generated on: 2025-10-08T21:10:50.505534
+Generated on: 2025-10-09T21:15:05.020858
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class WellNortheastLoc(BaseModel):
     """
     OW5000.WellNortheastLoc model.
-    
+
     Represents data from the OW5000.WellNortheastLoc schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.WellNortheastLoc"
     _schema_id = "#/definitions/OW5000_WellNortheastLoc"
     _sql_table_name = "OW5000_WellNortheastLoc"
-    
+
     # Model fields
-    well_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
-    well_location_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    well_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    well_location_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     district: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=16)
     lot_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     map_quad_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=30)

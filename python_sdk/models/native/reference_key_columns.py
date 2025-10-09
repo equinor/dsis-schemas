@@ -3,7 +3,7 @@ ReferenceKeyColumns Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: SYS.ReferenceKeyColumns
-Generated on: 2025-10-08T21:10:50.527561
+Generated on: 2025-10-09T21:15:05.066615
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class ReferenceKeyColumns(BaseModel):
     """
     SYS.ReferenceKeyColumns model.
-    
+
     Represents data from the SYS.ReferenceKeyColumns schema.
     """
-    
+
     # Schema metadata
     _schema_title = "SYS.ReferenceKeyColumns"
     _schema_id = "#/definitions/SYS_ReferenceKeyColumns"
     _sql_table_name = "SYS_ReferenceKeyColumns"
-    
+
     # Model fields
     PKTABLE_CAT: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)
     PKTABLE_SCHEM: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=255)

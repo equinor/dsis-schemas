@@ -3,7 +3,7 @@ RWPIntervalType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RWPIntervalType
-Generated on: 2025-10-08T21:10:50.454502
+Generated on: 2025-10-09T21:15:04.919612
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RWPIntervalType(BaseModel):
     """
     OW5000.RWPIntervalType model.
-    
+
     Represents data from the OW5000.RWPIntervalType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RWPIntervalType"
     _schema_id = "#/definitions/OW5000_RWPIntervalType"
     _sql_table_name = "OW5000_RWPIntervalType"
-    
+
     # Model fields
-    wp_interval_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
-    wp_interval_type_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    wp_interval_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
+    wp_interval_type_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     wp_interval_type_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")

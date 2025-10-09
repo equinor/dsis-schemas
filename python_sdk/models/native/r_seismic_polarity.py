@@ -3,7 +3,7 @@ RSeismicPolarity Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RSeismicPolarity
-Generated on: 2025-10-08T21:10:50.434743
+Generated on: 2025-10-09T21:15:04.906792
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RSeismicPolarity(BaseModel):
     """
     OW5000.RSeismicPolarity model.
-    
+
     Represents data from the OW5000.RSeismicPolarity schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RSeismicPolarity"
     _schema_id = "#/definitions/OW5000_RSeismicPolarity"
     _sql_table_name = "OW5000_RSeismicPolarity"
-    
+
     # Model fields
-    r_seismic_polr_kd: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    r_seismic_polr_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    r_seismic_polr_kd: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    r_seismic_polr_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

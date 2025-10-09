@@ -3,7 +3,7 @@ TargetUncertaintyAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.TargetUncertaintyAll
-Generated on: 2025-10-08T21:10:50.482789
+Generated on: 2025-10-09T21:15:04.979184
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class TargetUncertaintyAll(BaseModel):
     """
     OW5000.TargetUncertaintyAll model.
-    
+
     Represents data from the OW5000.TargetUncertaintyAll schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.TargetUncertaintyAll"
     _schema_id = "#/definitions/OW5000_TargetUncertaintyAll"
     _sql_table_name = "OW5000_TargetUncertaintyAll"
-    
+
     # Model fields
-    target_id: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
+    target_id: int = Field(description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     amount_steering: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     bha_drilling: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     md_target: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.001)

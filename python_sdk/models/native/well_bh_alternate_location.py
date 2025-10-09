@@ -3,7 +3,7 @@ WellBHAlternateLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.WellBHAlternateLocation
-Generated on: 2025-10-08T21:10:50.495171
+Generated on: 2025-10-09T21:15:05.001569
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class WellBHAlternateLocation(BaseModel):
     """
     OW5000.WellBHAlternateLocation model.
-    
+
     Represents data from the OW5000.WellBHAlternateLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.WellBHAlternateLocation"
     _schema_id = "#/definitions/OW5000_WellBHAlternateLocation"
     _sql_table_name = "OW5000_WellBHAlternateLocation"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
-    data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    data_source: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     crs_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     user_crs_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=80)
     x_lon: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=1e-09)

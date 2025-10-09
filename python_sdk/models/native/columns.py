@@ -3,7 +3,7 @@ Columns Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.information_schema.columns
-Generated on: 2025-10-08T21:10:50.532887
+Generated on: 2025-10-09T21:15:05.072061
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class Columns(BaseModel):
     """
     pg_catalog.information_schema.columns model.
-    
+
     Represents data from the pg_catalog.information_schema.columns schema.
     """
-    
+
     # Schema metadata
     _schema_title = "pg_catalog.information_schema.columns"
     _schema_id = "#/definitions/pg_catalog_information_schema.columns"
     _sql_table_name = "pg_catalog_information_schema_columns"
-    
+
     # Model fields
     table_catalog: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     table_schema: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)

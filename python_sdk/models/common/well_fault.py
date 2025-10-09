@@ -3,7 +3,7 @@ WellFault Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellFault
-Generated on: 2025-10-08T21:03:38.838109
+Generated on: 2025-10-09T21:14:54.974976
 """
 
 from typing import Optional, Dict, Any
@@ -15,15 +15,15 @@ from .base import BaseModel
 class WellFault(BaseModel):
     """
     OpenWorksCommonModel.WellFault model.
-    
+
     Represents data from the OpenWorksCommonModel.WellFault schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.WellFault"
     _schema_id = "#/definitions/OpenWorksCommonModel_WellFault"
     _sql_table_name = "OpenWorksCommonModel_WellFault"
-    
+
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=4000)
     wellbore_native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)

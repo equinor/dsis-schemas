@@ -3,7 +3,7 @@ RSyntheticType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RSyntheticType
-Generated on: 2025-10-08T21:10:50.445897
+Generated on: 2025-10-09T21:15:04.911481
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RSyntheticType(BaseModel):
     """
     OW5000.RSyntheticType model.
-    
+
     Represents data from the OW5000.RSyntheticType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RSyntheticType"
     _schema_id = "#/definitions/OW5000_RSyntheticType"
     _sql_table_name = "OW5000_RSyntheticType"
-    
+
     # Model fields
-    synthetic_type_nm: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    synthetic_type_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    synthetic_type_nm: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    synthetic_type_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     ref_value_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
     ref_value_status: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)

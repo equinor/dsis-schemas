@@ -3,7 +3,7 @@ RDiscBasis Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RDiscBasis
-Generated on: 2025-10-08T21:10:50.403645
+Generated on: 2025-10-09T21:15:04.872587
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RDiscBasis(BaseModel):
     """
     OW5000.RDiscBasis model.
-    
+
     Represents data from the OW5000.RDiscBasis schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RDiscBasis"
     _schema_id = "#/definitions/OW5000_RDiscBasis"
     _sql_table_name = "OW5000_RDiscBasis"
-    
+
     # Model fields
-    discovery_basis: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)
-    discovery_basis_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    discovery_basis: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)
+    discovery_basis_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

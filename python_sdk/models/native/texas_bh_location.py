@@ -3,7 +3,7 @@ TexasBHLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.TexasBHLocation
-Generated on: 2025-10-08T21:10:50.484018
+Generated on: 2025-10-09T21:15:04.980964
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class TexasBHLocation(BaseModel):
     """
     OW5000.TexasBHLocation model.
-    
+
     Represents data from the OW5000.TexasBHLocation schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.TexasBHLocation"
     _schema_id = "#/definitions/OW5000_TexasBHLocation"
     _sql_table_name = "OW5000_TexasBHLocation"
-    
+
     # Model fields
-    wellid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
+    wellid: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=31)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     rr_district: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2)
     blk_lge_twp_ind: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)

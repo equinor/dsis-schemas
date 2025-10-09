@@ -3,7 +3,7 @@ ClipPolygonAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.ClipPolygonAll
-Generated on: 2025-10-08T21:10:50.113898
+Generated on: 2025-10-09T21:15:04.606649
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class ClipPolygonAll(BaseModel):
     """
     OW5000.ClipPolygonAll model.
-    
+
     Represents data from the OW5000.ClipPolygonAll schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.ClipPolygonAll"
     _schema_id = "#/definitions/OW5000_ClipPolygonAll"
     _sql_table_name = "OW5000_ClipPolygonAll"
-    
+
     # Model fields
-    grid_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    grid_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     npts: Optional[int] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')")
     u: Optional[bytes] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')", max_length=8)
     u_dsdsunit: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)

@@ -3,7 +3,7 @@ RefLogCurveName Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RefLogCurveName
-Generated on: 2025-10-08T21:03:38.785265
+Generated on: 2025-10-09T21:14:54.951730
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class RefLogCurveName(BaseModel):
     """
     OpenWorksCommonModel.RefLogCurveName model.
-    
+
     Represents data from the OpenWorksCommonModel.RefLogCurveName schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OpenWorksCommonModel.RefLogCurveName"
     _schema_id = "#/definitions/OpenWorksCommonModel_RefLogCurveName"
     _sql_table_name = "OpenWorksCommonModel_RefLogCurveName"
-    
+
     # Model fields
-    log_curve_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=25)
+    log_curve_name: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=25)
     unit_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)
     curve_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=25)
     api_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)

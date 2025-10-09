@@ -3,7 +3,7 @@ SoilBoring Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.SoilBoring
-Generated on: 2025-10-08T21:10:50.474754
+Generated on: 2025-10-09T21:15:04.960407
 """
 
 from typing import Optional, Dict, Any
@@ -15,17 +15,17 @@ from .base import BaseModel
 class SoilBoring(BaseModel):
     """
     OW5000.SoilBoring model.
-    
+
     Represents data from the OW5000.SoilBoring schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.SoilBoring"
     _schema_id = "#/definitions/OW5000_SoilBoring"
     _sql_table_name = "OW5000_SoilBoring"
-    
+
     # Model fields
-    soil_boring_code: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)
+    soil_boring_code: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=24)
     country: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=25)
     data_source: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     company: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)

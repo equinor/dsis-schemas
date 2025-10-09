@@ -3,7 +3,7 @@ RGainMode Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RGainMode
-Generated on: 2025-10-08T21:10:50.410536
+Generated on: 2025-10-09T21:15:04.878441
 """
 
 from typing import Optional, Dict, Any
@@ -15,18 +15,18 @@ from .base import BaseModel
 class RGainMode(BaseModel):
     """
     OW5000.RGainMode model.
-    
+
     Represents data from the OW5000.RGainMode schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RGainMode"
     _schema_id = "#/definitions/OW5000_RGainMode"
     _sql_table_name = "OW5000_RGainMode"
-    
+
     # Model fields
-    r_gain_mode_kd: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    r_gain_mode_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    r_gain_mode_kd: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
+    r_gain_mode_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)

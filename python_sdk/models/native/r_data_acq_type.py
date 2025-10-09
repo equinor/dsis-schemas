@@ -3,7 +3,7 @@ RDataAcqType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RDataAcqType
-Generated on: 2025-10-08T21:10:50.402683
+Generated on: 2025-10-09T21:15:04.871488
 """
 
 from typing import Optional, Dict, Any
@@ -15,19 +15,19 @@ from .base import BaseModel
 class RDataAcqType(BaseModel):
     """
     OW5000.RDataAcqType model.
-    
+
     Represents data from the OW5000.RDataAcqType schema.
     """
-    
+
     # Schema metadata
     _schema_title = "OW5000.RDataAcqType"
     _schema_id = "#/definitions/OW5000_RDataAcqType"
     _sql_table_name = "OW5000_RDataAcqType"
-    
+
     # Model fields
-    data_acquisition_type: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
+    data_acquisition_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
     long_name: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=40)
-    data_acquisition_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
+    data_acquisition_id: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=3)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     create_user_id: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=32)
