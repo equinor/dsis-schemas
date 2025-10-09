@@ -76,5 +76,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "session_id",
+    "interp_project_name",
+    "project_type",
+    "project_database_name"
+  ]
 }

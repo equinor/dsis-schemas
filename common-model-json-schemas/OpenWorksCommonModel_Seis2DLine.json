@@ -235,5 +235,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_line_name",
+    "seismic2dsurvey_native_uid"
+  ]
 }

@@ -213,5 +213,14 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "shape_set_id",
+    "geo_name",
+    "geo_type",
+    "name",
+    "data_source",
+    "shape_set_type",
+    "z_domain"
+  ]
 }

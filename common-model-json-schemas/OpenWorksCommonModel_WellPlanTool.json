@@ -67,5 +67,9 @@
       "maxLength": 32,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellplan_native_uid",
+    "sequence_no"
+  ]
 }

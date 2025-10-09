@@ -85,5 +85,19 @@
       "maxLength": 2147483647,
       "sqlType": "NONE"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "TableName",
+    "Name",
+    "Type",
+    "IsIndexed",
+    "UID",
+    "TableUID",
+    "SchemaUID",
+    "RefTableUID",
+    "RefSchemaUID",
+    "ColPositions",
+    "ColNames"
+  ]
 }

@@ -79,5 +79,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "data_region_id",
+    "grid_id",
+    "region_name"
+  ]
 }

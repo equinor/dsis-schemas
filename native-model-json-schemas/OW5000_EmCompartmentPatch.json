@@ -264,5 +264,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "compartment_patch_id",
+    "structural_model_id",
+    "compartment_model_id",
+    "compartment_id",
+    "patch_sequence_no"
+  ]
 }

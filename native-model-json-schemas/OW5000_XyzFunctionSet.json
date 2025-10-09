@@ -110,5 +110,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "function_set_id",
+    "function_set_category",
+    "function_set_name",
+    "data_source",
+    "z_domain"
+  ]
 }

@@ -92,5 +92,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "defn_wellid",
+    "history_obs_no",
+    "defn_survey_name",
+    "source_wellid",
+    "source_survey_name"
+  ]
 }

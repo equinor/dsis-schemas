@@ -55,5 +55,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "lithotype_id",
+    "point_set_id",
+    "lithotype_number"
+  ]
 }

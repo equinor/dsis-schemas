@@ -123,5 +123,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "trimmed_surface_id",
+    "trimmed_surface_type",
+    "em_structural_body_id",
+    "structural_model_id",
+    "data_source"
+  ]
 }

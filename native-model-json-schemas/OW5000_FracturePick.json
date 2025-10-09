@@ -144,5 +144,26 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fracture_pick_id",
+    "fracture_network_id",
+    "well_id",
+    "pick_depth",
+    "pick_depth_dsdsunit",
+    "data_source",
+    "x_offset",
+    "x_offset_dsdsunit",
+    "y_offset",
+    "y_offset_dsdsunit",
+    "z_offset",
+    "z_offset_dsdsunit",
+    "dip_dir_offset",
+    "dip_dir_offset_dsdsunit",
+    "dip_angle_offset",
+    "dip_angle_offset_dsdsunit",
+    "dip_info_missing",
+    "skip_offset",
+    "honored_offset"
+  ]
 }

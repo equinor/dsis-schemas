@@ -90,5 +90,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "vertical_cpg_id",
+    "reservoir_index",
+    "structural_model_id"
+  ]
 }

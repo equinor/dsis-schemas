@@ -181,5 +181,9 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "project_name",
+    "project_type"
+  ]
 }

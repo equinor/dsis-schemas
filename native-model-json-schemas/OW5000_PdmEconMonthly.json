@@ -506,5 +506,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "pden_id",
+    "pden_type",
+    "zone_name",
+    "data_source",
+    "scenario",
+    "end_date"
+  ]
 }

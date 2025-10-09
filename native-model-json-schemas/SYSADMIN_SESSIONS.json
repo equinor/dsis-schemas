@@ -35,5 +35,11 @@
       "maxLength": 255,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "SessionId",
+    "UserName",
+    "CreatedTime"
+  ]
 }

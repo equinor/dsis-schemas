@@ -76,5 +76,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "frac_net_property_name",
+    "frac_net_property_id"
+  ]
 }

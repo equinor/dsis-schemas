@@ -90,5 +90,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "log_run_no",
+    "tool_code",
+    "tool_position_seq_no",
+    "service_name",
+    "tool_parm_name"
+  ]
 }

@@ -138,5 +138,16 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellbore_native_uid",
+    "zonation_native_uid",
+    "wellbore_uwi",
+    "name",
+    "data_source",
+    "zone_version",
+    "zonation_name",
+    "zonation_type",
+    "zonation_version"
+  ]
 }

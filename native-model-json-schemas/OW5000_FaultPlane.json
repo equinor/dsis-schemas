@@ -87,5 +87,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fault_plane_id",
+    "fault_name",
+    "data_source",
+    "interpretation_version_name",
+    "z_domain"
+  ]
 }

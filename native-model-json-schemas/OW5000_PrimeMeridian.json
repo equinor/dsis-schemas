@@ -77,5 +77,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "prime_meridian_nm",
+    "prime_meridian_id",
+    "greenwich_long",
+    "greenwich_long_dsdsunit"
+  ]
 }

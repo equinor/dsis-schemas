@@ -229,5 +229,14 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "welllog_native_uid",
+    "log_curve_name",
+    "log_curve_version",
+    "total_samples",
+    "index_unit",
+    "data",
+    "curve_unit"
+  ]
 }

@@ -87,5 +87,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "study_type",
+    "study_date",
+    "study_obs_no"
+  ]
 }

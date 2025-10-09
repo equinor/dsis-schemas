@@ -87,5 +87,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fracture_network_id",
+    "fracture_id",
+    "surface_geometry_id",
+    "fracture_surface_prop_name",
+    "begin_time"
+  ]
 }

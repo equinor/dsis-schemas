@@ -76,5 +76,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "grid_3d_layering_id",
+    "grid_3d_interval_id",
+    "data_source"
+  ]
 }

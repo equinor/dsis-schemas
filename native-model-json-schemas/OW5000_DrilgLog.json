@@ -115,5 +115,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "start_drilg_log_dte",
+    "top_depth",
+    "top_depth_dsdsunit"
+  ]
 }

@@ -157,5 +157,28 @@
       "type": "integer",
       "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "TableName",
+    "Name",
+    "Position",
+    "DataType",
+    "Scale",
+    "Length",
+    "IsLengthFixed",
+    "SupportsSelect",
+    "SupportsUpdates",
+    "IsCaseSensitive",
+    "IsSigned",
+    "IsCurrency",
+    "IsAutoIncremented",
+    "NullType",
+    "SearchType",
+    "JavaClass",
+    "Precision",
+    "Radix",
+    "UID",
+    "TableUID"
+  ]
 }

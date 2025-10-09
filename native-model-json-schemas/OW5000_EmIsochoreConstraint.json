@@ -109,5 +109,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "isochore_constraint_id",
+    "structural_model_id",
+    "constraining_horizon_id",
+    "constrained_horizon_id"
+  ]
 }

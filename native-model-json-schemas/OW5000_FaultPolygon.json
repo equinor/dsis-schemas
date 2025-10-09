@@ -173,5 +173,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fault_set_id",
+    "poly_seq_no",
+    "fault"
+  ]
 }

@@ -50,5 +50,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "tool_code",
+    "tool_seq_no",
+    "service_name"
+  ]
 }

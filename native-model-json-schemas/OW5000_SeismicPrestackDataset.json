@@ -369,5 +369,14 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_prestack_dataset_id",
+    "seis_geom_set_id",
+    "seismic_prestack_dataset_name",
+    "seismic_version_name",
+    "geom_set_type",
+    "seismic_prestack_datatype",
+    "z_domain"
+  ]
 }

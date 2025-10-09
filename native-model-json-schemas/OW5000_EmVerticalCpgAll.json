@@ -329,5 +329,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "vertical_cpg_id",
+    "structural_model_id",
+    "vertical_cpg_name",
+    "compartment_model_id"
+  ]
 }

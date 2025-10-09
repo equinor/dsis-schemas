@@ -184,5 +184,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "volumetric_alys_id",
+    "pool_name",
+    "lease_tract_name",
+    "data_source",
+    "analysis_version"
+  ]
 }

@@ -50,5 +50,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "mistie_function_hdr_id",
+    "seis_geom_set_id",
+    "shift_hdr_name",
+    "trace_number"
+  ]
 }

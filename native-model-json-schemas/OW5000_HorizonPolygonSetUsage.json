@@ -56,5 +56,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "sw_project_name",
+    "horizon_name",
+    "polygon_set_id",
+    "sw_project_type"
+  ]
 }

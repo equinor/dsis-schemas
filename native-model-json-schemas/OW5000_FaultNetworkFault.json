@@ -193,5 +193,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "em_study_id",
+    "fault_network_id",
+    "fault_network_fault_id",
+    "data_source",
+    "fault"
+  ]
 }

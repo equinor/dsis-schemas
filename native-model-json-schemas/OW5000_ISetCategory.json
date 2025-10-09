@@ -61,5 +61,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "iset_category_id",
+    "iset_category_name",
+    "category_type_id"
+  ]
 }

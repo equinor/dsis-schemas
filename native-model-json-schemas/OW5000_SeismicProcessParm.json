@@ -109,5 +109,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_process_parm_id",
+    "seismic_process_id",
+    "parm_name"
+  ]
 }

@@ -81,5 +81,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "relationship_id",
+    "relation_by",
+    "subject_type",
+    "subject",
+    "object_type",
+    "object",
+    "action_type",
+    "action"
+  ]
 }

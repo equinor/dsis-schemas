@@ -121,5 +121,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "well_location_id",
+    "company",
+    "type",
+    "date_acquired",
+    "scale_obs_no"
+  ]
 }

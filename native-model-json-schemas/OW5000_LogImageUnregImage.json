@@ -56,5 +56,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "well_id",
+    "tif_filename",
+    "tif_file_path"
+  ]
 }

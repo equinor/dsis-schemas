@@ -66,5 +66,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "analysis_property_code",
+    "unit_type_id",
+    "analysis_property_id"
+  ]
 }

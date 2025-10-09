@@ -23,5 +23,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "i3dv_id",
+    "i3dv_data_id",
+    "i3dv_data_type"
+  ]
 }

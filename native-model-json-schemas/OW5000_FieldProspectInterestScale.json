@@ -116,5 +116,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "field",
+    "company",
+    "interest_type",
+    "date_acquired",
+    "scale_obs_no"
+  ]
 }

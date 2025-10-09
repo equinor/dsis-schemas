@@ -86,5 +86,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "well_id",
+    "data_source",
+    "z_domain",
+    "z_domain_qualifier"
+  ]
 }

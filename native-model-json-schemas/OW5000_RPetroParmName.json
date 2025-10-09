@@ -66,5 +66,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "petro_parm_name",
+    "unit_type_id",
+    "petro_parm_name_id"
+  ]
 }

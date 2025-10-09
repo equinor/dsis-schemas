@@ -135,5 +135,16 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "inter_well_point_id",
+    "geo_name",
+    "geo_type",
+    "attribute",
+    "strat_column",
+    "data_source",
+    "orig_x_lon",
+    "orig_y_lat",
+    "orig_crs_id"
+  ]
 }

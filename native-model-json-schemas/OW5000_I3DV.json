@@ -188,5 +188,23 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "i3dv_id",
+    "i3dv_type",
+    "description",
+    "data_source",
+    "crs_id",
+    "vertical_domain",
+    "vertical_domain_unit_id",
+    "attribute_name",
+    "attribute_unit_id",
+    "dimension",
+    "x_origin",
+    "y_origin",
+    "azimuth",
+    "azimuth_dsdsunit",
+    "datum",
+    "datum_dsdsunit"
+  ]
 }

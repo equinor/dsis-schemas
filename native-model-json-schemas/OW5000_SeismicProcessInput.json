@@ -71,5 +71,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_process_id",
+    "input_data_id",
+    "input_data_type"
+  ]
 }

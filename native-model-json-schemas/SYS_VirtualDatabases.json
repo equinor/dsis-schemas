@@ -31,5 +31,9 @@
       "maxLength": 29,
       "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
     }
-  }
+  },
+  "required": [
+    "Name",
+    "Version"
+  ]
 }

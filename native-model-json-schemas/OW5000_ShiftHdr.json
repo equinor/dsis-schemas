@@ -61,5 +61,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "shift_hdr_id",
+    "shift_hdr_name",
+    "shift_domain"
+  ]
 }

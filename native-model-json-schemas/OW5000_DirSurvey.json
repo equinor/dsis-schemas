@@ -418,5 +418,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "survey_name",
+    "survey_calc_mthd",
+    "north_reference",
+    "scale_type",
+    "resample_distance",
+    "resample_distance_dsdsunit",
+    "npts"
+  ]
 }

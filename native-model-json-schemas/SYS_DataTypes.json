@@ -100,5 +100,18 @@
       "maxLength": 64,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "Name",
+    "TypeName",
+    "JavaClass",
+    "TypeLength",
+    "NullType",
+    "IsSigned",
+    "IsAutoIncremented",
+    "IsCaseSensitive",
+    "Precision",
+    "SearchType",
+    "UID"
+  ]
 }

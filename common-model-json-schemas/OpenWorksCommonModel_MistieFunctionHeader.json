@@ -61,5 +61,12 @@
       "maxLength": 32,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "mistie_function_hdr_id",
+    "shift_hdr_name",
+    "mistie_function_name",
+    "horizon_attr_hdr_id",
+    "data_source"
+  ]
 }

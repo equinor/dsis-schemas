@@ -82,5 +82,9 @@
       "maxLength": 32,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "basin_name",
+    "basin_id"
+  ]
 }

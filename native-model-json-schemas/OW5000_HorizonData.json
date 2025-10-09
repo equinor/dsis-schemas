@@ -224,5 +224,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "horizon_data_id",
+    "horizon_attr_hdr_id",
+    "seis_geom_set_id"
+  ]
 }

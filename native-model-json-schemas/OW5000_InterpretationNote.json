@@ -214,5 +214,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "inote_id",
+    "inote_title",
+    "instance_no",
+    "inote_category_id"
+  ]
 }

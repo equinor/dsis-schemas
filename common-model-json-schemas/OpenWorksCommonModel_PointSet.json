@@ -178,5 +178,20 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "map_data_set_name",
+    "geo_type",
+    "geo_name",
+    "data_source",
+    "point_set_type",
+    "min_x",
+    "max_x",
+    "min_y",
+    "max_y",
+    "z_domain",
+    "crs",
+    "num_points",
+    "data"
+  ]
 }

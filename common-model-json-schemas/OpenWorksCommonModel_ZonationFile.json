@@ -132,5 +132,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "zonation_native_uid",
+    "name",
+    "zonation_file_type",
+    "zonation_file_version",
+    "zonation_file_format"
+  ]
 }

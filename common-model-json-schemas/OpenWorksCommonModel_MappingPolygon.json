@@ -164,5 +164,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "mappingpolygonset_native_uid",
+    "polygon_seq_no",
+    "num_points",
+    "data",
+    "crs"
+  ]
 }

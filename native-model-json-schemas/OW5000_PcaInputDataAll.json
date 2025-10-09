@@ -66,5 +66,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "pca_id",
+    "data_type",
+    "data_id",
+    "field_name"
+  ]
 }

@@ -103,5 +103,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "tool_name",
+    "survey_tool_company",
+    "term_seq_no",
+    "tool_term_name"
+  ]
 }

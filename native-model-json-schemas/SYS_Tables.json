@@ -64,5 +64,15 @@
       "maxLength": 50,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "Name",
+    "Type",
+    "IsPhysical",
+    "SupportsUpdates",
+    "UID",
+    "Cardinality",
+    "IsMaterialized",
+    "SchemaUID"
+  ]
 }

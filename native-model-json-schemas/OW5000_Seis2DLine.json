@@ -291,5 +291,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seis_geom_set_id",
+    "seis_geom_set_nm",
+    "component_geom_id",
+    "seis2d_unique_line_id",
+    "restricted_data_ind"
+  ]
 }

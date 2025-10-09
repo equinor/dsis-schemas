@@ -383,5 +383,13 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "gridded_3d_volume_id",
+    "gridded_3d_volume_name",
+    "volume_type",
+    "data_source",
+    "attribute",
+    "crs_id"
+  ]
 }

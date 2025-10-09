@@ -61,5 +61,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "property_name",
+    "microseis_event_pty_id",
+    "unit_type_id"
+  ]
 }

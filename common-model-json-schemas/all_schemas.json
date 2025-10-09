@@ -63,7 +63,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "application_name",
+      "data_category",
+      "data_set_name"
+    ]
   },
   "OpenWorksCommonModel.ApplicationData2": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -129,7 +134,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "application_name",
+      "data_category",
+      "data_set_name"
+    ]
   },
   "OpenWorksCommonModel.Basin": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -215,7 +225,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "basin_name",
+      "basin_id"
+    ]
   },
   "OpenWorksCommonModel.BinsetGrid3DGrid": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -525,7 +539,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic3dsurvey_native_uid"
+    ]
   },
   "OpenWorksCommonModel.CartoReferenceSystem": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -617,7 +634,10 @@
         "maxLength": 200,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name"
+    ]
   },
   "OpenWorksCommonModel.Casing": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -941,7 +961,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "company_name"
+    ]
   },
   "OpenWorksCommonModel.ComputedLithology": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1125,7 +1148,10 @@
         "maxLength": 1024,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "concept_id"
+    ]
   },
   "OpenWorksCommonModel.ConceptSiteOutlines": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1158,7 +1184,10 @@
         "maxLength": 1024,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "concept_id"
+    ]
   },
   "OpenWorksCommonModel.ConceptSites": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1191,7 +1220,10 @@
         "maxLength": 1024,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "concept_id"
+    ]
   },
   "OpenWorksCommonModel.ConceptTargets": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1224,7 +1256,10 @@
         "maxLength": 1024,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "concept_id"
+    ]
   },
   "OpenWorksCommonModel.Concepts": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1287,7 +1322,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_name",
+      "scenario_name",
+      "concept_name"
+    ]
   },
   "OpenWorksCommonModel.ContourLine": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1411,7 +1451,13 @@
         "maxLength": 64,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "cntr_line_id",
+      "cntr_set_id",
+      "cntr_line_value",
+      "cntr_line_value_unit"
+    ]
   },
   "OpenWorksCommonModel.ContourParameter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1592,7 +1638,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "data_source",
+      "cntr_bounds_source",
+      "cntr_lvl_source"
+    ]
   },
   "OpenWorksCommonModel.ContourSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2244,7 +2295,15 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "x_coord",
+      "y_coord",
+      "z_value",
+      "z_unit",
+      "z_domain",
+      "crs"
+    ]
   },
   "OpenWorksCommonModel.DataDictionary": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2377,7 +2436,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "table_name",
+      "column_name"
+    ]
   },
   "OpenWorksCommonModel.DataDictionaryValue": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2447,7 +2510,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "table_name",
+      "column_name",
+      "value"
+    ]
   },
   "OpenWorksCommonModel.DataSource": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2497,7 +2565,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "type",
+      "public_ind"
+    ]
   },
   "OpenWorksCommonModel.DataSourceUserPermission": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2556,7 +2629,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "user_id",
+      "data_source",
+      "security_level"
+    ]
   },
   "OpenWorksCommonModel.Dipmeter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2997,7 +3075,18 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "survey_name",
+      "survey_calc_method",
+      "north_reference",
+      "npts",
+      "data",
+      "md_unit",
+      "inclination_unit",
+      "azimuth_unit"
+    ]
   },
   "OpenWorksCommonModel.DrillersEstimatorPoint": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -3056,7 +3145,82 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "target_native_uid",
+      "target_point_no"
+    ]
+  },
+  "OpenWorksCommonModel.EditorTemplates": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "#/definitions/OpenWorksCommonModel_EditorTemplates",
+    "title": "OpenWorksCommonModel.EditorTemplates",
+    "type": "object",
+    "properties": {
+      "native_uid": {
+        "type": "string",
+        "maxLength": 1024,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "application_name": {
+        "type": "string",
+        "maxLength": 40,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "data_category": {
+        "type": "string",
+        "maxLength": 24,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "data_set_name": {
+        "type": "string",
+        "maxLength": 40,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "data": {
+        "type": "string",
+        "format": "binary",
+        "maxLength": 2147483647,
+        "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
+      },
+      "remark": {
+        "type": "string",
+        "maxLength": 200,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "create_date": {
+        "type": "string",
+        "format": "time",
+        "maxLength": 29,
+        "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+      },
+      "create_user_id": {
+        "type": "string",
+        "maxLength": 32,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "update_user_id": {
+        "type": "string",
+        "maxLength": 32,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      },
+      "update_date": {
+        "type": "string",
+        "format": "time",
+        "maxLength": 29,
+        "sqlType": "DBAPITYPEOBJECT('TIMESTAMP')"
+      },
+      "alternate_uid": {
+        "type": "string",
+        "maxLength": 4000,
+        "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
+      }
+    },
+    "required": [
+      "application_name",
+      "data_category",
+      "data_set_name"
+    ]
   },
   "OpenWorksCommonModel.EmContour": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -3707,7 +3871,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_name"
+    ]
   },
   "OpenWorksCommonModel.FaultCenterLine": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -3863,7 +4030,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_set_id",
+      "line_seq_no"
+    ]
   },
   "OpenWorksCommonModel.FaultCenterLineSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4076,7 +4247,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_name",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.FaultGrid": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4541,7 +4716,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "list_name",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.FaultListMember": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4595,7 +4774,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "list_id",
+      "fault_plane_id"
+    ]
   },
   "OpenWorksCommonModel.FaultPlane": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4691,7 +4874,13 @@
         "maxLength": 80,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_name",
+      "data_source",
+      "interpretation_version_name",
+      "z_domain"
+    ]
   },
   "OpenWorksCommonModel.FaultPlaneTrimesh": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4866,7 +5055,20 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_name",
+      "interpretation_version_name",
+      "data_source",
+      "domain",
+      "min_x",
+      "max_x",
+      "min_y",
+      "max_y",
+      "min_z",
+      "max_z",
+      "z_unit"
+    ]
   },
   "OpenWorksCommonModel.FaultSegment": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -5121,7 +5323,19 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "min_x",
+      "max_x",
+      "min_y",
+      "max_y",
+      "min_z",
+      "max_z",
+      "crs",
+      "z_domain",
+      "z_unit",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.FaultTrimesh": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -5252,7 +5466,18 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "fault_plane_id",
+      "min_wrk_prj_x",
+      "max_wrk_prj_x",
+      "min_wrk_prj_y",
+      "max_wrk_prj_y",
+      "min_z",
+      "max_z",
+      "z_unit",
+      "z_domain"
+    ]
   },
   "OpenWorksCommonModel.Field": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -5533,7 +5758,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "field_name"
+    ]
   },
   "OpenWorksCommonModel.Film": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -5706,7 +5934,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "film_format",
+      "film_type",
+      "film_version",
+      "name",
+      "wellbore_native_uid"
+    ]
   },
   "OpenWorksCommonModel.FractureJobFracWell": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6093,7 +6328,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "geoshapeset_native_uid",
+      "attribute_name",
+      "data_type"
+    ]
   },
   "OpenWorksCommonModel.GeoShapeSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6269,7 +6509,14 @@
         "maxLength": 2147483647,
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       }
-    }
+    },
+    "required": [
+      "geo_name",
+      "geo_type",
+      "name",
+      "data_source",
+      "z_domain"
+    ]
   },
   "OpenWorksCommonModel.GeoShapeSetAttribute": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6355,7 +6602,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "geoshapeset_native_uid",
+      "attribute_name",
+      "data_source",
+      "data_type"
+    ]
   },
   "OpenWorksCommonModel.GeologicalEstimatorPoint": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6419,7 +6672,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "target_native_uid",
+      "target_point_no"
+    ]
   },
   "OpenWorksCommonModel.Gridded3DVolume": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6818,7 +7075,13 @@
         "maxLength": 10,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name"
+    ]
   },
   "OpenWorksCommonModel.HorizonAttributeHeader3D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -6861,7 +7124,13 @@
         "maxLength": 10,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name"
+    ]
   },
   "OpenWorksCommonModel.HorizonData2D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -7104,7 +7373,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name",
+      "seis2dline_native_uid"
+    ]
   },
   "OpenWorksCommonModel.HorizonData3D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -7119,22 +7395,22 @@
       },
       "horizon_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 60,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 5,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_attribute_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_version_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "seismicdataset3d_native_uid": {
@@ -7149,12 +7425,12 @@
       },
       "seismic_survey_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_status": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 12,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_class": {
@@ -7347,7 +7623,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name",
+      "seismic3dsurvey_native_uid"
+    ]
   },
   "OpenWorksCommonModel.HorizonListHeader": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -7684,7 +7967,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name"
+    ]
   },
   "OpenWorksCommonModel.HorizonProperties3D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -7704,27 +7993,27 @@
       },
       "horizon_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 60,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 5,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_attribute_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_version_name": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_status": {
         "type": "string",
-        "maxLength": 4000,
+        "maxLength": 12,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_class": {
@@ -7912,7 +8201,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_name",
+      "data_source",
+      "horizon_attribute_name",
+      "interpretation_version_name"
+    ]
   },
   "OpenWorksCommonModel.Hybrid3DVolume": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -8552,7 +8847,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "inote_title",
+      "instance_no",
+      "inote_category_id"
+    ]
   },
   "OpenWorksCommonModel.InterpProcessInput": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -8687,7 +8987,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "interp_process_native_uid",
+      "input_data_id",
+      "input_data_type"
+    ]
   },
   "OpenWorksCommonModel.InterpProcessOutput": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -8822,7 +9127,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "interp_process_native_uid",
+      "output_data_id",
+      "output_data_type"
+    ]
   },
   "OpenWorksCommonModel.InterpProcessParm": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -8921,7 +9231,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "interp_process_native_uid",
+      "parm_name"
+    ]
   },
   "OpenWorksCommonModel.Interpolated3DVolume": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9212,7 +9526,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "process_type",
+      "process_name",
+      "process_start_time",
+      "process_end_time",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.IrregularGeometry": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9351,7 +9672,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "target_native_uid",
+      "target_type"
+    ]
   },
   "OpenWorksCommonModel.IrregularGeometryPoints": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9420,7 +9746,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "target_native_uid",
+      "target_type",
+      "target_point_seq_no"
+    ]
   },
   "OpenWorksCommonModel.Lease": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9659,7 +9991,13 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "lease_id",
+      "lease_no",
+      "sublease_no",
+      "tract_no"
+    ]
   },
   "OpenWorksCommonModel.LineOfSection": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10227,7 +10565,16 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "welllog_native_uid",
+      "log_curve_name",
+      "log_curve_version",
+      "total_samples",
+      "index_unit",
+      "data",
+      "curve_unit"
+    ]
   },
   "OpenWorksCommonModel.LogCurveQualifier": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10300,7 +10647,16 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "service_name",
+      "log_run_no",
+      "log_crv_name",
+      "log_pass_id",
+      "log_crv_version",
+      "qualifier_name"
+    ]
   },
   "OpenWorksCommonModel.LogFile": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10446,7 +10802,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "log_file_format",
+      "log_file_type",
+      "log_file_version",
+      "name",
+      "welllog_native_uid"
+    ]
   },
   "OpenWorksCommonModel.LoggingParameter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10532,7 +10895,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "welllog_native_uid",
+      "parameter_name"
+    ]
   },
   "OpenWorksCommonModel.MappingPolygon": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10700,7 +11067,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "mappingpolygonset_native_uid",
+      "polygon_seq_no",
+      "num_points",
+      "data",
+      "crs"
+    ]
   },
   "OpenWorksCommonModel.MappingPolygonSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10845,7 +11219,16 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "polygon_set_name",
+      "data_source",
+      "max_x",
+      "max_y",
+      "min_x",
+      "min_y",
+      "crs"
+    ]
   },
   "OpenWorksCommonModel.MeasurementUnit": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -10887,7 +11270,12 @@
         "maxLength": 2000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "unit_name",
+      "unit_type_name",
+      "unit_abbreviation"
+    ]
   },
   "OpenWorksCommonModel.MicroseismicJob": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -11395,7 +11783,14 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "mistie_function_hdr_id",
+      "shift_hdr_name",
+      "mistie_function_name",
+      "horizon_attr_hdr_id",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.MistieFunctionMember": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -11444,7 +11839,13 @@
         "maxLength": 64,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "mistie_function_hdr_id",
+      "seis_geom_set_id",
+      "shift_hdr_name",
+      "trace_number"
+    ]
   },
   "OpenWorksCommonModel.NaturalFracturePick": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12101,7 +12502,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "pick_name",
+      "pick_by",
+      "pick_obs_no"
+    ]
   },
   "OpenWorksCommonModel.PlanOptimizationParameter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12201,7 +12608,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplan_native_uid",
+      "wellbore_native_uid",
+      "parameter_name"
+    ]
   },
   "OpenWorksCommonModel.PlanParameterSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12251,7 +12663,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "plan_parameter_set_name"
+    ]
   },
   "OpenWorksCommonModel.PlannedWell": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12470,7 +12885,15 @@
         "maxLength": 30,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_native_uid",
+      "wellplansite_native_uid",
+      "site_name",
+      "well_name",
+      "well_uwi",
+      "elevation_reference"
+    ]
   },
   "OpenWorksCommonModel.PlannedWellbore": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12602,7 +13025,16 @@
         "maxLength": 30,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_native_uid",
+      "plannedwell_native_uid",
+      "plannedwell_uwi",
+      "well_name",
+      "wellbore_name",
+      "wellbore_uwi",
+      "elevation_reference"
+    ]
   },
   "OpenWorksCommonModel.Platform": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12759,7 +13191,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "platform_code"
+    ]
   },
   "OpenWorksCommonModel.PlatformSlot": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -12873,7 +13308,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "platform_native_uid",
+      "slot_no"
+    ]
   },
   "OpenWorksCommonModel.PointSet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13055,7 +13494,22 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "map_data_set_name",
+      "geo_type",
+      "geo_name",
+      "data_source",
+      "point_set_type",
+      "min_x",
+      "max_x",
+      "min_y",
+      "max_y",
+      "z_domain",
+      "crs",
+      "num_points",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.PointSetField": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13225,7 +13679,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "pointset_native_uid",
+      "attribute",
+      "field_type",
+      "data_type"
+    ]
   },
   "OpenWorksCommonModel.PolyTarget": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13392,7 +13852,11 @@
         "maxLength": 2147483647,
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "target_name"
+    ]
   },
   "OpenWorksCommonModel.PositionLog": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13535,7 +13999,15 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "npts",
+      "data",
+      "md_unit",
+      "tvd_unit",
+      "xy_offset_unit"
+    ]
   },
   "OpenWorksCommonModel.PreferredTDCurve": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13615,7 +14087,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "td_name",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.ProcessDataType": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13673,7 +14150,10 @@
         "maxLength": 40,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "data_type_name"
+    ]
   },
   "OpenWorksCommonModel.Project": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13815,7 +14295,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_name"
+    ]
   },
   "OpenWorksCommonModel.ProjectAccess": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13868,7 +14351,11 @@
         "type": "integer",
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       }
-    }
+    },
+    "required": [
+      "project_name",
+      "user_id"
+    ]
   },
   "OpenWorksCommonModel.ProjectDBUser": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13903,7 +14390,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "user_id"
+    ]
   },
   "OpenWorksCommonModel.ProjectUser": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -13961,7 +14451,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_name",
+      "user_id"
+    ]
   },
   "OpenWorksCommonModel.PseudoWells": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14135,7 +14629,10 @@
         "maxLength": 20,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "parm_name"
+    ]
   },
   "OpenWorksCommonModel.RProcessType": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14195,7 +14692,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "process_type"
+    ]
   },
   "OpenWorksCommonModel.RasterLog": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14462,7 +14962,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "borehole_type",
+      "borehole_type_id"
+    ]
   },
   "OpenWorksCommonModel.RefCoreAnalysisType": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14517,7 +15021,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "core_analysis_type"
+    ]
   },
   "OpenWorksCommonModel.RefCoreProperty": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14577,7 +15084,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "core_property"
+    ]
   },
   "OpenWorksCommonModel.RefCountry": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14637,7 +15147,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "country_name",
+      "country_id"
+    ]
   },
   "OpenWorksCommonModel.RefCountyName": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14702,7 +15216,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "county_name",
+      "county_id"
+    ]
   },
   "OpenWorksCommonModel.RefCurrency": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14757,7 +15275,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "currency",
+      "currency_type_id"
+    ]
   },
   "OpenWorksCommonModel.RefDataAcquisitionType": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14817,7 +15339,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "data_acquisition_type",
+      "data_acquisition_id"
+    ]
   },
   "OpenWorksCommonModel.RefGeologicFeature": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14877,7 +15403,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "geologic_feature",
+      "geologic_feature_id"
+    ]
   },
   "OpenWorksCommonModel.RefHorizonAttribute": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14962,7 +15492,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "horizon_attribute_name",
+      "horizon_attribute_id",
+      "unit_type"
+    ]
   },
   "OpenWorksCommonModel.RefLithoClass": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15053,7 +15588,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "litho_class"
+    ]
   },
   "OpenWorksCommonModel.RefLogCurveName": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15118,7 +15656,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "log_curve_name"
+    ]
   },
   "OpenWorksCommonModel.RefLoggingService": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15198,7 +15739,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "service_name"
+    ]
   },
   "OpenWorksCommonModel.RefPickSurfaceName": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15258,7 +15802,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "pick_surf_name"
+    ]
   },
   "OpenWorksCommonModel.RefStateName": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15323,7 +15870,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "state_name",
+      "state_id"
+    ]
   },
   "OpenWorksCommonModel.RefStratigraphicUnitName": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15378,7 +15929,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "strat_unit_name"
+    ]
   },
   "OpenWorksCommonModel.RefTrajectoryShape": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15433,7 +15987,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "trajectory_shape",
+      "trajectory_shape_id"
+    ]
   },
   "OpenWorksCommonModel.RefWellClass": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15493,7 +16051,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_class",
+      "well_class_id"
+    ]
   },
   "OpenWorksCommonModel.RefWellboreStatus": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15552,7 +16114,10 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_status_name"
+    ]
   },
   "OpenWorksCommonModel.RegularGeometry": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15724,7 +16289,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "target_native_uid",
+      "target_type"
+    ]
   },
   "OpenWorksCommonModel.RelativeUncertainty": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -15772,7 +16342,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "targetestimator_a_native_uid",
+      "targetestimator_b_native_uid"
+    ]
   },
   "OpenWorksCommonModel.RigInfo": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16190,7 +16764,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic_line_name",
+      "seismic2dsurvey_native_uid"
+    ]
   },
   "OpenWorksCommonModel.Seismic2DList": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16308,7 +16886,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "list_id",
+      "list_name",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.Seismic2DListMember": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16369,7 +16952,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "list_id",
+      "seis_geom_set_id"
+    ]
   },
   "OpenWorksCommonModel.Seismic2DSurvey": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16530,7 +17117,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic_survey_name"
+    ]
   },
   "OpenWorksCommonModel.Seismic3DList": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16646,7 +17236,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "list_id",
+      "seis_geom_set_id"
+    ]
   },
   "OpenWorksCommonModel.Seismic3DSurvey": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -16889,7 +17483,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic_survey_name"
+    ]
   },
   "OpenWorksCommonModel.SeismicDataSet2D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17132,7 +17729,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic_data_set_name",
+      "data_file_name",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.SeismicDataSet3D": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17404,7 +18006,19 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic3dsurvey_native_uid",
+      "seismic_data_set_name",
+      "seismic_version_name",
+      "data_file_name",
+      "data_file_format",
+      "z_domain",
+      "z_start",
+      "z_sample_rate",
+      "z_npts",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.SeismicDataSet3DAttribute": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17677,7 +18291,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "seismic_data_set_name",
+      "data_file_name",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.SeismicShiftHeader": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17742,7 +18361,12 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "shift_hdr_id",
+      "shift_hdr_name",
+      "shift_domain"
+    ]
   },
   "OpenWorksCommonModel.SeismicShiftMember": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17823,7 +18447,11 @@
         "maxLength": 10,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "shift_hdr_id",
+      "seis_geom_set_id"
+    ]
   },
   "OpenWorksCommonModel.ShapeNodeProperty": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -17904,7 +18532,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "geoshapeset_native_uid",
+      "attribute_name",
+      "data_type"
+    ]
   },
   "OpenWorksCommonModel.SiteTemplates": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18026,7 +18659,12 @@
         "multipleOf": 0.001,
         "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "wellplan_site_native_uid",
+      "name"
+    ]
   },
   "OpenWorksCommonModel.StratigraphicColumn": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18329,7 +18967,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "pick_name",
+      "pick_by",
+      "pick_obs_no"
+    ]
   },
   "OpenWorksCommonModel.StratigraphicUnit": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18436,7 +19080,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "stratigraphic_column",
+      "unit_name"
+    ]
   },
   "OpenWorksCommonModel.SurfaceGrid": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18643,7 +19291,26 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "map_data_set_name",
+      "geo_type",
+      "geo_name",
+      "attribute",
+      "data_source",
+      "data_domain",
+      "x_min",
+      "x_max",
+      "y_min",
+      "y_max",
+      "grid_interval_x",
+      "grid_interval_y",
+      "num_cols",
+      "num_rows",
+      "rotation_i",
+      "rotation_origin_x",
+      "rotation_origin_y"
+    ]
   },
   "OpenWorksCommonModel.SurfaceGridExtendedProperties": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18661,7 +19328,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "extended_properties"
+    ]
   },
   "OpenWorksCommonModel.SurfaceGridProperties": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18873,7 +19543,26 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "map_data_set_name",
+      "geo_type",
+      "geo_name",
+      "attribute",
+      "data_source",
+      "data_domain",
+      "x_min",
+      "x_max",
+      "y_min",
+      "y_max",
+      "grid_interval_x",
+      "grid_interval_y",
+      "num_cols",
+      "num_rows",
+      "rotation_i",
+      "rotation_origin_x",
+      "rotation_origin_y"
+    ]
   },
   "OpenWorksCommonModel.SurveyProgram": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -18964,7 +19653,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "directionalsurvey_native_uid",
+      "sequence_no"
+    ]
   },
   "OpenWorksCommonModel.SyntheticSeismic": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -19127,7 +19820,19 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "synthetic_name",
+      "start_time",
+      "end_time",
+      "time_unit",
+      "sample_interval",
+      "sample_interval_unit",
+      "npts",
+      "amplitude",
+      "amplitude_unit"
+    ]
   },
   "OpenWorksCommonModel.Tape": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -19339,7 +20044,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "parent_native_uid"
+    ]
   },
   "OpenWorksCommonModel.TapeFile": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -19950,7 +20659,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "tape_native_uid"
+    ]
   },
   "OpenWorksCommonModel.Target": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -20099,7 +20812,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "target_name"
+    ]
   },
   "OpenWorksCommonModel.TargetEstimator": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -20232,7 +20949,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "target_native_uid"
+    ]
   },
   "OpenWorksCommonModel.TargetOptimizationParameter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -20318,7 +21038,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "target_native_uid",
+      "parameter_name"
+    ]
   },
   "OpenWorksCommonModel.TargetUncertainty": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -20649,7 +21373,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "target_native_uid"
+    ]
   },
   "OpenWorksCommonModel.TimeDepthTable": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -20857,7 +21584,16 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "td_name",
+      "datum",
+      "npts",
+      "data",
+      "depth_unit",
+      "time_unit"
+    ]
   },
   "OpenWorksCommonModel.TurnPoint": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -21042,7 +21778,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "wellplan_native_uid",
+      "wellbore_native_uid",
+      "turn_point_seq_no"
+    ]
   },
   "OpenWorksCommonModel.Wavelet": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -21232,7 +21974,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wavelet_name",
+      "total_samples",
+      "amplitude",
+      "amplitude_unit"
+    ]
   },
   "OpenWorksCommonModel.Well": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -21439,7 +22187,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_uwi"
+    ]
   },
   "OpenWorksCommonModel.WellCongressSurfaceLocation": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -21580,7 +22331,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellCore": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -21871,7 +22625,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "core_id",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.WellCoreAnalysis": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -22029,7 +22788,17 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "wellbore_uwi",
+      "wellcore_native_uid",
+      "core_id",
+      "data_source",
+      "analysis_obs_no",
+      "sample_analysis_obs_no",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.WellCoreDescription": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -22095,7 +22864,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "wellcore_native_uid",
+      "core_id",
+      "data_source",
+      "data"
+    ]
   },
   "OpenWorksCommonModel.WellDailyProduction": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24091,7 +24867,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellFault": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24417,7 +25196,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "well_file_format",
+      "well_file_type",
+      "well_file_version",
+      "wellbore_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellImage": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24759,7 +25545,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "application_name",
+      "data_category",
+      "data_set_name"
+    ]
   },
   "OpenWorksCommonModel.WellList": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -24819,7 +25610,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "type",
+      "data_source"
+    ]
   },
   "OpenWorksCommonModel.WellListMember": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -25127,7 +25923,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "log_name",
+      "log_run_no",
+      "log_pass_id"
+    ]
   },
   "OpenWorksCommonModel.WellMonthlyProduction": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -26786,7 +27588,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellNotePad": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27304,7 +28109,12 @@
         "maxLength": 2147483647,
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "well_plan_name",
+      "well_plan_version"
+    ]
   },
   "OpenWorksCommonModel.WellPlanInterval": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27419,7 +28229,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "wellplan_native_uid",
+      "wellbore_native_uid",
+      "interval_type",
+      "occurrence_no"
+    ]
   },
   "OpenWorksCommonModel.WellPlanProject": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27525,7 +28342,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "project_name",
+      "min_x",
+      "min_y",
+      "max_x",
+      "max_y"
+    ]
   },
   "OpenWorksCommonModel.WellPlanSite": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27621,7 +28445,11 @@
         "maxLength": 30,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplanproject_native_uid",
+      "site_name"
+    ]
   },
   "OpenWorksCommonModel.WellPlanSiteInfo": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27754,7 +28582,12 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplan_native_uid",
+      "target_native_uid",
+      "wellbore_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellPlanTool": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27825,7 +28658,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellplan_native_uid",
+      "sequence_no"
+    ]
   },
   "OpenWorksCommonModel.WellPlanningGroup": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -27880,7 +28717,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "group_name"
+    ]
   },
   "OpenWorksCommonModel.WellPressure": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30147,7 +30987,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "well_native_uid",
+      "wellbore_uwi"
+    ]
   },
   "OpenWorksCommonModel.WellboreElevationInfo": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30227,7 +31071,10 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid"
+    ]
   },
   "OpenWorksCommonModel.WellboreListMemberDetail": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30447,7 +31294,11 @@
         "maxLength": 32,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "z_domain_qualifier",
+      "z_domain"
+    ]
   },
   "OpenWorksCommonModel.ZonalParameter": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30500,7 +31351,11 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "zone_native_uid",
+      "name"
+    ]
   },
   "OpenWorksCommonModel.Zonation": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30640,7 +31495,13 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "name",
+      "zonation_type",
+      "zonation_version",
+      "wellbore_native_uid"
+    ]
   },
   "OpenWorksCommonModel.ZonationFile": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30776,7 +31637,14 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "zonation_native_uid",
+      "name",
+      "zonation_file_type",
+      "zonation_file_version",
+      "zonation_file_format"
+    ]
   },
   "OpenWorksCommonModel.Zone": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -30918,7 +31786,18 @@
         "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       }
-    }
+    },
+    "required": [
+      "wellbore_native_uid",
+      "zonation_native_uid",
+      "wellbore_uwi",
+      "name",
+      "data_source",
+      "zone_version",
+      "zonation_name",
+      "zonation_type",
+      "zonation_version"
+    ]
   },
   "OpenWorksCommonModel.ZoneAttribute": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

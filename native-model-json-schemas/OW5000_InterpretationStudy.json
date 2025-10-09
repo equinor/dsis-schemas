@@ -133,5 +133,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "interpretation_study_id",
+    "interpretation_set_id",
+    "study_name"
+  ]
 }

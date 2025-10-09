@@ -152,5 +152,9 @@
       "maxLength": 32,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fault_set_id",
+    "line_seq_no"
+  ]
 }

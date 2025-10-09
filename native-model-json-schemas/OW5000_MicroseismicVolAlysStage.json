@@ -56,5 +56,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "microseismic_alys_id",
+    "microseismic_job_name",
+    "microseismic_stage_name"
+  ]
 }

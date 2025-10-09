@@ -215,5 +215,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "geotiff_image_id",
+    "relative_path",
+    "file_format"
+  ]
 }

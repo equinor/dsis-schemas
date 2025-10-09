@@ -236,5 +236,10 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "wellplanproject_native_uid",
+    "well_plan_name",
+    "well_plan_version"
+  ]
 }

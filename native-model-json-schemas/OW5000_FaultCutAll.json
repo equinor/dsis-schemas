@@ -199,5 +199,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "fault_cut_id",
+    "pick_surf_name",
+    "fault_name",
+    "fault_line_id",
+    "surf_line_id1",
+    "surf_line_id2",
+    "data_source",
+    "fault_cut_type"
+  ]
 }

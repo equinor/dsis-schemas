@@ -215,5 +215,13 @@
       "maxLength": 30,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "project_native_uid",
+    "wellplansite_native_uid",
+    "site_name",
+    "well_name",
+    "well_uwi",
+    "elevation_reference"
+  ]
 }

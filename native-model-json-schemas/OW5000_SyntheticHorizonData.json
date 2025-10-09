@@ -166,5 +166,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "synthetic_hrzn_data_id",
+    "synthetic_2d_id",
+    "prestack_hrzn_hdr_id",
+    "data_source",
+    "offset_type"
+  ]
 }

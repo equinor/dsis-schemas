@@ -141,5 +141,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wp_project_id",
+    "well_plan_id",
+    "well_plan_name",
+    "well_plan_version"
+  ]
 }

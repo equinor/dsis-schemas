@@ -149,5 +149,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "vsp_geometry_name",
+    "vsp_data_set_name",
+    "vsp_data_set_type",
+    "vsp_file_format",
+    "z_domain"
+  ]
 }

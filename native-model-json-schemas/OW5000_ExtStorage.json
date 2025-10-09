@@ -81,5 +81,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "storage_id",
+    "r_digital_fmt_kd",
+    "media_type",
+    "media_location",
+    "media_label"
+  ]
 }

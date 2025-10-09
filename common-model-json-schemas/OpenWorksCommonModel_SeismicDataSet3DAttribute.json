@@ -269,5 +269,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_data_set_name",
+    "data_file_name",
+    "data"
+  ]
 }

@@ -223,5 +223,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "structural_body_id",
+    "structural_body_name",
+    "interpretation_version_name",
+    "data_source"
+  ]
 }

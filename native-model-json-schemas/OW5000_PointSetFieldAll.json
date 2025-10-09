@@ -166,5 +166,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "point_set_field_id",
+    "point_set_id",
+    "attribute",
+    "field_type",
+    "data_type"
+  ]
 }

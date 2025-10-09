@@ -118,5 +118,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "prestack_hrzn_attr_id",
+    "prestack_hrzn_data_id",
+    "horizon_attr_name",
+    "data_source",
+    "unit_type_id"
+  ]
 }

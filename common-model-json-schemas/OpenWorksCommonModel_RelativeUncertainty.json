@@ -44,5 +44,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "targetestimator_a_native_uid",
+    "targetestimator_b_native_uid"
+  ]
 }

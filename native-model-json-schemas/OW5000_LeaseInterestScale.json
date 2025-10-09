@@ -105,5 +105,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "lease_id",
+    "company_name",
+    "scale_obs_no"
+  ]
 }

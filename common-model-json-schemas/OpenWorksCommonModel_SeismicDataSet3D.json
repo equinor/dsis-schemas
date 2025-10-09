@@ -268,5 +268,17 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic3dsurvey_native_uid",
+    "seismic_data_set_name",
+    "seismic_version_name",
+    "data_file_name",
+    "data_file_format",
+    "z_domain",
+    "z_start",
+    "z_sample_rate",
+    "z_npts",
+    "data"
+  ]
 }

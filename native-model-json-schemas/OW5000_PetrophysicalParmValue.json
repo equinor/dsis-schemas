@@ -167,5 +167,25 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "petro_parm_id",
+    "petro_parm_name",
+    "wellid",
+    "log_crv_name",
+    "log_run_no",
+    "logging_job_no",
+    "log_name",
+    "log_crv_version",
+    "strat_unit_name",
+    "column_name",
+    "top_depth",
+    "top_depth_dsdsunit",
+    "base_depth",
+    "base_depth_dsdsunit",
+    "well_list_id",
+    "data_source",
+    "log_pass_id",
+    "effective_date"
+  ]
 }

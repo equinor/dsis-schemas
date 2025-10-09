@@ -80,5 +80,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "hwc_intrp_id",
+    "well_id",
+    "hwc_intrp_name",
+    "data_source",
+    "pick_surf_name"
+  ]
 }

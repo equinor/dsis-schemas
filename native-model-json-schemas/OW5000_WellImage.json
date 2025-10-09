@@ -132,5 +132,11 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "image_type",
+    "image_seq_no",
+    "data_source"
+  ]
 }

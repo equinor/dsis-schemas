@@ -86,5 +86,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "pden_type",
+    "zone_name",
+    "fluid_type",
+    "gas_obs_no",
+    "analysis_property_code"
+  ]
 }

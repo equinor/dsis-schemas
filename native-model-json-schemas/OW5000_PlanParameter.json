@@ -139,5 +139,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "plan_parm_set_id",
+    "parm_obs_no",
+    "tvd",
+    "tvd_dsdsunit"
+  ]
 }

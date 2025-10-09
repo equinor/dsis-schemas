@@ -266,5 +266,11 @@
       "maxLength": 2147483647,
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "pick_name",
+    "pick_by",
+    "pick_obs_no"
+  ]
 }

@@ -16,27 +16,27 @@
     },
     "horizon_name": {
       "type": "string",
-      "maxLength": 4000,
+      "maxLength": 60,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "data_source": {
       "type": "string",
-      "maxLength": 4000,
+      "maxLength": 5,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "horizon_attribute_name": {
       "type": "string",
-      "maxLength": 4000,
+      "maxLength": 40,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "interpretation_version_name": {
       "type": "string",
-      "maxLength": 4000,
+      "maxLength": 40,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "interpretation_status": {
       "type": "string",
-      "maxLength": 4000,
+      "maxLength": 12,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "horizon_class": {
@@ -224,5 +224,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "horizon_name",
+    "data_source",
+    "horizon_attribute_name",
+    "interpretation_version_name"
+  ]
 }

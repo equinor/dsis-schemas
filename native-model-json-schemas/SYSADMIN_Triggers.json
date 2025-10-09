@@ -49,5 +49,15 @@
       "maxLength": 50,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "SchemaName",
+    "TableName",
+    "Name",
+    "TriggerType",
+    "TriggerEvent",
+    "Status",
+    "TableUID"
+  ]
 }

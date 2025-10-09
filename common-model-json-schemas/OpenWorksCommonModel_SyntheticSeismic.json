@@ -159,5 +159,17 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellbore_native_uid",
+    "synthetic_name",
+    "start_time",
+    "end_time",
+    "time_unit",
+    "sample_interval",
+    "sample_interval_unit",
+    "npts",
+    "amplitude",
+    "amplitude_unit"
+  ]
 }

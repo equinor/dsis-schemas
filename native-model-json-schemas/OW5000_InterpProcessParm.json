@@ -109,5 +109,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "interp_process_parm_id",
+    "interp_process_id",
+    "parm_name"
+  ]
 }

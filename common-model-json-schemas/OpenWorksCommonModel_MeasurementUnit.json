@@ -38,5 +38,10 @@
       "maxLength": 2000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "unit_name",
+    "unit_type_name",
+    "unit_abbreviation"
+  ]
 }

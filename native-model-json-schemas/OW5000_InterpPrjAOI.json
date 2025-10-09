@@ -84,5 +84,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "interpretation_project_name",
+    "pt_seq",
+    "wgs84_lat",
+    "wgs84_lon"
+  ]
 }

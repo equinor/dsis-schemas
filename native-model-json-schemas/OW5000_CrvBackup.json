@@ -85,5 +85,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "suite_name",
+    "track_id",
+    "curve_name",
+    "crv_seq_no",
+    "seq",
+    "data_source"
+  ]
 }

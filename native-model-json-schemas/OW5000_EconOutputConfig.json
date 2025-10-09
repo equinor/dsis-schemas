@@ -55,5 +55,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "econ_table_name",
+    "econ_column_name",
+    "stream_type",
+    "stream_num"
+  ]
 }

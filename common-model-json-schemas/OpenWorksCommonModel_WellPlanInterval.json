@@ -111,5 +111,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellplanproject_native_uid",
+    "wellplan_native_uid",
+    "wellbore_native_uid",
+    "interval_type",
+    "occurrence_no"
+  ]
 }

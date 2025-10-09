@@ -198,5 +198,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "equipment",
+    "depth_set",
+    "depth_set_dsdsunit",
+    "install_date"
+  ]
 }

@@ -70,5 +70,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "hwc_intrp_id",
+    "predicted_curve_id",
+    "type_log_id"
+  ]
 }

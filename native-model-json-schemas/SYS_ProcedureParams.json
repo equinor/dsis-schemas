@@ -96,5 +96,20 @@
       "maxLength": 255,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "ProcedureName",
+    "ProcedureUID",
+    "Name",
+    "DataType",
+    "Position",
+    "Type",
+    "Optional",
+    "Precision",
+    "TypeLength",
+    "Scale",
+    "Radix",
+    "NullType"
+  ]
 }

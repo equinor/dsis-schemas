@@ -29,5 +29,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_change_sequence",
+    "seismic_data_set_id",
+    "seismic_update_user_id",
+    "seismic_update_timestamp"
+  ]
 }

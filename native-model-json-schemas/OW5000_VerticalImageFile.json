@@ -129,5 +129,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "vertical_image_file_id",
+    "image_file_name",
+    "image_name",
+    "data_source"
+  ]
 }

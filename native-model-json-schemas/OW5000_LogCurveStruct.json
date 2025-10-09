@@ -79,5 +79,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "log_curve_id",
+    "order_num",
+    "sample_type",
+    "data_type"
+  ]
 }

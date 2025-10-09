@@ -176,5 +176,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "em_study_id",
+    "em_study_name",
+    "data_source",
+    "crs_id",
+    "min_prj_x",
+    "max_prj_x",
+    "min_prj_y",
+    "max_prj_y"
+  ]
 }

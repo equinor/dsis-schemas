@@ -66,5 +66,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "facility_name",
+    "wellid",
+    "pden_type",
+    "zone_name",
+    "data_source"
+  ]
 }

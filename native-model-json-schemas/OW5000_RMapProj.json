@@ -65,5 +65,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "r_map_proj_kind",
+    "r_map_proj_id",
+    "r_geod_source_nm"
+  ]
 }

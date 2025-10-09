@@ -169,5 +169,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "film_format",
+    "film_type",
+    "film_version",
+    "name",
+    "wellbore_native_uid"
+  ]
 }

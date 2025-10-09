@@ -160,5 +160,17 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "synthetic_name",
+    "wellid",
+    "synthetic_id",
+    "start_time",
+    "start_time_dsdsunit",
+    "end_time",
+    "end_time_dsdsunit",
+    "sample_interval",
+    "sample_interval_dsdsunit",
+    "npts"
+  ]
 }

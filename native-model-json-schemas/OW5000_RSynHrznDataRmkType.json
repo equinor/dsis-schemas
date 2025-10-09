@@ -56,5 +56,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "syn_hrzn_data_rmk_type",
+    "syn_hrzn_data_rmk_id"
+  ]
 }

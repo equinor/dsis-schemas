@@ -218,5 +218,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "prestack_hrzn_data_id",
+    "seis_geom_set_id",
+    "geom_set_type",
+    "prestack_hrzn_hdr_id",
+    "data_source",
+    "offset_type"
+  ]
 }

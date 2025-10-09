@@ -141,5 +141,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_fcl_id",
+    "seismic_fcl_name",
+    "entity_type_nm",
+    "seis_geom_set_id"
+  ]
 }

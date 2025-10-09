@@ -426,5 +426,19 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "log_crv_name",
+    "log_run_no",
+    "log_crv_version",
+    "log_curve_id",
+    "log_pass_id",
+    "log_name",
+    "top_depth",
+    "top_depth_dsdsunit",
+    "base_depth",
+    "base_depth_dsdsunit",
+    "crv_increm"
+  ]
 }

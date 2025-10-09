@@ -239,5 +239,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "horizon_name",
+    "data_source",
+    "horizon_attribute_name",
+    "interpretation_version_name",
+    "seis2dline_native_uid"
+  ]
 }

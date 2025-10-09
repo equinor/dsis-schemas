@@ -92,5 +92,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "formation",
+    "contact_type",
+    "cut_seq_no",
+    "data_source",
+    "effective_date"
+  ]
 }

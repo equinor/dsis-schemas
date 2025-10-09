@@ -69,5 +69,14 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellbore_native_uid",
+    "service_name",
+    "log_run_no",
+    "log_crv_name",
+    "log_pass_id",
+    "log_crv_version",
+    "qualifier_name"
+  ]
 }

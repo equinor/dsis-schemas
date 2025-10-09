@@ -92,5 +92,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "boundary_id",
+    "property_map_id",
+    "boundary_type",
+    "structural_model_id"
+  ]
 }

@@ -86,5 +86,14 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "curvename",
+    "log_run_no",
+    "service_name",
+    "log_pass_id",
+    "cmd_index",
+    "src_curve"
+  ]
 }

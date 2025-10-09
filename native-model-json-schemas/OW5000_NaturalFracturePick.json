@@ -156,5 +156,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "ntrl_frac_pick_id",
+    "well_id",
+    "data_source",
+    "ntrl_frac_pick_depth",
+    "ntrl_frac_pick_depth_dsdsunit"
+  ]
 }

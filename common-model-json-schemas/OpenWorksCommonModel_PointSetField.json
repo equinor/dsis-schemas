@@ -166,5 +166,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "pointset_native_uid",
+    "attribute",
+    "field_type",
+    "data_type"
+  ]
 }

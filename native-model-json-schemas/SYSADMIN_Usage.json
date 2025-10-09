@@ -59,5 +59,16 @@
       "maxLength": 255,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "UID",
+    "object_type",
+    "SchemaName",
+    "Name",
+    "Uses_UID",
+    "Uses_object_type",
+    "Uses_SchemaName",
+    "Uses_Name"
+  ]
 }

@@ -174,5 +174,27 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "service_name",
+    "log_run_no",
+    "log_pass_id",
+    "framework_obs_no",
+    "z_index_scheme",
+    "z_index_mode",
+    "z_index_storage_mode",
+    "z_index_start",
+    "z_index_stop",
+    "z_index_increment",
+    "z_index_npts",
+    "secondary_z_idx_scheme",
+    "secondary_z_idx_mode",
+    "secondary_z_idx_start",
+    "secondary_z_idx_stop",
+    "secondary_z_idx_unit_id",
+    "z_index_start_storage",
+    "z_index_stop_storage",
+    "z_index_increment_storage"
+  ]
 }

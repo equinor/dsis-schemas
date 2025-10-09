@@ -33,5 +33,10 @@
       "maxLength": 255,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "IsPhysical",
+    "UID",
+    "PrimaryMetamodelURI"
+  ]
 }

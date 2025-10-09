@@ -104,5 +104,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "line_id",
+    "base_line_name",
+    "data_source",
+    "x_min",
+    "x_max",
+    "y_min",
+    "y_max",
+    "crs_id"
+  ]
 }

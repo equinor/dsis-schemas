@@ -48,5 +48,10 @@
       "type": "integer",
       "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
     }
-  }
+  },
+  "required": [
+    "VDBName",
+    "SchemaName",
+    "Name"
+  ]
 }

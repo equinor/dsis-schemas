@@ -220,5 +220,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "data_source",
+    "top_depth",
+    "top_depth_dsdsunit"
+  ]
 }

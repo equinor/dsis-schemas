@@ -72,5 +72,14 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "litho_crv_type",
+    "source",
+    "top_depth",
+    "top_depth_dsdsunit",
+    "base_depth",
+    "base_depth_dsdsunit"
+  ]
 }

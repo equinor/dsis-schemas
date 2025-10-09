@@ -55,5 +55,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "cross_section_id",
+    "surface_id",
+    "surface_type",
+    "structural_model_id"
+  ]
 }

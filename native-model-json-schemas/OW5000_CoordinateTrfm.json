@@ -70,5 +70,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "coordinate_trfm_nm",
+    "coordinate_trfm_id"
+  ]
 }

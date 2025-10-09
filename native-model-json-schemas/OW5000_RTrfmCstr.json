@@ -66,5 +66,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "r_trfm_cstr_name",
+    "r_geod_source_nm",
+    "source_sys_type",
+    "r_trfm_cstr_id",
+    "target_sys_type"
+  ]
 }

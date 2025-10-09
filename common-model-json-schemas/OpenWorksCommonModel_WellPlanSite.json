@@ -92,5 +92,9 @@
       "maxLength": 30,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellplanproject_native_uid",
+    "site_name"
+  ]
 }

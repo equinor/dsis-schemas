@@ -66,5 +66,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "regression_model_id",
+    "data_type",
+    "data_id",
+    "field_name"
+  ]
 }

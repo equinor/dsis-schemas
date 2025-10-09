@@ -122,5 +122,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "binset_grid_id",
+    "binset_name",
+    "seis_geom_set_id"
+  ]
 }

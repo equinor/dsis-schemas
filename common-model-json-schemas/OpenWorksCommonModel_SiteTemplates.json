@@ -118,5 +118,10 @@
       "multipleOf": 0.001,
       "sqlType": "DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')"
     }
-  }
+  },
+  "required": [
+    "wellplanproject_native_uid",
+    "wellplan_site_native_uid",
+    "name"
+  ]
 }

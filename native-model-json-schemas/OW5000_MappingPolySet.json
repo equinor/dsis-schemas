@@ -167,5 +167,15 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "polygon_set_id",
+    "polygon_set_name",
+    "data_source",
+    "max_x",
+    "max_y",
+    "min_x",
+    "min_y",
+    "crs_id"
+  ]
 }

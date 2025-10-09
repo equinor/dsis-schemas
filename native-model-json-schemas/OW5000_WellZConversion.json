@@ -280,5 +280,13 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "time_depth_id",
+    "well_id",
+    "time_depth_name",
+    "depth_datum",
+    "depth_datum_dsdsunit",
+    "total_samples"
+  ]
 }

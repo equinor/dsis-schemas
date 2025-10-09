@@ -94,5 +94,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "tubing_set_depth",
+    "tubing_set_depth_dsdsunit",
+    "tubing_string_no"
+  ]
 }

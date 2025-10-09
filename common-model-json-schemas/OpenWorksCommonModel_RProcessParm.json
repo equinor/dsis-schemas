@@ -51,5 +51,8 @@
       "maxLength": 20,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "parm_name"
+  ]
 }

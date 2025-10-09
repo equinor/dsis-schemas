@@ -76,5 +76,12 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "wellid",
+    "sample_obs_no",
+    "paleo_alys_type",
+    "data_source",
+    "paleo_component"
+  ]
 }

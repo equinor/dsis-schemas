@@ -50,5 +50,9 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "prestack_hrzn_hdr_id",
+    "prestack_hrzn_hdr_rmk_type"
+  ]
 }

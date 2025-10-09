@@ -118,5 +118,11 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "em_primary_horizon_id",
+    "em_secondary_horizon_id",
+    "structural_model_id",
+    "contact_type"
+  ]
 }

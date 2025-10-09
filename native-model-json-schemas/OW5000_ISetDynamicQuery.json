@@ -49,5 +49,10 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "interpretation_set_id",
+    "iset_folder_id",
+    "data_type"
+  ]
 }

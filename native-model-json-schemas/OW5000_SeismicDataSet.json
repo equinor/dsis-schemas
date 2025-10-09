@@ -532,5 +532,16 @@
       "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     }
-  }
+  },
+  "required": [
+    "seismic_data_set_id",
+    "seis_geom_set_id",
+    "seis_data_set_name",
+    "seismic_version_name",
+    "geom_set_type",
+    "data_file_name",
+    "binary_data_format",
+    "polarity",
+    "z_domain"
+  ]
 }
