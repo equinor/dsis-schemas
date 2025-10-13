@@ -17,7 +17,7 @@ from datetime import datetime
 class DSISSDKGenerator:
     """Generator for DSIS Python SDK from JSON schemas."""
 
-    def __init__(self, schemas_dir: str = "common-model-json-schemas", output_dir: str = "python_sdk", model_group: str = "common"):
+    def __init__(self, schemas_dir: str = "common-model-json-schemas", output_dir: str = "dsis_model_sdk", model_group: str = "common"):
         self.schemas_dir = Path(schemas_dir)
         self.output_dir = Path(output_dir)
         self.model_group = model_group
@@ -600,7 +600,7 @@ def generate_common_models():
     """Generate Common Model SDK (OpenWorks)."""
     generator = DSISSDKGenerator(
         schemas_dir="common-model-json-schemas",
-        output_dir="python_sdk",
+        output_dir="dsis_model_sdk",
         model_group="common"
     )
     generator.generate_sdk()
@@ -609,7 +609,7 @@ def generate_native_models():
     """Generate Native Model SDK."""
     generator = DSISSDKGenerator(
         schemas_dir="native-model-json-schemas",  # Adjust path as needed
-        output_dir="python_sdk",
+        output_dir="dsis_model_sdk",
         model_group="native"
     )
     generator.generate_sdk()

@@ -12,7 +12,7 @@ from typing import Dict, Any
 
 # Add paths for imports
 sys.path.insert(0, '.')
-sys.path.insert(0, 'python_sdk')
+sys.path.insert(0, 'dsis_model_sdk')
 
 def test_common_models():
     """Test Common Models (OpenWorks Common Model)"""

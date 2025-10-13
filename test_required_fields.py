@@ -6,8 +6,8 @@ Test script to verify required fields are properly enforced in generated models.
 import sys
 sys.path.insert(0, '.')
 
-from python_sdk.models.common import Basin, DataSource
-from python_sdk.models.native import WellTstFlwMeas, Project
+from dsis_model_sdk.models.common import Basin, DataSource
+from dsis_model_sdk.models.native import WellTstFlwMeas, Project
 from pydantic import ValidationError
 
 
