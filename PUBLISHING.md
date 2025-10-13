@@ -41,7 +41,7 @@ Edit `pyproject.toml` and update the version number:
 ```toml
 [project]
 name = "dsis-model-sdk"
-version = "1.0.1"  # Update this
+version = "0.0.2"  # Update this (current version is 0.0.1)
 ```
 
 Follow [Semantic Versioning](https://semver.org/):
@@ -54,7 +54,7 @@ Follow [Semantic Versioning](https://semver.org/):
 Update `README.md` or create a `CHANGELOG.md` with release notes:
 
 ```markdown
-## [1.0.1] - 2025-10-13
+## [0.0.2] - 2025-10-13
 
 ### Added
 - New feature X
@@ -71,7 +71,7 @@ Update `README.md` or create a `CHANGELOG.md` with release notes:
 
 ```bash
 git add pyproject.toml README.md
-git commit -m "chore: bump version to 1.0.1"
+git commit -m "chore: bump version to 0.0.2"
 git push origin main
 ```
 
@@ -79,10 +79,10 @@ git push origin main
 
 ```bash
 # Create an annotated tag
-git tag -a v1.0.1 -m "Release version 1.0.1"
+git tag -a v0.0.2 -m "Release version 0.0.2"
 
 # Push the tag to GitHub
-git push origin v1.0.1
+git push origin v0.0.2
 ```
 
 ### Step 5: Monitor the Release
