@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 The SDK is now organized as follows:
 ```
-python_sdk/
+dsis_model_sdk/
 ├── __init__.py
 ├── models/
 │   ├── __init__.py
@@ -75,7 +75,7 @@ python3 generate_sdk.py [common|native|all]
 
 ### Import Common Models
 ```python
-from python_sdk.models.common import Well, Company, Wellbore
+from dsis_model_sdk.models.common import Well, Company, Wellbore
 
 # Create a well
 well = Well(
@@ -91,7 +91,7 @@ print(f"Schema: {well.get_schema_title()}")
 
 ### Import Native Models (after generation)
 ```python
-from python_sdk.models.native import SomeNativeModel
+from dsis_model_sdk.models.native import SomeNativeModel
 
 # Use native models
 native_obj = SomeNativeModel(
@@ -101,7 +101,7 @@ native_obj = SomeNativeModel(
 
 ### Import Both Model Groups
 ```python
-from python_sdk.models import common, native
+from dsis_model_sdk.models import common, native
 
 # Use common models
 well = common.Well(native_uid="well_001", well_name="Test Well")
@@ -134,7 +134,7 @@ Each generated model includes:
 
 ### Example Model Usage
 ```python
-from python_sdk.models.common import Well
+from dsis_model_sdk.models.common import Well
 from datetime import date
 
 # Create with validation
@@ -167,7 +167,7 @@ Test the generated models:
 ```bash
 source venv/bin/activate
 python3 -c "
-from python_sdk.models.common import Well, Company
+from dsis_model_sdk.models.common import Well, Company
 well = Well(native_uid='test', well_name='Test Well')
 print(f'✅ {well.well_name} created successfully')
 "

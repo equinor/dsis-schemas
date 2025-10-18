@@ -14,6 +14,12 @@ A comprehensive Python SDK for both OpenWorks Common Model and Native Model sche
 
 ## Installation
 
+### From PyPI (Recommended)
+
+```bash
+pip install dsis-schemas
+```
+
 ### From Source
 
 ```bash
@@ -33,7 +39,7 @@ pip install -e .
 ### Common Models (OpenWorks Common Model)
 
 ```python
-from python_sdk.models.common import Well, Company, Wellbore
+from dsis_model_sdk.models.common import Well, Company, Wellbore
 
 # Create a company
 company = Company(
@@ -57,7 +63,7 @@ print(well_json)
 ### Native Models (OW5000 Native Model)
 
 ```python
-from python_sdk.models.native import Well, Activity, Basin, RCompany
+from dsis_model_sdk.models.native import Well, Activity, Basin, RCompany
 
 # Create native models
 company = RCompany(
@@ -112,7 +118,7 @@ The SDK includes 201 models covering all OpenWorks Common Model entities:
 ### Basic Model Operations
 
 ```python
-from dsis_sdk.models import Well
+from dsis_model_sdk.models.common import Well
 
 # Create with validation
 well = Well(
@@ -135,8 +141,8 @@ if errors:
 ### Serialization & Deserialization
 
 ```python
-from dsis_sdk.models import Company
-from dsis_sdk.utils import serialize_to_json, deserialize_from_json
+from dsis_model_sdk.models.common import Company
+from dsis_model_sdk.utils import serialize_to_json, deserialize_from_json
 
 # Create and serialize
 company = Company(
@@ -154,8 +160,8 @@ company_copy = deserialize_from_json(json_str, Company)
 ### Working with Multiple Models
 
 ```python
-from dsis_sdk.models import Well, Wellbore
-from dsis_sdk.utils import serialize_multiple_to_json
+from dsis_model_sdk.models.common import Well, Wellbore
+from dsis_model_sdk.utils import serialize_multiple_to_json
 
 # Create related models
 well = Well(native_uid="well_001", well_name="Parent Well")
@@ -173,7 +179,7 @@ json_data = serialize_multiple_to_json(models, indent=2)
 ### Schema Introspection
 
 ```python
-from dsis_sdk.utils import get_model_schema, get_field_info, list_all_models
+from dsis_model_sdk.utils import get_model_schema, get_field_info, list_all_models
 
 # List all available models
 all_models = list_all_models()
@@ -192,7 +198,7 @@ print(f"Max length: {field_info['max_length']}")
 ### Finding Models by Domain
 
 ```python
-from dsis_sdk.utils import get_models_by_domain, find_models_by_pattern
+from dsis_model_sdk.utils import get_models_by_domain, find_models_by_pattern
 
 # Get all well-related models
 well_models = get_models_by_domain('well')
@@ -208,7 +214,7 @@ print(f"Seismic models: {seismic_models}")
 The SDK works seamlessly with the existing OData query builder:
 
 ```python
-from dsis_sdk.models import Well
+from dsis_model_sdk.models.common import Well
 from tmp.odata_query_builder import Query  # Existing query builder
 
 # Use SDK models for type safety
@@ -243,16 +249,16 @@ pytest tests/
 
 ```bash
 # Format code
-black dsis_sdk/
+black dsis_model_sdk/
 
 # Sort imports
-isort dsis_sdk/
+isort dsis_model_sdk/
 
 # Type checking
-mypy dsis_sdk/
+mypy dsis_model_sdk/
 
 # Linting
-flake8 dsis_sdk/
+flake8 dsis_model_sdk/
 ```
 
 ## Schema Information
