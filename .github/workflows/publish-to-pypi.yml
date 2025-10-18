@@ -13,6 +13,7 @@ jobs:
       name: release  # Matches the PyPI environment
       url: https://pypi.org/p/dsis-model-sdk
     permissions:
+      contents: read  # Required to checkout the repository
       id-token: write  # For trusted publishing
     steps:
     
