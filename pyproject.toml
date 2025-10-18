@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dsis-schemas"
-version = "0.0.1"
+version = "0.0.2"
 description = "Python SDK for DSIS OpenWorks Common Model and OW5000 Native Model schemas"
 readme = "README.md"
 license = {text = "MIT"}
