@@ -1,0 +1,58 @@
+package bulkdata;
+option java_package = "com.lgc.bulkdata";
+
+//Google Protocol Buffers
+//https://developers.google.com/protocol-buffers/
+//This is the protocol buffer definition used by
+//Landmark Teiid Adapters for bulk data.
+//The LGCStructure is modeled after LGC Value Table,
+//with the added feature of nested tables
+//Compiled with the following command
+// $ protoc.exe --java_out=. LGCProtoBuf.proto
+
+message Array3FBuf {
+    optional Index3     length  = 1;                    //Length of i,j,k
+    repeated float      data    = 2 [packed=true];      //Data List of type float
+    optional Header     header  = 3;                    //Optional Header
+
+    message Index3 {
+        required int32  i = 1;                          //Trace
+        required int32  j = 2;                          //Line
+        required int32  k = 3;                          //Sample
+    }
+
+    message Header {
+        required double x = 1;                          //WorldX
+        required double y = 2;                          //WorldY
+        required int32  scalarXY = 3;                   //Scalar for WorldX and WorldY
+    }
+}
+
+//For List of Array3FBuf
+message Array3FBufList {
+	repeated Array3FBuf array3F = 1;
+}
+
+message Array2FBuf {
+
+    optional Index2     length  = 1;                    //Length of i,k
+    repeated float      data    = 2 [packed=true];      //Data List of type float
+    optional Header     header  = 3;                    //Optional Header
+
+    message Index2 {
+        required int32  i = 1;                          //Trace
+        required int32  k = 2;                          //Sample
+    }
+
+    message Header {
+        required double x = 1;                          //WorldX
+        required double y = 2;                          //WorldY
+        required float  shotpoint = 3;                  //Shotpoint
+        required int32  scalarXY = 4;                   //Scalar for WorldX and WorldY
+    }
+}
+
+//For List of Array2FBuf
+message Array2FBufList {
+	repeated Array2FBuf array2F = 1;
+}

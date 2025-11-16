@@ -39,12 +39,22 @@ from . import exceptions
 from .utils.validation import validate_data, ValidationError
 from .utils.serialization import serialize_to_json, deserialize_from_json
 
+# Try to import protobuf support (optional)
+try:
+    from . import protobuf
+    PROTOBUF_AVAILABLE = True
+except ImportError:
+    PROTOBUF_AVAILABLE = False
+    protobuf = None
+
 __all__ = [
     "models",
     "utils",
     "exceptions",
+    "protobuf",
     "validate_data",
     "ValidationError",
     "serialize_to_json",
     "deserialize_from_json",
+    "PROTOBUF_AVAILABLE",
 ]

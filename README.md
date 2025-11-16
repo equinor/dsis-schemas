@@ -10,14 +10,19 @@ A comprehensive Python SDK for both OpenWorks Common Model and Native Model sche
 - 📊 **Schema Introspection**: Utilities to explore model schemas and metadata
 - 🔗 **Integration Ready**: Works seamlessly with existing OData query builders
 - 🛡️ **Reserved Keyword Safe**: Handles Python reserved words with field aliases
-- 📝 **Well Documented**: Comprehensive documentation and examples
+- � **Protobuf Support**: Decode bulk data fields (horizon, log curves, seismic)
+- �📝 **Well Documented**: Comprehensive documentation and examples
 
 ## Installation
 
 ### From PyPI (Recommended)
 
 ```bash
+# Basic installation (metadata/OData support only)
 pip install dsis-schemas
+
+# With protobuf support for bulk data decoding
+pip install dsis-schemas[protobuf]
 ```
 
 ### From Source
@@ -112,6 +117,128 @@ The SDK includes 201 models covering all OpenWorks Common Model entities:
 ### Projects & Planning
 - `Project`, `WellPlanProject`, `ConceptPlans`
 - `Target`, `Platform`, `Field`
+
+## Working with Bulk Data (Protobuf)
+
+The DSIS API serves data in two formats:
+- **Metadata**: Via OData (JSON) - entity properties, relationships, statistics
+- **Bulk Data**: Via Protocol Buffers (binary) - large arrays like horizon z-values, log curves, seismic amplitudes
+
+### Installation for Bulk Data Support
+
+```bash
+pip install dsis-schemas[protobuf]
+```
+
+### Decoding Horizon Data
+
+```python
+from dsis_model_sdk.models.common import HorizonData3D
+from dsis_model_sdk.protobuf import decode_horizon_data
+from dsis_model_sdk.utils.protobuf_decoders import horizon_to_numpy
+
+# Step 1: Get metadata from OData API
+horizon = HorizonData3D.from_dict(odata_response)
+
+print(f"Horizon: {horizon.horizon_name}")
+print(f"Mean depth: {horizon.horizon_mean} {horizon.horizon_mean_unit}")
+
+# Step 2: Decode binary bulk data field
+if horizon.data:
+    decoded = decode_horizon_data(horizon.data)
+    
+    # Step 3: Convert to NumPy array for analysis
+    array, metadata = horizon_to_numpy(decoded)
+    
+    print(f"Grid shape: {array.shape}")
+    print(f"Data coverage: {(~np.isnan(array)).sum() / array.size * 100:.1f}%")
+    
+    # Use the data
+    valid_data = array[~np.isnan(array)]
+    print(f"Depth range: {np.min(valid_data):.2f} - {np.max(valid_data):.2f}")
+```
+
+### Decoding Log Curve Data
+
+```python
+from dsis_model_sdk.protobuf import decode_log_curves
+from dsis_model_sdk.utils.protobuf_decoders import log_curve_to_dict
+
+# Decode log curve binary data
+decoded = decode_log_curves(log_data.data)
+
+print(f"Curve type: {'DEPTH' if decoded.curve_type == decoded.DEPTH else 'TIME'}")
+print(f"Index range: {decoded.index.start_index} to {decoded.index.start_index + decoded.index.number_of_index * decoded.index.increment}")
+
+# Convert to dict for easier access
+data = log_curve_to_dict(decoded)
+
+for curve_name, curve_data in data['curves'].items():
+    print(f"Curve: {curve_name}")
+    print(f"  Unit: {curve_data['unit']}")
+    print(f"  Values: {len(curve_data['values'])} samples")
+```
+
+### Decoding Seismic Data
+
+```python
+from dsis_model_sdk.protobuf import decode_seismic_float_data
+from dsis_model_sdk.utils.protobuf_decoders import seismic_3d_to_numpy
+
+# Decode 3D seismic volume
+decoded = decode_seismic_float_data(seismic.data)
+array, metadata = seismic_3d_to_numpy(decoded)
+
+print(f"Volume shape: {array.shape}")  # (traces_i, traces_j, samples_k)
+print(f"Memory size: {array.nbytes / 1024 / 1024:.2f} MB")
+print(f"Amplitude range: {np.min(array):.2f} to {np.max(array):.2f}")
+
+# Extract a single trace
+trace = array[100, 100, :]
+print(f"Trace samples: {len(trace)}")
+```
+
+### Complete Workflow
+
+```python
+import requests
+from dsis_model_sdk.models.common import HorizonData3D
+from dsis_model_sdk.protobuf import decode_horizon_data
+
+# 1. Query OData API for metadata
+response = requests.get(
+    "https://dsis-api.example.com/odata/HorizonData3D",
+    params={'$filter': "horizon_name eq 'Top_Reservoir'"}
+)
+metadata = response.json()['value'][0]
+
+# 2. Request bulk data (binary protobuf)
+native_uid = metadata['native_uid']
+bulk_response = requests.get(
+    f"https://dsis-api.example.com/odata/HorizonData3D('{native_uid}')/data/$value",
+    headers={'Accept': 'application/octet-stream'}
+)
+
+# 3. Create model with both metadata and bulk data
+metadata['data'] = bulk_response.content
+horizon = HorizonData3D.from_dict(metadata)
+
+# 4. Decode and use bulk data
+decoded = decode_horizon_data(horizon.data)
+# ... process decoded data
+```
+
+### Supported Bulk Data Types
+
+| Data Type | Model | Protobuf Decoder | Content |
+|-----------|-------|------------------|---------|
+| **Horizon 3D** | `HorizonData3D` | `decode_horizon_data()` | Interpreted surface z-values |
+| **Log Curves** | `LogCurve` | `decode_log_curves()` | Well log measurements vs depth/time |
+| **Seismic 3D** | `SeismicDataSet3D` | `decode_seismic_float_data()` | 3D seismic amplitude volume |
+| **Seismic 2D** | `SeismicDataSet2D` | `decode_seismic_2d_float_data()` | 2D seismic trace data |
+| **Tabular** | Various | `decode_tabular_data()` | Generic tabular structures |
+
+For more examples, see `dsis_model_sdk/examples/protobuf_bulk_data.py`.
 
 ## Usage Examples
 

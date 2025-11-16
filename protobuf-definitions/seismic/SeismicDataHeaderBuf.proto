@@ -1,0 +1,81 @@
+package bulkdata;
+option java_package = "com.lgc.bulkdata";
+
+//Google Protocol Buffers
+//https://developers.google.com/protocol-buffers/
+//This is the protocol buffer definition used by
+//Landmark Teiid Adapters for bulk data.
+//The LGCStructure is modeled after LGC Value Table,
+//with the added feature of nested tables
+//Compiled with the following command
+// $ protoc.exe --java_out=. LGCProtoBuf.proto
+
+message SeismicDataHeader {
+
+    required DataType   dataType            = 1 [default = FLOAT];
+    required Index3     first               = 3;                    //First of i,j,k
+
+    // Length contains actual trace number in i, and actual line number in j when the mode value is TRACE or LIVETRACE
+    // In all other modes it contains the actual lengths in i,j,k for trace, line and sample respectively
+    // K always contains sample size
+    required Index3     length              = 4;                    //Length of i,j,k
+
+    required Index3     increment           = 5;                    //Increment of i,j,k
+    required Index3     transposeMapping    = 6;                    //Transpose of i,j,k
+    required Mode       mode                = 7[default = XSLICE];
+
+    //optional CRS to be set for navigation data in TRACE or LIVETRACE mode
+    optional CRS        navigationCRS       = 8;
+
+    message Index3 {
+        required int32  i = 1;  //Trace
+        required int32  j = 2;  //Line
+        optional int32  k = 3;  //Sample
+    }
+}
+
+message SeismicDataHeader2D {
+
+    required DataType       dataType    = 1 [default = FLOAT];
+    required Index2         first       = 2;                        //First of i,k
+
+    // Length contains actual trace number in i when the mode value is TRACE or LIVETRACE
+    // In all other modes it contains the actual lengths in i,k for trace and sample respectively
+    // K always contains sample size
+    required Index2         length      = 3;                        //Length of i,k
+    required Index2         increment   = 4;                        //Increment of i,k
+    required Mode           mode        = 5[default = XSLICE];      //Transpose of i,k
+
+    //optional CRS to be set for navigation data in TRACE or LIVETRACE mode
+    optional CRS        navigationCRS       = 6;
+
+    message Index2 {
+        required int32      i = 1;  //Trace
+        optional int32      k = 2;  //Sample
+    }
+
+}
+
+enum DataType{
+    FLOAT   = 1;
+    SHORT   = 2;
+    INT     = 3;
+    BYTE    = 4;
+}
+
+enum Mode{
+    XSLICE      = 1;
+    YSLICE      = 2;
+    TRACE       = 3;        //Trace by Trace
+    XY          = 4;
+    YX          = 5;
+    LIVETRACE   = 6;        //Trace by Trace .. excluding dead traces
+    XSLICES     = 7;        //Mulitple of XSLICE
+    YSLICES     = 8;        //Mulitple of YSLICE
+    ZSLICE      = 9;
+}
+
+message CRS {
+    required string name         = 1;                   //The name of the the CRS
+    required bool isProjected    = 2 [default = true];  //True if projected false if geodatic
+}

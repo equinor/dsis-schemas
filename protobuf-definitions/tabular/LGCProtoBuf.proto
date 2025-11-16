@@ -1,0 +1,46 @@
+//Google Protocol Buffers
+//https://developers.google.com/protocol-buffers/
+//This is the protocol buffer definition used by
+//Landmark Teiid Adapters for bulk data.
+//The LGCStructure is modeled after LGC Value Table,
+//with the added feature of nested tables
+//Compiled with the following command
+// $ protoc.exe --java_out=. LGCProtoBuf.proto
+message LGCStructure {
+
+  //The name of the structure being modeled
+  optional string structName = 1 [default = "NaN"];
+  
+  //List of LGCElement data
+  repeated LGCElement elements = 3;
+
+  enum DataType{
+    STRUCT = 0;
+    INT    = 1;
+    FLOAT  = 2;
+    DOUBLE = 3;
+    LONG   = 4;
+    STRING = 5;
+    SHORT  = 6;
+    BYTE   = 7;
+    CHAR   = 8;
+  }
+
+  message LGCElement {
+    optional string   unitTypeName = 11 [default = "UNKNOWN"];
+    optional string   unitName     = 12 [default = "UNKNOWN"];
+    
+    optional string   elementName  = 1  [default = "NaN"];
+    optional DataType dataType     = 2  [default = STRUCT];
+
+    repeated string        data_string = 3;
+    repeated sint32        data_int    = 4;
+    repeated float         data_float  = 5;
+    repeated double        data_double = 6;
+    repeated sint64        data_long   = 7;
+    repeated LGCStructure  data_struct = 8;
+    repeated sint32        data_short  = 9;
+    optional bytes         data_byte   = 10;
+  }
+
+}

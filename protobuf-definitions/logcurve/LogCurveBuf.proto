@@ -1,0 +1,78 @@
+package bulkdata;
+option java_package = "com.lgc.bulkdata";
+
+//Google Protocol Buffers
+//https://developers.google.com/protocol-buffers/
+//This is the protocol buffer definition used by
+//Landmark Teiid Adapters for bulk data.
+//The LGCStructure is modeled after LGC Value Table,
+//with the added feature of nested tables
+//Compiled with the following command
+// $ protoc.exe --java_out=. LGCProtoBuf.proto
+//C:\svn\hbi\bulkdata\src>c:\svn\hbi\bulkdata\src\com\lgc\bulkdata\protoc_2_5_0.exe --java_out . com\lgc\bulkdata\LogCurveBuf.proto
+
+message LogCurves {
+
+	optional IndexType curve_type = 1 [default = DEPTH];
+	optional Index index = 2;
+	repeated CurveValue values = 3;
+	
+	//Curve values
+	message CurveValue {
+		required SampleType  sample_type = 1 [default = VALUE]; 
+		required DataType 	 data_type =2 [default = DOUBLE];
+		optional string 	 unit_type = 3;
+		optional string 	 unit = 4;
+		optional uint32      fixed_columns = 5 [ default = 1 ];
+		optional uint32      fixed_rows = 6 [ default = 1];
+		repeated sint32 	 variable_size = 7;
+		repeated string      data_string = 8;
+		repeated sint32      data_int    = 9 [packed=true];
+		repeated float       data_float  = 10 [packed=true];
+		repeated double      data_double = 11 [packed=true];
+		repeated sint64      data_long  = 12 [packed=true];
+		optional string		 name = 13;
+		optional Index second_dimension = 14;
+		optional Index third_dimension = 15;
+		optional double null_value = 16;
+		optional string native_uid = 17;
+
+	}
+
+	//Curve index with optional depth array (if it is non periodic curve)
+	message Index {
+		required double increment = 1;
+		optional double start_index = 2;
+		optional uint32 number_of_index = 3;
+		optional string unit_type = 4;
+		optional string unit = 5;
+		repeated double index = 6 [packed=true];
+	}
+
+	//Log curve type - either DEPTH or TIME
+	enum IndexType{
+		DEPTH = 1;
+		TIME = 2;
+	}
+
+
+	//Log curve data type
+	enum DataType{
+		DOUBLE    = 1;
+		FLOAT  = 2;
+		INT = 3;
+		LONG   = 4;
+		STRING = 5;
+	}
+
+	//Sample types
+	enum SampleType{
+		VALUE = 1; 
+	    FIXEDLIST1D= 2;
+	    FIXEDLIST2D= 3;
+	    VARIABLELIST= 4;
+	    FIXEDROWSVARCOLSLIST2D= 5;
+	}
+}
+
+

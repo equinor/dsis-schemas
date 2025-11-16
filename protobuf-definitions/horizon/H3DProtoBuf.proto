@@ -1,0 +1,64 @@
+//Google Protocol Buffers
+//https://developers.google.com/protocol-buffers/
+//This is the protocol buffer definition used by
+//Landmark Teiid Adapters for bulk data.
+//The LGCStructure is modeled after LGC Value Table,
+//with the added feature of nested tables
+//Compiled with the following command
+// $ protoc.exe --java_out=. LGCProtoBuf.proto
+
+message HorizonData3D {            
+
+    // if parent BinsetGrid3DGrid.grid_i_direction = TRACE
+    // numberOfColumns = grid_jsize
+    // numberOfRows    = grid_isize
+
+    // if BinsetGrid3DGrid.grid_i_direction = LINE
+    // numberOfColumns = grid_isize
+    // numberOfRows    = grid_jsize
+
+    optional MODE  mode             = 1  [default = FULL];  
+    optional int32 firstRowIndex    = 2;  // index of row in the current chunk, not IL/XL annotation
+    optional int32 numberOfRows     = 3;  // number of rows in the current chunk
+    optional int32 firstColumnIndex = 4;  // index of column in the current chunk, not IL/XL annotation
+    optional int32 numberOfColumns  = 5;  // number of columns in the current chunk
+  
+  
+    // Horzion structure has to be populated in one of the following modes
+    // SAMPLES mode  
+    //      - optimal if the horizon is sparsely interpreted, like less than 40% of the survey bin grid 
+    //      - populate only the interpreted samples, non-interpreted samples are skipped
+    //      - only samples would be populated 
+    //      - each sample will contain row and column indices and corresponding z value
+    // FULL mode 
+    //      - optimal for horizons which are interpreted more than 40% of the survey bin grid
+    //      - populate all the values in the array including null (1.0E37f) values for non-interpreted bins
+    //      - only lines would be populated 
+    //      
+    repeated Line    lines          = 6;      
+    
+    optional Samples samples        = 7;      
+  
+    message Line {                            
+        required DIRECTION direction = 1;  // Recommended to use COLUMN direction
+        required int32     lineIndex = 2;  // index of the line not IL/XL annotations)   
+        repeated float     values    = 3;  // z value array for the line   
+    }
+    message Samples {                         
+        repeated int32 columnIndex = 1;       
+        repeated int32 rowIndex    = 2;       
+        repeated float value       = 3;
+    }
+
+    enum MODE {
+        FULL    = 1;
+        SAMPLES = 2;
+    }
+    
+    // It is recommended to use column direction
+    enum DIRECTION {
+        ROW    = 1;  
+        COLUMN = 2;
+    }
+    
+}
