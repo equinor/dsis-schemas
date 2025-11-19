@@ -12,7 +12,7 @@ Supported data types:
 
 Usage:
     from dsis_model_sdk.models.common import HorizonData3D
-    from dsis_model_sdk.protobuf import decode_horizon_data
+    from dsis_model_sdk.protobuf import decode_horizon_data, H3DProtoBuf_pb2
     
     # Get data from OData API
     horizon = HorizonData3D.from_dict(odata_response)
@@ -22,10 +22,10 @@ Usage:
         decoded = decode_horizon_data(horizon.data)
         
         # Access structured data
-        if decoded.mode == decoded.FULL:
+        if decoded.mode == H3DProtoBuf_pb2.HorizonData3D.FULL:
             for line in decoded.lines:
                 print(f"Line {line.lineIndex}: {len(line.values)} values")
-        elif decoded.mode == decoded.SAMPLES:
+        elif decoded.mode == H3DProtoBuf_pb2.HorizonData3D.SAMPLES:
             samples = decoded.samples
             for col, row, val in zip(samples.columnIndex, samples.rowIndex, samples.value):
                 print(f"Sample at ({col}, {row}): {val}")
@@ -66,18 +66,18 @@ def decode_horizon_data(binary_data: bytes) -> 'H3DProtoBuf_pb2.HorizonData3D':
         
     Example:
         >>> from dsis_model_sdk.models.common import HorizonData3D
-        >>> from dsis_model_sdk.protobuf import decode_horizon_data
+        >>> from dsis_model_sdk.protobuf import decode_horizon_data, H3DProtoBuf_pb2
         >>> 
         >>> horizon = HorizonData3D.from_dict(api_response)
         >>> decoded = decode_horizon_data(horizon.data)
         >>> 
         >>> # Access data based on mode
-        >>> if decoded.mode == decoded.FULL:
+        >>> if decoded.mode == H3DProtoBuf_pb2.HorizonData3D.FULL:
         ...     # All values including nulls (1.0E37f for non-interpreted)
         ...     for line in decoded.lines:
         ...         print(f"Line {line.lineIndex}, Direction: {line.direction}")
         ...         print(f"Values: {line.values[:10]}...")  # First 10 values
-        >>> elif decoded.mode == decoded.SAMPLES:
+        >>> elif decoded.mode == H3DProtoBuf_pb2.HorizonData3D.SAMPLES:
         ...     # Only interpreted samples (sparse)
         ...     samples = decoded.samples
         ...     print(f"Total samples: {len(samples.value)}")
@@ -108,12 +108,12 @@ def decode_log_curves(binary_data: bytes) -> 'LogCurveBuf_pb2.LogCurves':
         Exception: If binary data is invalid or corrupted
         
     Example:
-        >>> from dsis_model_sdk.protobuf import decode_log_curves
+        >>> from dsis_model_sdk.protobuf import decode_log_curves, LogCurveBuf_pb2
         >>> 
         >>> decoded = decode_log_curves(log_data.data)
         >>> 
         >>> # Access curve type and index
-        >>> print(f"Curve type: {'DEPTH' if decoded.curve_type == decoded.DEPTH else 'TIME'}")
+        >>> print(f"Curve type: {'DEPTH' if decoded.curve_type == LogCurveBuf_pb2.LogCurves.DEPTH else 'TIME'}")
         >>> print(f"Index start: {decoded.index.start_index}")
         >>> print(f"Index increment: {decoded.index.increment}")
         >>> 
@@ -122,7 +122,7 @@ def decode_log_curves(binary_data: bytes) -> 'LogCurveBuf_pb2.LogCurves':
         ...     print(f"Curve: {curve.name}")
         ...     print(f"Data type: {curve.data_type}")
         ...     print(f"Unit: {curve.unit}")
-        ...     if curve.data_type == curve.DOUBLE:
+        ...     if curve.data_type == LogCurveBuf_pb2.LogCurves.DOUBLE:
         ...         print(f"Values: {curve.data_double[:10]}")  # First 10 values
     """
     _check_protobuf_available()

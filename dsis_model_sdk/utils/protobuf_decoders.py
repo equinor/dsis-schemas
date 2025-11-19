@@ -38,22 +38,31 @@ def horizon_to_numpy(decoded_horizon) -> Tuple[Optional[np.ndarray], Dict[str, A
     except ImportError:
         raise ImportError("NumPy is required for this function. Install with: pip install numpy")
     
+    # Import protobuf to access enum values
+    try:
+        from dsis_model_sdk.protobuf import H3DProtoBuf_pb2
+    except ImportError:
+        import sys
+        import os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'protobuf'))
+        import H3DProtoBuf_pb2
+    
     metadata = {
-        'mode': 'FULL' if decoded_horizon.mode == decoded_horizon.FULL else 'SAMPLES',
+        'mode': 'FULL' if decoded_horizon.mode == H3DProtoBuf_pb2.HorizonData3D.FULL else 'SAMPLES',
         'first_row_index': decoded_horizon.firstRowIndex,
         'number_of_rows': decoded_horizon.numberOfRows,
         'first_column_index': decoded_horizon.firstColumnIndex,
         'number_of_columns': decoded_horizon.numberOfColumns,
     }
     
-    if decoded_horizon.mode == decoded_horizon.FULL:
+    if decoded_horizon.mode == H3DProtoBuf_pb2.HorizonData3D.FULL:
         # Convert lines to 2D array
         rows = decoded_horizon.numberOfRows
         cols = decoded_horizon.numberOfColumns
         array = np.full((rows, cols), np.nan, dtype=np.float32)
         
         for line in decoded_horizon.lines:
-            if line.direction == line.COLUMN:
+            if line.direction == H3DProtoBuf_pb2.HorizonData3D.COLUMN:
                 # Column direction: fill column
                 col_idx = line.lineIndex - decoded_horizon.firstColumnIndex
                 if 0 <= col_idx < cols:
@@ -146,34 +155,44 @@ def log_curve_to_dict(decoded_log_curves) -> Dict[str, Any]:
         'curves': {}
     }
     
+    # Import the protobuf module to access enum values
+    try:
+        from dsis_model_sdk.protobuf import LogCurveBuf_pb2
+    except ImportError:
+        import sys
+        import os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'protobuf'))
+        import LogCurveBuf_pb2
+    
     for curve in decoded_log_curves.values:
+        # Access enums from the LogCurves message class
         data_type_map = {
-            curve.DOUBLE: 'DOUBLE',
-            curve.FLOAT: 'FLOAT',
-            curve.INT: 'INT',
-            curve.LONG: 'LONG',
-            curve.STRING: 'STRING'
+            LogCurveBuf_pb2.LogCurves.DOUBLE: 'DOUBLE',
+            LogCurveBuf_pb2.LogCurves.FLOAT: 'FLOAT',
+            LogCurveBuf_pb2.LogCurves.INT: 'INT',
+            LogCurveBuf_pb2.LogCurves.LONG: 'LONG',
+            LogCurveBuf_pb2.LogCurves.STRING: 'STRING'
         }
         
         sample_type_map = {
-            curve.VALUE: 'VALUE',
-            curve.FIXEDLIST1D: 'FIXEDLIST1D',
-            curve.FIXEDLIST2D: 'FIXEDLIST2D',
-            curve.VARIABLELIST: 'VARIABLELIST',
-            curve.FIXEDROWSVARCOLSLIST2D: 'FIXEDROWSVARCOLSLIST2D'
+            LogCurveBuf_pb2.LogCurves.VALUE: 'VALUE',
+            LogCurveBuf_pb2.LogCurves.FIXEDLIST1D: 'FIXEDLIST1D',
+            LogCurveBuf_pb2.LogCurves.FIXEDLIST2D: 'FIXEDLIST2D',
+            LogCurveBuf_pb2.LogCurves.VARIABLELIST: 'VARIABLELIST',
+            LogCurveBuf_pb2.LogCurves.FIXEDROWSVARCOLSLIST2D: 'FIXEDROWSVARCOLSLIST2D'
         }
         
         # Get actual data based on data type
         values = None
-        if curve.data_type == curve.DOUBLE:
+        if curve.data_type == LogCurveBuf_pb2.LogCurves.DOUBLE:
             values = list(curve.data_double)
-        elif curve.data_type == curve.FLOAT:
+        elif curve.data_type == LogCurveBuf_pb2.LogCurves.FLOAT:
             values = list(curve.data_float)
-        elif curve.data_type == curve.INT:
+        elif curve.data_type == LogCurveBuf_pb2.LogCurves.INT:
             values = list(curve.data_int)
-        elif curve.data_type == curve.LONG:
+        elif curve.data_type == LogCurveBuf_pb2.LogCurves.LONG:
             values = list(curve.data_long)
-        elif curve.data_type == curve.STRING:
+        elif curve.data_type == LogCurveBuf_pb2.LogCurves.STRING:
             values = list(curve.data_string)
         
         curve_data = {
