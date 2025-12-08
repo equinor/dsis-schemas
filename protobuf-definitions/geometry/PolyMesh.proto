@@ -1,0 +1,72 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.PolyMeshBuf.PolyMesh
+
+syntax = "proto2";
+
+package dsis;
+
+message PolyMesh {
+    message CoordinateSet {
+        message Coordinates {
+            message Coordinate2D {
+                required double X = 1;
+                required double Y = 2;
+            }
+
+            message Coordinate3D {
+                required double X = 1;
+                required double Y = 2;
+                required double Z = 3;
+            }
+
+            repeated Coordinate2D coord2D = 1 [packed = false];
+            repeated Coordinate3D coord3D = 2 [packed = false];
+        }
+
+        enum NumberDimensions {
+            TWOD = 2;
+            THREED = 3;
+        }
+
+        required NumberDimensions ndim = 1;
+        required Coordinates coords = 2;
+    }
+
+    message MeshSet {
+        enum GeometryType {
+            POLYLINE = 2;
+            TRIMESH = 3;
+            QUADMESH = 4;
+        }
+
+        message Mesh {
+            message Quadrilateral {
+                required int32 coord1_idx = 1;
+                required int32 coord2_idx = 2;
+                required int32 coord3_idx = 3;
+                required int32 coord4_idx = 4;
+            }
+
+            message Segment {
+                required int32 coord1_idx = 1;
+                required int32 coord2_idx = 2;
+            }
+
+            message Triangle {
+                required int32 coord1_idx = 1;
+                required int32 coord2_idx = 2;
+                required int32 coord3_idx = 3;
+            }
+
+            repeated Segment polyline = 1 [packed = false];
+            repeated Triangle trimesh = 2 [packed = false];
+            repeated Quadrilateral quadmesh = 3 [packed = false];
+        }
+
+        required GeometryType geomType = 1;
+        required Mesh mesh = 2;
+    }
+
+    required MeshSet meshset = 1;
+    required CoordinateSet coordset = 2;
+}

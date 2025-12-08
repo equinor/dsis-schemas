@@ -10,8 +10,24 @@ pip install dsis-schemas[protobuf]
 # Models (metadata)
 from dsis_model_sdk.models.common import HorizonData3D
 
-# Protobuf decoders (bulk data)
-from dsis_model_sdk.protobuf import decode_horizon_data
+# Core protobuf decoders (bulk data)
+from dsis_model_sdk.protobuf import (
+    decode_horizon_data,
+    decode_log_curves,
+    decode_seismic_data,
+    decode_lgc_structure,
+    decode_property_table_set,
+)
+
+# Array decoders
+from dsis_model_sdk.protobuf import decode_array_2f, decode_array_3f
+
+# Geometry decoders
+from dsis_model_sdk.protobuf import (
+    decode_fault_plane,
+    decode_poly_mesh,
+    decode_fracture_network,
+)
 
 # NumPy utilities (optional)
 from dsis_model_sdk.utils.protobuf_decoders import horizon_to_numpy
@@ -42,11 +58,32 @@ for curve in decoded.values:
 ### Seismic Data
 ```python
 # Decode
-decoded = decode_seismic_float_data(seismic.data)
+decoded = decode_seismic_data(seismic.data)
 
-# To NumPy
-array, meta = seismic_3d_to_numpy(decoded)
-print(f"Volume: {array.shape}")
+# Access data
+if decoded.data.data_float:
+    print(f"Float data: {len(decoded.data.data_float)} values")
+print(f"Dimensions: {decoded.length.i}x{decoded.length.j}x{decoded.length.k}")
+```
+
+### Array Data
+```python
+# Decode 3D float array
+array_3d = decode_array_3f(binary_data)
+print(f"Shape: {array_3d.length.i}x{array_3d.length.j}x{array_3d.length.k}")
+print(f"Data: {len(array_3d.data)} points")
+```
+
+### Geometry Data
+```python
+# Decode fault plane
+fault = decode_fault_plane(fault_data)
+for segment in fault.faultSegment:
+    print(f"Points: {len(segment.x)}")
+
+# Decode mesh
+mesh = decode_poly_mesh(mesh_data)
+print(f"Mesh type: {mesh.meshset.geomType}")
 ```
 
 ## Data Flow
@@ -64,14 +101,34 @@ OData JSON → Pydantic Model → model.data (bytes)
 
 ## Decoder Functions
 
+### Core Data Types
 | Function | Input | Output |
 |----------|-------|--------|
 | `decode_horizon_data()` | bytes | HorizonData3D message |
 | `decode_log_curves()` | bytes | LogCurves message |
-| `decode_seismic_float_data()` | bytes | Array3FBuf message |
+| `decode_seismic_data()` | bytes | SeismicData message |
+| `decode_seismic_header()` | bytes | SeismicDataHeader message |
+| `decode_lgc_structure()` | bytes | LGCStructure message |
+| `decode_property_table_set()` | bytes | PropertyTableSet message |
+
+### Array Types
+| Function | Input | Output |
+|----------|-------|--------|
+| `decode_array_2f()` | bytes | Array2FBuf message |
+| `decode_array_3f()` | bytes | Array3FBuf message |
+
+### Geometry Types
+| Function | Input | Output |
+|----------|-------|--------|
+| `decode_fault_plane()` | bytes | FaultPlane message |
+| `decode_poly_mesh()` | bytes | PolyMesh message |
+| `decode_fracture_network()` | bytes | FractureNetwork message |
+
+### Utilities (if available)
+| Function | Input | Output |
+|----------|-------|--------|
 | `horizon_to_numpy()` | message | ndarray (2D) |
 | `log_curve_to_dict()` | message | dict |
-| `seismic_3d_to_numpy()` | message | ndarray (3D) |
 
 ## Error Handling
 ```python

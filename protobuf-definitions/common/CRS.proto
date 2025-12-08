@@ -1,0 +1,11 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.SeismicDataHeaderBuf.CRS
+
+syntax = "proto3";
+
+package dsis;
+
+message CRS {
+    string name = 1;
+    bool isProjected = 2;
+}

@@ -1,0 +1,17 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.SeismicDataByteBuf.Array3BBuf
+
+syntax = "proto3";
+
+package dsis;
+
+message Array3BBuf {
+    message Index3 {
+        int32 i = 1;
+        int32 j = 2;
+        int32 k = 3;
+    }
+
+    Index3 length = 1;
+    bytes data = 2;
+}

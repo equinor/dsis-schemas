@@ -1,0 +1,24 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.SeismicDataFloatBuf.Array2FBuf
+
+syntax = "proto3";
+
+package dsis;
+
+message Array2FBuf {
+    message Header {
+        double x = 1;
+        double y = 2;
+        float shotpoint = 3;
+        int32 scalarXY = 4;
+    }
+
+    message Index2 {
+        int32 i = 1;
+        int32 k = 2;
+    }
+
+    Index2 length = 1;
+    repeated float data = 2;
+    Header header = 3;
+}

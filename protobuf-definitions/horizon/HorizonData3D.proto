@@ -1,0 +1,38 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.H3DProtoBuf.HorizonData3D
+
+syntax = "proto2";
+
+package dsis;
+
+message HorizonData3D {
+    message Line {
+        enum DIRECTION {
+            ROW = 1;
+            COLUMN = 2;
+        }
+
+        required DIRECTION direction = 1;
+        required int32 lineIndex = 2;
+        repeated float values = 3 [packed = false];
+    }
+
+    enum MODE {
+        FULL = 1;
+        SAMPLES = 2;
+    }
+
+    message Samples {
+        repeated int32 columnIndex = 1 [packed = false];
+        repeated int32 rowIndex = 2 [packed = false];
+        repeated float value = 3 [packed = false];
+    }
+
+    optional MODE mode = 1;
+    optional int32 firstRowIndex = 2;
+    optional int32 numberOfRows = 3;
+    optional int32 firstColumnIndex = 4;
+    optional int32 numberOfColumns = 5;
+    repeated Line lines = 6 [packed = false];
+    optional Samples samples = 7;
+}

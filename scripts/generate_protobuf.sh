@@ -45,20 +45,42 @@ mkdir -p "$OUTPUT_DIR"
 # Generate from each proto file
 echo -e "${YELLOW}Generating from horizon definitions...${NC}"
 protoc --python_out="$OUTPUT_DIR" \
-    "$PROTO_DIR/horizon/H3DProtoBuf.proto"
+    "$PROTO_DIR/horizon/HorizonData3D.proto"
 
 echo -e "${YELLOW}Generating from logcurve definitions...${NC}"
 protoc --python_out="$OUTPUT_DIR" \
-    "$PROTO_DIR/logcurve/LogCurveBuf.proto"
+    "$PROTO_DIR/logcurve/LogCurves.proto"
 
 echo -e "${YELLOW}Generating from seismic definitions...${NC}"
 protoc --python_out="$OUTPUT_DIR" \
-    "$PROTO_DIR/seismic/SeismicDataFloatBuf.proto" \
-    "$PROTO_DIR/seismic/SeismicDataHeaderBuf.proto"
+    "$PROTO_DIR/seismic/SeismicData.proto" \
+    "$PROTO_DIR/seismic/SeismicDataHeader.proto" \
+    "$PROTO_DIR/seismic/SeismicDataHeader2D.proto"
 
 echo -e "${YELLOW}Generating from tabular definitions...${NC}"
 protoc --python_out="$OUTPUT_DIR" \
-    "$PROTO_DIR/tabular/LGCProtoBuf.proto"
+    "$PROTO_DIR/tabular/LGCStructure.proto" \
+    "$PROTO_DIR/tabular/PropertyTableSet.proto"
+
+echo -e "${YELLOW}Generating from array definitions...${NC}"
+protoc --python_out="$OUTPUT_DIR" \
+    "$PROTO_DIR/arrays/Array2FBuf.proto" \
+    "$PROTO_DIR/arrays/Array2FBufList.proto" \
+    "$PROTO_DIR/arrays/Array3BBuf.proto" \
+    "$PROTO_DIR/arrays/Array3FBuf.proto" \
+    "$PROTO_DIR/arrays/Array3FBufList.proto" \
+    "$PROTO_DIR/arrays/Array3IBuf.proto" \
+    "$PROTO_DIR/arrays/Array3SBuf.proto"
+
+echo -e "${YELLOW}Generating from geometry definitions...${NC}"
+protoc --python_out="$OUTPUT_DIR" \
+    "$PROTO_DIR/geometry/FaultPlane.proto" \
+    "$PROTO_DIR/geometry/PolyMesh.proto" \
+    "$PROTO_DIR/geometry/FractureNetwork.proto"
+
+echo -e "${YELLOW}Generating from common definitions...${NC}"
+protoc --python_out="$OUTPUT_DIR" \
+    "$PROTO_DIR/common/CRS.proto"
 
 # Flatten directory structure (protoc creates nested dirs)
 if [ -d "$OUTPUT_DIR/protobuf_definitions" ]; then

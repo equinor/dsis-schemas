@@ -1,0 +1,392 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.FractureNetworkBuf.FractureNetwork
+
+syntax = "proto2";
+
+package dsis;
+
+message FractureNetwork {
+    message FracNetProperties {
+        message FracNetProperty {
+            required string property_set_name = 1;
+            required int64 begin_time = 2;
+            optional string remark = 3;
+            optional PropertyTableSet frac_net_property = 4;
+        }
+
+        required int32 num_fracnet_property = 1;
+        repeated FracNetProperty fracnet_property = 2 [packed = false];
+    }
+
+    message FracNetPropertySets {
+        message FracNetPropertySet {
+            message FracNetPropSetMembers {
+                message FracNetPropSetMember {
+                    required string property_set_name = 1;
+                    required string property_name = 2;
+                    optional int32 property_table_idx = 3;
+                    optional string property_units = 4;
+                    optional double no_data_value = 5;
+                    optional string remark = 6;
+                }
+
+                required int32 num_fracnet_prop_set_member = 1;
+                repeated FracNetPropSetMember fracnet_prop_set_member = 2 [packed = false];
+            }
+
+            required string property_set_name = 1;
+            optional FracNetPropSetMembers facnet_prop_set_members = 2;
+            optional FracNetProperties fracnet_properties = 3;
+        }
+
+        required int32 num_fracnet_prop_set = 1;
+        repeated FracNetPropertySet fracnet_prop_set = 2 [packed = false];
+    }
+
+    message FractureJobEconomics {
+        message Propants {
+            message Propant {
+                required string propant_name = 1;
+                required double amount = 2;
+                required double cost_per_unit = 3;
+                required string amount_uom = 4;
+            }
+
+            required int32 num_propants = 1;
+            repeated Propant propant = 2 [packed = false];
+        }
+
+        message StimulationFluids {
+            message StimulationFluid {
+                required string fluid_name = 1;
+                required double clean_volume = 2;
+                required string volume_uom = 3;
+                required double cost_per_unit = 4;
+            }
+
+            required int32 num_stim_fluids = 1;
+            repeated StimulationFluid stim_fluid = 2 [packed = false];
+        }
+
+        required double hydraulic_power = 1;
+        required string power_uom = 2;
+        required double power_cost_per_unit = 3;
+        required double water_disposal_cost_per_unit = 4;
+        required double transport_distance = 5;
+        required string transport_distance_uom = 6;
+        required double cost_per_transport_distance_unit = 7;
+        required double discount_rate = 8;
+        required double revenue_escalation_rate = 9;
+        required double cost_escalation_rate = 10;
+        required double oil_severence_tax_percent = 11;
+        required double gas_serverance_tax_percent = 12;
+        required double nri_percent = 13;
+        required double total_months = 14;
+        required double nonproducing_months = 15;
+        required double well_cost = 16;
+        required double service_charge = 17;
+        required double monthly_opex = 18;
+        required double gas_price = 19;
+        required double oil_price = 20;
+        required double condensate_price = 21;
+        required string produced_gas_uom = 22;
+        required string produced_liquids_uom = 23;
+        optional string currency = 24;
+        optional StimulationFluids stim_fluids = 25;
+        optional Propants propants = 26;
+    }
+
+    message FractureNetworkSlices {
+        message FractureNetworkSlice {
+            message FractureTraces {
+                message FractureTrace {
+                    required string fracture_name = 1;
+                    optional string slice_name = 2;
+                    optional string trace_property_set_name = 3;
+                    optional string node_property_set_name = 4;
+                    optional string element_property_set_name = 5;
+                    optional string remark = 6;
+                    optional PropertyTableSet trace_property = 7;
+                    optional PolyMesh trace_geometry = 8;
+                }
+
+                required int32 num_traces = 1;
+                repeated FractureTrace trace = 2 [packed = false];
+            }
+
+            required string slice_name = 1;
+            required string slice_version = 2;
+            optional string property_set_name = 3;
+            optional int64 creation_time = 4;
+            optional int64 destruction_time = 5;
+            optional string remark = 6;
+            optional PropertyTableSet slice_property = 7;
+            optional PolyMesh slice_surface_geometry = 8;
+            optional FractureTraces fracture_traces = 9;
+        }
+
+        required int32 num_slice = 1;
+        repeated FractureNetworkSlice slice = 2 [packed = false];
+    }
+
+    message Fractures {
+        message Fracture {
+            message FractureProperties {
+                message FractureProperty {
+                    required string fracture_name = 1;
+                    required string property_set_name = 2;
+                    required int64 begin_time = 3;
+                    optional PropertyTableSet fracture_property = 4;
+                }
+
+                required int32 num_fracture_property = 1;
+                repeated FractureProperty fracture_property = 2 [packed = false];
+            }
+
+            enum FractureState {
+                UNKNOWN = 0;
+                UNPROPPED = 1;
+                PROPPED = 2;
+            }
+
+            message FractureSurfaceGeometries {
+                message FractureSurfaceGeometry {
+                    message FractureSurfaceProperties {
+                        message FractureSurfaceProperty {
+                            required string fracture_name = 1;
+                            required int64 begin_time = 2;
+                            required string fracture_surface_prop_name = 3;
+                            optional string element_property_set_name = 4;
+                            optional string node_property_set_name = 5;
+                            optional string remark = 6;
+                            optional PropertyTableSet surface_property = 7;
+                        }
+
+                        required int32 num_surface_property = 1;
+                        repeated FractureSurfaceProperty fracture_surface_property = 2 [packed = false];
+                    }
+
+                    message FractureSurfaceVolumes {
+                        message FractureSurfaceVolume {
+                            required string fracture_name = 1;
+                            required int64 begin_time = 2;
+                            optional double vol_average_width = 3;
+                            optional double vol_total_volume = 4;
+                            optional string remark = 5;
+                            optional PropertyTableSet vol_width = 6;
+                        }
+
+                        required int32 num_surface_volume = 1;
+                        repeated FractureSurfaceVolume surface_volume = 2 [packed = false];
+                    }
+
+                    required string fracture_name = 1;
+                    optional int64 begin_time = 2;
+                    optional string geometry_type = 3;
+                    optional double min_x = 4;
+                    optional double max_x = 5;
+                    optional double min_y = 6;
+                    optional double max_y = 7;
+                    optional float avg_surface_geom_length = 8;
+                    optional float avg_surface_geom_height = 9;
+                    optional float avg_surface_geom_strike = 10;
+                    optional float avg_surface_geom_dip = 11;
+                    optional float avg_surface_geom_area = 12;
+                    optional string remark = 13;
+                    optional PolyMesh surface_geom_mesh = 14;
+                    optional FractureSurfaceVolumes surface_volumes = 15;
+                    optional FractureSurfaceProperties surface_properties = 16;
+                }
+
+                required int32 num_surface_geometry = 1;
+                repeated FractureSurfaceGeometry surface_geometry = 2 [packed = false];
+            }
+
+            required string fracture_name = 1;
+            optional string fracture_source = 2;
+            optional string fracture_type = 3;
+            optional int64 creation_time = 4;
+            optional int64 destruction_time = 5;
+            optional string remark = 6;
+            optional FractureSurfaceGeometries geometries = 7;
+            optional FractureProperties fracture_properties = 8;
+            optional FractureState fracture_state = 9;
+        }
+
+        required int32 num_fracture = 1;
+        repeated Fracture fracture = 2 [packed = false];
+    }
+
+    message PolyMesh {
+        message CoordinateSet {
+            message Coordinates {
+                message Coordinate2D {
+                    required double X = 1;
+                    required double Y = 2;
+                }
+
+                message Coordinate3D {
+                    required double X = 1;
+                    required double Y = 2;
+                    required double Z = 3;
+                }
+
+                repeated Coordinate2D coord2D = 1 [packed = false];
+                repeated Coordinate3D coord3D = 2 [packed = false];
+            }
+
+            enum NumberDimensions {
+                TWOD = 2;
+                THREED = 3;
+            }
+
+            required NumberDimensions ndim = 1;
+            required Coordinates coords = 2;
+        }
+
+        message MeshSet {
+            enum GeometryType {
+                POLYLINE = 2;
+                TRIMESH = 3;
+                QUADMESH = 4;
+            }
+
+            message Mesh {
+                message Quadrilateral {
+                    required int32 coord1_idx = 1;
+                    required int32 coord2_idx = 2;
+                    required int32 coord3_idx = 3;
+                    required int32 coord4_idx = 4;
+                }
+
+                message Segment {
+                    required int32 coord1_idx = 1;
+                    required int32 coord2_idx = 2;
+                }
+
+                message Triangle {
+                    required int32 coord1_idx = 1;
+                    required int32 coord2_idx = 2;
+                    required int32 coord3_idx = 3;
+                }
+
+                repeated Segment polyline = 1 [packed = false];
+                repeated Triangle trimesh = 2 [packed = false];
+                repeated Quadrilateral quadmesh = 3 [packed = false];
+            }
+
+            required GeometryType geomType = 1;
+            required Mesh mesh = 2;
+        }
+
+        required MeshSet meshset = 1;
+        required CoordinateSet coordset = 2;
+    }
+
+    message PropertyTableSet {
+        message PropertyTable {
+            message PropertyInfo {
+                enum DataType {
+                    STRUCT = 0;
+                    INT = 1;
+                    FLOAT = 2;
+                    DOUBLE = 3;
+                    LONG = 4;
+                    STRING = 5;
+                    SHORT = 6;
+                    BYTE = 7;
+                    CHAR = 8;
+                }
+
+                message PropertyValues {
+                    required DataType data_type = 1;
+                    repeated string data_string = 2 [packed = false];
+                    repeated sint32 data_int = 3 [packed = false];
+                    repeated float data_float = 4 [packed = false];
+                    repeated double data_double = 5 [packed = false];
+                    repeated sint64 data_long = 6 [packed = false];
+                    repeated sint32 data_short = 7 [packed = false];
+                    optional bytes data_byte = 8;
+                }
+
+                required string name = 1;
+                required string property_type = 2;
+                required DataType data_type = 3;
+                optional string display_name = 4;
+                optional string remark = 5;
+                optional string unit_name = 6;
+                optional string unit_type = 7;
+                optional string property_category = 8;
+                required PropertyValues propertyValues = 9;
+            }
+
+            enum PropertySetNameType {
+                TRACE = 0;
+                NODE = 1;
+                ELEMENT = 2;
+                SLICE = 3;
+                FRACTURE = 4;
+                FRAC_NET = 5;
+                WIDTH = 6;
+            }
+
+            required PropertySetNameType propertySetNameType = 1;
+            repeated PropertyInfo propertyInfo = 2 [packed = false];
+        }
+
+        repeated PropertyTable propertyTable = 1 [packed = false];
+    }
+
+    message TreatmentWells {
+        message TreatmentWell {
+            message StimulationStages {
+                message StimulationStage {
+                    message PerforationIntervals {
+                        message PerforationInterval {
+                            required string name = 1;
+                            required double top_depth = 2;
+                            required double base_depth = 3;
+                        }
+
+                        required int32 num_perforation_intervals = 1;
+                        repeated PerforationInterval perforation = 2 [packed = false];
+                    }
+
+                    required string stage_name = 1;
+                    optional string start_time = 2;
+                    optional int64 duration = 3;
+                    optional PerforationIntervals perforations = 4;
+                }
+
+                required int32 num_stimulation_stages = 1;
+                repeated StimulationStage stages = 2 [packed = false];
+            }
+
+            required string uwi = 1;
+            optional StimulationStages stages = 2;
+        }
+
+        required int32 num_of_wells = 1;
+        repeated TreatmentWell well = 2 [packed = false];
+    }
+
+    optional Fractures fractures = 1;
+    optional FracNetPropertySets fracnet_prop_sets = 2;
+    optional FracNetProperties fracnet_properties = 3;
+    optional FractureNetworkSlices slices = 4;
+    optional TreatmentWells wells = 5;
+    optional FractureJobEconomics economics = 6;
+    optional string creation_time = 7;
+    optional string carto_system_name = 8;
+    optional string xyz_units = 9;
+    optional string time_units = 10;
+    optional string fracture_network_source = 11;
+    optional double average_formation_porosity = 12;
+    optional string porosity_uom = 13;
+    optional double average_formation_permeability = 14;
+    optional string permeability_uom = 15;
+    optional double total_surface_area = 16;
+    optional string width_uom = 17;
+    optional double average_stage_spacing = 18;
+    optional string z_units = 19;
+}

@@ -1,0 +1,43 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.LGCProtoBuf.LGCStructure
+
+syntax = "proto3";
+
+package dsis;
+
+message LGCStructure {
+    message LGCElement {
+        enum DataType {
+            STRUCT = 0;
+            INT = 1;
+            FLOAT = 2;
+            DOUBLE = 3;
+            LONG = 4;
+            STRING = 5;
+            SHORT = 6;
+            BYTE = 7;
+            CHAR = 8;
+        }
+
+        message LGCStructure {
+            string structName = 1;
+            repeated LGCElement elements = 3;
+        }
+
+        string elementName = 1;
+        DataType dataType = 2;
+        repeated string data_string = 3;
+        repeated sint32 data_int = 4;
+        repeated float data_float = 5;
+        repeated double data_double = 6;
+        repeated sint64 data_long = 7;
+        repeated LGCStructure data_struct = 8;
+        repeated sint32 data_short = 9;
+        bytes data_byte = 10;
+        string unitTypeName = 11;
+        string unitName = 12;
+    }
+
+    string structName = 1;
+    repeated LGCElement elements = 3;
+}

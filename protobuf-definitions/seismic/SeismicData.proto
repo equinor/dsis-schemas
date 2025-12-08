@@ -1,0 +1,24 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.SeismicDataBuf.SeismicData
+
+syntax = "proto3";
+
+package dsis;
+
+message SeismicData {
+    message Data {
+        repeated float data_float = 1;
+        repeated sint32 data_short = 2;
+        repeated sint32 data_int = 3;
+        bytes data_byte = 4;
+    }
+
+    message Index3 {
+        int32 i = 1;
+        int32 j = 2;
+        int32 k = 3;
+    }
+
+    Index3 length = 1;
+    Data data = 2;
+}

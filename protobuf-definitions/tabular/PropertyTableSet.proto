@@ -1,0 +1,59 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.PropertyTableBuf.PropertyTableSet
+
+syntax = "proto3";
+
+package dsis;
+
+message PropertyTableSet {
+    message PropertyTable {
+        message PropertyInfo {
+            enum DataType {
+                STRUCT = 0;
+                INT = 1;
+                FLOAT = 2;
+                DOUBLE = 3;
+                LONG = 4;
+                STRING = 5;
+                SHORT = 6;
+                BYTE = 7;
+                CHAR = 8;
+            }
+
+            message PropertyValues {
+                DataType data_type = 1;
+                repeated string data_string = 2;
+                repeated sint32 data_int = 3;
+                repeated float data_float = 4;
+                repeated double data_double = 5;
+                repeated sint64 data_long = 6;
+                repeated sint32 data_short = 7;
+                bytes data_byte = 8;
+            }
+
+            string name = 1;
+            string property_type = 2;
+            DataType data_type = 3;
+            string display_name = 4;
+            string remark = 5;
+            string unit_name = 6;
+            string unit_type = 7;
+            string property_category = 8;
+            PropertyValues propertyValues = 9;
+        }
+
+        enum PropertySetNameType {
+            TRACE = 0;
+            NODE = 1;
+            ELEMENT = 2;
+            SLICE = 3;
+            FRACTURE = 4;
+            FRAC_NET = 5;
+        }
+
+        PropertySetNameType propertySetNameType = 1;
+        repeated PropertyInfo propertyInfo = 2;
+    }
+
+    repeated PropertyTable propertyTable = 1;
+}

@@ -1,0 +1,18 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.FaultPlaneBuf.FaultPlane
+
+syntax = "proto3";
+
+package dsis;
+
+message FaultPlane {
+    message FaultSegment {
+        repeated double x = 1;
+        repeated double y = 2;
+        repeated double z = 3;
+        repeated double line_no = 4;
+        repeated double trace_no = 5;
+    }
+
+    repeated FaultSegment faultSegment = 1;
+}

@@ -1,0 +1,44 @@
+// Automatically generated based on the Java class definition of
+// com.lgc.bulkdata.SeismicDataHeaderBuf.SeismicDataHeader2D
+
+syntax = "proto2";
+
+package dsis;
+
+message SeismicDataHeader2D {
+    message CRS {
+        required string name = 1;
+        required bool isProjected = 2;
+    }
+
+    enum DataType {
+        FLOAT = 1;
+        SHORT = 2;
+        INT = 3;
+        BYTE = 4;
+    }
+
+    message Index2 {
+        required int32 i = 1;
+        optional int32 k = 2;
+    }
+
+    enum Mode {
+        XSLICE = 1;
+        YSLICE = 2;
+        TRACE = 3;
+        XY = 4;
+        YX = 5;
+        LIVETRACE = 6;
+        XSLICES = 7;
+        YSLICES = 8;
+        ZSLICE = 9;
+    }
+
+    required DataType dataType = 1;
+    required Index2 first = 2;
+    required Index2 length = 3;
+    required Index2 increment = 4;
+    required Mode mode = 5;
+    optional CRS navigationCRS = 6;
+}
