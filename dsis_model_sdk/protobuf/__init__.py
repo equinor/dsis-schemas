@@ -148,28 +148,6 @@ def _decode_length_delimited_protobuf(input_binary: bytes, target_protobuf: _M) 
     return target_protobuf
 
 
-# Helper function for length-prefixed messages
-def _skip_varint_length_prefix(binary_data: bytes) -> bytes:
-    """
-    Skip varint length prefix and return the actual message bytes.
-    
-    This is commonly used when protobuf messages are stored in files or
-    transmitted over streams where message boundaries need to be defined.
-
-    This method assumes the whole message is contained in a single length-prefixed block.
-    If multiple messages are concatenated, use _decode_varint in a loop to read each message
-    sequentially and keep track of the offset to the next one.
-    
-    Args:
-        binary_data: Binary data with varint length prefix
-        
-    Returns:
-        Binary data without the length prefix
-    """
-    (message_size, offset) = _decode_varint(binary_data, 0)
-    # Return only the message bytes (using length for boundary)
-    return binary_data[offset:offset + message_size]
-
 # Decoder functions
 def decode_horizon_data(binary_data: bytes, skip_length_prefix: bool = False) -> 'HorizonData3D_pb2.HorizonData3D':
     """
@@ -210,10 +188,11 @@ def decode_horizon_data(binary_data: bytes, skip_length_prefix: bool = False) ->
         ...         print(f"Sample {i}: col={col}, row={row}, z={val}")
     """
     _check_protobuf_available()
+    message = HorizonData3D_pb2.HorizonData3D() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = HorizonData3D_pb2.HorizonData3D()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -285,10 +264,11 @@ def decode_seismic_data(binary_data: bytes, skip_length_prefix: bool = False) ->
         ...     print(f"Short data: {len(decoded.data.data_short)} values")
     """
     _check_protobuf_available()
+    message = SeismicData_pb2.SeismicData() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = SeismicData_pb2.SeismicData()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -313,10 +293,11 @@ def decode_array_3f(binary_data: bytes, skip_length_prefix: bool = False) -> 'Ar
         >>> print(f"Data points: {len(decoded.data)}")
     """
     _check_protobuf_available()
+    message = Array3FBuf_pb2.Array3FBuf() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = Array3FBuf_pb2.Array3FBuf()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -448,10 +429,11 @@ def decode_property_table_set(binary_data: bytes, skip_length_prefix: bool = Fal
         Exception: If binary data is invalid or corrupted
     """
     _check_protobuf_available()
+    message = PropertyTableSet_pb2.PropertyTableSet() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = PropertyTableSet_pb2.PropertyTableSet()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
