@@ -35,7 +35,7 @@ pip install -e .
 
 ### Dependencies
 
-- Python 3.8+
+- Python 3.9+
 - Pydantic 2.0+
 - typing-extensions 4.0+
 
