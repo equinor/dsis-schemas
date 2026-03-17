@@ -34,6 +34,7 @@ Note:
     The protobuf package is optional. Install with:
     pip install dsis-schemas[protobuf]
 """
+from typing import Tuple, TypeVar
 
 # Import generated protobuf modules
 try:
@@ -69,32 +70,82 @@ except ImportError as e:
     _import_error = str(e)
 
 
-# Helper function for length-prefixed messages
-def _skip_varint_length_prefix(binary_data: bytes) -> bytes:
-    """
-    Skip varint length prefix and return the actual message bytes.
-    
-    This is commonly used when protobuf messages are stored in files or
-    transmitted over streams where message boundaries need to be defined.
-    
-    Args:
-        binary_data: Binary data with varint length prefix
-        
+
+def _decode_varint(data: bytes, offset: int) -> Tuple[int, int]:
+    """Decode a varint to find the size of the subsequent message and the offset where it starts.
+
+    A varint is a variable-length encoding for integers used in protobuf to record the size of the subsequent message.
+
+    Each byte of the varint  has the most significant bit (MSB) as a continuation flag.
+    The remaining 7 bits of each byte contribute to the integer value.
+    The varint ends when a byte with MSB=0 is encountered (meaning no continuation).
+
     Returns:
-        Binary data without the length prefix
+    (message_size, message_start): the message size (decoded int value) and the byte offset where it starts (after the decoded int)
+
+    Raises:
+    ValueError: If the varint is malformed or exceeds expected length
     """
     result = 0
     shift = 0
-    offset = 0
-    while offset < len(binary_data):
-        byte = binary_data[offset]
-        result |= (byte & 0x7f) << shift
+    while True:
+        if offset >= len(data):
+            raise ValueError("Unexpected end of data while decoding varint.")
+        byte = data[offset]
+        result |= (byte & 0x7F) << shift
         offset += 1
         if not (byte & 0x80):
-            break
+            return result, offset
         shift += 7
-    # Return only the message bytes (using length for boundary)
-    return binary_data[offset:offset + result]
+        if shift > 64:
+            raise ValueError("Varint is too long, possible overflow or malformed data.")
+
+# All protobuf messages (such as LGCStructure, HorizonData3D, etc.) inherit from google.protobuf.message.Message
+# With this, we bind that to a generic type _M so when a specific subbclass of Message is used, the type hinting
+# will know which one it is and provide better autocompletion and type checking.
+try:
+    from google.protobuf.message import Message as _PbMessage
+    _M = TypeVar('_M', bound=_PbMessage)
+except ImportError:
+    _M = TypeVar('_M')  # type: ignore[misc]
+
+
+def _decode_length_delimited_protobuf(input_binary: bytes, target_protobuf: _M) -> _M:  # type: ignore[return]
+    """
+    Decode one or more length-delimited protobuf messages
+
+    DSIS returns bulk protobuf payloads as lenght-delimited streams: a series of one or more messages,
+    where each message is prefixed by a varint indicating its size, followed by the message bytes.
+    This function reads all the messages in a payload, merging them into a single message.
+
+    Args:
+        input_binary: The raw bytes as received from the API.
+        target_protobuf: A pre-instantiated (empty) object of any protobuf type (e.g. LGCStructure, HorizonData3D, etc.)
+        Important: the object is modified in place and returned for convenience, but the caller can also
+        just use the modified object without relying on the return value.
+
+    Returns:
+        The same target_protobuf object, now populated with the decoded data. 
+
+    Raises:
+        ValueError: If a varint is malformed or data is truncated.
+
+    Example:
+        >>> lgc_structure = LGCStructure_pb2.LGCStructure()
+        >>> lgc_structure = _decode_length_delimited_protobuf(binary_data, lgc_structure)
+    """
+    offset = 0
+    msg_count = 0
+    while offset < len(input_binary):
+        msg_size, msg_start = _decode_varint(input_binary, offset) # Read and decode the size of the next message
+        msg_binary = input_binary[msg_start:msg_start + msg_size]  # Extract the actual message bytes
+        if msg_count == 0:
+            target_protobuf.ParseFromString(msg_binary)            # First message goes into empty buffer
+        else:
+            target_protobuf.MergeFromString(msg_binary)            # Subsequent messages are appended
+        offset = msg_start + msg_size
+        msg_count += 1
+    return target_protobuf
 
 
 # Decoder functions
@@ -137,10 +188,11 @@ def decode_horizon_data(binary_data: bytes, skip_length_prefix: bool = False) ->
         ...         print(f"Sample {i}: col={col}, row={row}, z={val}")
     """
     _check_protobuf_available()
+    message = HorizonData3D_pb2.HorizonData3D() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = HorizonData3D_pb2.HorizonData3D()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -212,10 +264,11 @@ def decode_seismic_data(binary_data: bytes, skip_length_prefix: bool = False) ->
         ...     print(f"Short data: {len(decoded.data.data_short)} values")
     """
     _check_protobuf_available()
+    message = SeismicData_pb2.SeismicData() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = SeismicData_pb2.SeismicData()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -240,10 +293,11 @@ def decode_array_3f(binary_data: bytes, skip_length_prefix: bool = False) -> 'Ar
         >>> print(f"Data points: {len(decoded.data)}")
     """
     _check_protobuf_available()
+    message = Array3FBuf_pb2.Array3FBuf() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = Array3FBuf_pb2.Array3FBuf()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
@@ -267,13 +321,17 @@ def decode_array_2f(binary_data: bytes) -> 'Array2FBuf_pb2.Array2FBuf':
     return message
 
 
-def decode_lgc_structure(binary_data: bytes, skip_length_prefix: bool = False) -> 'LGCStructure_pb2.LGCStructure':
+def decode_lgc_structure(binary_data: bytes) -> 'LGCStructure_pb2.LGCStructure': # type: ignore[name-defined]
     """
     Decode binary tabular data into structured LGCStructure protobuf message.
+
+    The payload is a length-delimited protobuf stream: one or more
+    concatenated messages, each prefixed by a varint indicating its size.
+    The first message initialises the structure; subsequent messages are
+    merged to build the complete table.
     
     Args:
-        binary_data: Binary bytes containing tabular data
-        skip_length_prefix: If True, skips varint length prefix (for file storage)
+        binary_data: Binary bytes containing tabular data (length-delimited)
         
     Returns:
         LGCStructure protobuf message with decoded tabular structure
@@ -285,21 +343,15 @@ def decode_lgc_structure(binary_data: bytes, skip_length_prefix: bool = False) -
     Example:
         >>> from dsis_model_sdk.protobuf import decode_lgc_structure
         >>> 
-        >>> # Decode with length prefix (common in file storage)
-        >>> decoded = decode_lgc_structure(file_data, skip_length_prefix=True)
-        >>> 
-        >>> # Access structure
+        >>> decoded = decode_lgc_structure(raw_bytes)
         >>> print(f"Structure: {decoded.structName}")
         >>> for element in decoded.elements:
         ...     print(f"Element: {element.elementName}, Type: {element.dataType}")
     """
     _check_protobuf_available()
-    if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = LGCStructure_pb2.LGCStructure()
-    message.ParseFromString(binary_data)
+    message = LGCStructure_pb2.LGCStructure() # type: ignore[attr-defined]
+    _decode_length_delimited_protobuf(binary_data, message)
     return message
-
 
 def decode_fault_plane(binary_data: bytes) -> 'FaultPlane_pb2.FaultPlane':
     """
@@ -377,10 +429,11 @@ def decode_property_table_set(binary_data: bytes, skip_length_prefix: bool = Fal
         Exception: If binary data is invalid or corrupted
     """
     _check_protobuf_available()
+    message = PropertyTableSet_pb2.PropertyTableSet() # type: ignore[attr-defined]
     if skip_length_prefix:
-        binary_data = _skip_varint_length_prefix(binary_data)
-    message = PropertyTableSet_pb2.PropertyTableSet()
-    message.ParseFromString(binary_data)
+        _decode_length_delimited_protobuf(binary_data, message)
+    else:
+        message.ParseFromString(binary_data)
     return message
 
 
