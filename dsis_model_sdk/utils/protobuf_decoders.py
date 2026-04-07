@@ -294,10 +294,95 @@ def seismic_2d_to_numpy(decoded_seismic):
     return array, metadata
 
 
+def lgc_element_to_numpy1d(
+    lgc_element: Any # LGCStructure_pb2.LGCStructure.LGCElement - defined as Any to avoid forward reference issues without importing protobuf at the top level
+) -> np.ndarray:
+    """
+    Extract data values from an LGCElement as a 1-D numpy array.
+    Args:
+    lgc_element: LGCStructure_pb2.LGCStructure.LGCElement protobuf message containing data and data type information.
+    Returns:
+    1-D numpy array of the element's data values with appropriate dtype based on the element's dataType field
+    """
+    try:
+        from dsis_model_sdk.protobuf import LGCStructure_pb2
+    except ImportError:
+        import sys
+        import os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'protobuf'))
+        import LGCStructure_pb2
+
+    DataType = LGCStructure_pb2.LGCStructure.LGCElement.DataType
+
+    dt = lgc_element.dataType
+    if dt == DataType.Value('FLOAT'):
+        return np.array(lgc_element.data_float, dtype=np.float32)
+    elif dt == DataType.Value('DOUBLE'):
+        return np.array(lgc_element.data_double, dtype=np.float64)
+    elif dt == DataType.Value('INT'):
+        return np.array(lgc_element.data_int, dtype=np.int32)
+    elif dt == DataType.Value('LONG'):
+        return np.array(lgc_element.data_long, dtype=np.int64)
+    elif dt == DataType.Value('SHORT'):
+        return np.array(lgc_element.data_short, dtype=np.int16)
+    elif dt == DataType.Value('STRING'):
+        return np.array(lgc_element.data_string, dtype=object)
+    elif dt == DataType.Value('BYTE'):
+        return np.frombuffer(lgc_element.data_byte, dtype=np.uint8)
+    elif dt == DataType.Value('CHAR'):
+        return np.frombuffer(lgc_element.data_byte, dtype=np.uint8)
+    else:
+        raise ValueError(f"Unsupported LGCElement data type: {dt}")
+
+
+def lgc_structure_to_numpy2d(
+    lgc_structure: Any,  # LGCStructure_pb2.LGCStructure - defined as Any to avoid forward reference issues without importing protobuf at the top level
+    cartesian_origin: bool = True,
+    znon: Optional[float] = None,
+    max_abs_value: Optional[float] = 1.0e15
+) -> np.ndarray:
+    """
+    Convert decoded LGC structure (repeated elements/cols, each with repeated datatype value lists/rows)
+    to 2D numpy array.
+
+    Args:
+        lgc_structure: LGCStructure_pb2.LGCStructure containing repeated LGCElement messages for each column
+        cartesian_origin: If True (default), reverse the order of rows in each column. This converts
+        from OpenWorks "matrix" convention (rows counted from top-to-bottom, origin at top-left)
+        to a "Cartesian" convention (rows counted from bottom-to-top, origin at bottom-left),
+        which is the expected convention in xtgeo and downstream consumers.
+        znon: (only for float data) If provided, replace occurrences of this exact value with NaN.
+        Typically set by apps to sentinel dummy values like -999.25 or -9999 to represent null values
+        max_abs_value: (only for float data) If provided, replace values with absolute value
+        greater than or equal to this threshold with NaN.
+    """
+
+    first_element = lgc_element_to_numpy1d(lgc_structure.elements[0])
+    ncols = len(lgc_structure.elements)
+    nrows = len(first_element)
+    datatype = first_element.dtype
+
+    extracted_array = np.zeros((ncols, nrows), dtype=datatype)
+    for element in lgc_structure.elements:
+        values = lgc_element_to_numpy1d(element)
+        if cartesian_origin:
+            extracted_array[int(element.elementName)] = values[::-1]
+        else:
+            extracted_array[int(element.elementName)] = values
+    if datatype in (np.float32, np.float64):
+        if znon is not None:
+            extracted_array[extracted_array == znon] = np.nan
+        if max_abs_value is not None:
+            extracted_array[np.abs(extracted_array) >= max_abs_value] = np.nan
+    return extracted_array
+
+
 __all__ = [
     'horizon_to_numpy',
     'horizon_samples_to_dict',
     'log_curve_to_dict',
     'seismic_3d_to_numpy',
     'seismic_2d_to_numpy',
+    'lgc_element_to_numpy1d',
+    'lgc_structure_to_numpy2d',
 ]
