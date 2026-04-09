@@ -230,67 +230,33 @@ decoded = decode_horizon_data(horizon.data)
 
 ### Decoding Surface Grid Data (LGCStructure)
 
-Surface grids and tabular data are often stored as LGCStructure (LogCurve-like Structure) in DSIS. This format stores columnar data efficiently.
+Surface grids and tabular data are often stored as LGCStructure in DSIS. This format stores columnar data efficiently.
 
 ```python
+import numpy as np
 from dsis_model_sdk.protobuf import decode_lgc_structure
+from dsis_model_sdk.utils.protobuf_decoders import lgc_structure_to_numpy2d
 
-# Decode surface grid binary file (commonly stored with varint length prefix)
 with open('surface.bin', 'rb') as f:
     binary_data = f.read()
 
-# Use skip_length_prefix=True for files with varint length prefix
-decoded = decode_lgc_structure(binary_data, skip_length_prefix=True)
+decoded = decode_lgc_structure(binary_data) # LGCStructure_pb2.LGCStructure
 
-print(f"Structure name: {decoded.structName}")
-print(f"Number of columns: {len(decoded.elements)}")
+# znon is the null-value marker and can be obtained form the SurfaceGrid / SurfaceGridProperties endpoints
+grid_array: np.ndarray = lgc_structure_to_numpy2d(decoded, znon=-999.25, max_abs_value=1e15)
 
-# Access column data
-for i, element in enumerate(decoded.elements[:5]):
-    print(f"\nColumn {i}: {element.elementName}")
-    print(f"  Data type: {element.dataType}")
-    
-    if element.data_float:
-        # Filter out null values (typically -99999.0)
-        values = [v for v in element.data_float if v != -99999.0]
-        print(f"  Float values: {len(element.data_float)} total, {len(values)} non-null")
-        if values:
-            print(f"  Range: {min(values):.2f} to {max(values):.2f}")
-    elif element.data_double:
-        print(f"  Double values: {len(element.data_double)}")
-    elif element.data_int:
-        print(f"  Integer values: {len(element.data_int)}")
-    elif element.data_string:
-        print(f"  String values: {len(element.data_string)}")
-
-# Example: Convert to pandas DataFrame
-import pandas as pd
-
-data_dict = {}
-for element in decoded.elements:
-    col_name = element.elementName or f"col_{element.elementName}"
-    if element.data_float:
-        data_dict[col_name] = list(element.data_float)
-    elif element.data_double:
-        data_dict[col_name] = list(element.data_double)
-    elif element.data_int:
-        data_dict[col_name] = list(element.data_int)
-    elif element.data_string:
-        data_dict[col_name] = list(element.data_string)
-
-df = pd.DataFrame(data_dict)
-print(f"\nDataFrame shape: {df.shape}")
-print(df.head())
+print(grid_array.shape) # (ncols, nrows)
+print(grid_array.dtype) # e.g. dtype('float32')
 ```
 
 ### Supported Bulk Data Types
 
 | Data Type | Protobuf Decoder | Content | Length Prefix |
 |-----------|------------------|---------|---------------|
-| **Horizon 3D** | `decode_horizon_data()` | Interpreted surface z-values | Optional |
+| **Horizon 3D** | `decode_horizon_data()` | Interpreted z-values on regular grid OR xyz points | Optional |
 | **Log Curves** | `decode_log_curves()` | Well log measurements vs depth/time | Optional |
 | **Seismic 3D** | `decode_seismic_data()` | 3D seismic amplitude volume | Optional |
-| **Surface Grid** | `decode_lgc_structure()` | Tabular/columnar surface data | Optional |
+| **Surface Grid** | `decode_lgc_structure()` | Interpreted z-values on regular grid | Yes |
 | **Property Tables** | `decode_property_table_set()` | Property attribute tables | Optional |
 | **3D Float Array** | `decode_array_3f()` | Generic 3D float arrays | Optional |
 | **Fault Plane** | `decode_fault_plane()` | Fault surface geometry | No |
