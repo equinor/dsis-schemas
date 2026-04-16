@@ -302,9 +302,12 @@ Generated on: {datetime.now().isoformat()}
         if max_length and json_type == 'string' and format_type not in ('date', 'time', 'date-time'):
             config_parts.append(f"max_length={max_length}")
 
-        # Add numeric constraints
+        # Add numeric constraints — only for integer fields.
+        # Skip multiple_of for float/number fields: the JSON Schema multipleOf
+        # reflects nominal DB column scale, but actual values routinely exceed
+        # that precision (e.g. rotation_j = π/2 = 1.5707963267948966).
         multiple_of = field_schema.get('multipleOf')
-        if multiple_of and json_type in ('number', 'integer'):
+        if multiple_of and json_type == 'integer':
             config_parts.append(f"multiple_of={multiple_of}")
 
         return ', '.join(config_parts) if config_parts else ""
