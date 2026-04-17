@@ -144,8 +144,9 @@ def get_pydantic_field_config(
     if json_type == "string" and max_length:
         config['max_length'] = max_length
     
-    # Add numeric constraints
-    if json_type in ("number", "integer") and multiple_of:
+    # Add numeric constraints (skip multiple_of for floating-point fields where
+    # DB precision metadata doesn't reflect actual data precision)
+    if json_type == "integer" and multiple_of:
         config['multiple_of'] = multiple_of
     
     # Add format validation
