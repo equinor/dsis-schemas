@@ -3,7 +3,7 @@ InterpretationProcess Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.InterpretationProcess
-Generated on: 2025-10-09T21:15:04.758561
+Generated on: 2026-04-17T09:03:28.696809
 """
 
 from typing import Optional, Dict, Any

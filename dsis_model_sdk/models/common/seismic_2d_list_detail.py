@@ -3,7 +3,7 @@ Seismic2DListDetail Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.Seismic2DListDetail
-Generated on: 2025-10-09T21:14:54.956383
+Generated on: 2026-04-17T09:03:28.290772
 """
 
 from typing import Optional, Dict, Any

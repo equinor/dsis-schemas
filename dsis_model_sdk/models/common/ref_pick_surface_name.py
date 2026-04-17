@@ -3,7 +3,7 @@ RefPickSurfaceName Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RefPickSurfaceName
-Generated on: 2025-10-09T21:14:54.952384
+Generated on: 2026-04-17T09:03:28.280533
 """
 
 from typing import Optional, Dict, Any

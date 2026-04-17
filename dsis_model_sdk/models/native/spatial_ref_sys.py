@@ -3,7 +3,7 @@ SpatialRefSys Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: SYS.spatial_ref_sys
-Generated on: 2025-10-09T21:15:05.068742
+Generated on: 2026-04-17T09:03:29.178835
 """
 
 from typing import Optional, Dict, Any

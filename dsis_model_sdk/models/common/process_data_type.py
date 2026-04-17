@@ -3,7 +3,7 @@ ProcessDataType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.ProcessDataType
-Generated on: 2025-10-09T21:14:54.942036
+Generated on: 2026-04-17T09:03:28.261433
 """
 
 from typing import Optional, Dict, Any

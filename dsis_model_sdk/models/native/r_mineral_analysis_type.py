@@ -3,7 +3,7 @@ RMineralAnalysisType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RMineralAnalysisType
-Generated on: 2025-10-09T21:15:04.892661
+Generated on: 2026-04-17T09:03:28.881882
 """
 
 from typing import Optional, Dict, Any

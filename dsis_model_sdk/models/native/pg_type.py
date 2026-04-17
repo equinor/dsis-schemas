@@ -3,7 +3,7 @@ PgType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.pg_type
-Generated on: 2025-10-09T21:15:05.116586
+Generated on: 2026-04-17T09:03:29.203191
 """
 
 from typing import Optional, Dict, Any

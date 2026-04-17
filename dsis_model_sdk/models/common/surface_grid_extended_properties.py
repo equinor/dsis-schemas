@@ -3,7 +3,7 @@ SurfaceGridExtendedProperties Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.SurfaceGridExtendedProperties
-Generated on: 2025-10-09T21:14:54.962819
+Generated on: 2026-04-17T09:03:28.305864
 """
 
 from typing import Optional, Dict, Any

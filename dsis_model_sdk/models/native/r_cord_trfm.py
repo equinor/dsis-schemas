@@ -3,7 +3,7 @@ RCordTrfm Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RCordTrfm
-Generated on: 2025-10-09T21:15:04.868099
+Generated on: 2026-04-17T09:03:28.842470
 """
 
 from typing import Optional, Dict, Any

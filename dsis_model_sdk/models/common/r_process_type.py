@@ -3,7 +3,7 @@ RProcessType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RProcessType
-Generated on: 2025-10-09T21:14:54.944822
+Generated on: 2026-04-17T09:03:28.268464
 """
 
 from typing import Optional, Dict, Any

@@ -3,7 +3,7 @@ Horizon2DAttribute Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.Horizon2DAttribute
-Generated on: 2025-10-09T21:15:04.731210
+Generated on: 2026-04-17T09:03:28.650525
 """
 
 from typing import Optional, Dict, Any

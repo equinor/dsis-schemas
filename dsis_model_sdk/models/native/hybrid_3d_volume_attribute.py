@@ -3,7 +3,7 @@ Hybrid3DVolumeAttribute Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.Hybrid3DVolumeAttribute
-Generated on: 2025-10-09T21:15:04.743143
+Generated on: 2026-04-17T09:03:28.668850
 """
 
 from typing import Optional, Dict, Any

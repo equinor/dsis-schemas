@@ -3,7 +3,7 @@ Seismic3DCoveragePolygon Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.Seismic3DCoveragePolygon
-Generated on: 2025-10-09T21:15:04.940477
+Generated on: 2026-04-17T09:03:28.973583
 """
 
 from typing import Optional, Dict, Any

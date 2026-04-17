@@ -3,7 +3,7 @@ RefCoreAnalysisType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RefCoreAnalysisType
-Generated on: 2025-10-09T21:14:54.946271
+Generated on: 2026-04-17T09:03:28.270473
 """
 
 from typing import Optional, Dict, Any

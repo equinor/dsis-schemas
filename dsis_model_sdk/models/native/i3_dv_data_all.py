@@ -3,7 +3,7 @@ I3DVDataAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.I3DVDataAll
-Generated on: 2025-10-09T21:15:04.744840
+Generated on: 2026-04-17T09:03:28.673622
 """
 
 from typing import Optional, Dict, Any

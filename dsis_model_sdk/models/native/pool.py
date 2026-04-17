@@ -3,7 +3,7 @@ Pool Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.Pool
-Generated on: 2025-10-09T21:15:04.850282
+Generated on: 2026-04-17T09:03:28.812549
 """
 
 from typing import Optional, Dict, Any

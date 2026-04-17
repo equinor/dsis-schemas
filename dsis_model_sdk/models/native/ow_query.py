@@ -3,7 +3,7 @@ OwQuery Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.OwQuery
-Generated on: 2025-10-09T21:15:04.817577
+Generated on: 2026-04-17T09:03:28.768410
 """
 
 from typing import Optional, Dict, Any
