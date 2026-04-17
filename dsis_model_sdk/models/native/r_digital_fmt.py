@@ -3,7 +3,7 @@ RDigitalFmt Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RDigitalFmt
-Generated on: 2025-10-09T21:15:04.872264
+Generated on: 2026-04-17T09:03:28.850504
 """
 
 from typing import Optional, Dict, Any

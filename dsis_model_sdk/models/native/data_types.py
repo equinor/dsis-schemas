@@ -3,7 +3,7 @@ DataTypes Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: SYS.DataTypes
-Generated on: 2025-10-09T21:15:05.060518
+Generated on: 2026-04-17T09:03:29.167812
 """
 
 from typing import Optional, Dict, Any

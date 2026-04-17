@@ -3,7 +3,7 @@ RHorizonName Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RHorizonName
-Generated on: 2025-10-09T21:15:04.884879
+Generated on: 2026-04-17T09:03:28.867798
 """
 
 from typing import Optional, Dict, Any

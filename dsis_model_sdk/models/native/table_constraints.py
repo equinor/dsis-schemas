@@ -3,7 +3,7 @@ TableConstraints Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: pg_catalog.information_schema.table_constraints
-Generated on: 2025-10-09T21:15:05.076611
+Generated on: 2026-04-17T09:03:29.187390
 """
 
 from typing import Optional, Dict, Any

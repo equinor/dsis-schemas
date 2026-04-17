@@ -3,7 +3,7 @@ GeodeticSurfaceLocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.GeodeticSurfaceLocation
-Generated on: 2025-10-09T21:15:04.714040
+Generated on: 2026-04-17T09:03:28.626615
 """
 
 from typing import Optional, Dict, Any

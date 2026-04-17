@@ -3,7 +3,7 @@ PdmGroupAlloc Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.PdmGroupAlloc
-Generated on: 2025-10-09T21:15:04.835457
+Generated on: 2026-04-17T09:03:28.793499
 """
 
 from typing import Optional, Dict, Any
@@ -32,7 +32,7 @@ class PdmGroupAlloc(BaseModel):
     data_source: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=5)
     allocation_date: datetime = Field(description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")
     product_type: str = Field(description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=12)
-    allocation_factor: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')", multiple_of=0.001)
+    allocation_factor: Optional[float] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('FLOAT', 'REAL', 'DOUBLE')")
     allocation_factor_dsdsunit: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=64)
     remark: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=2000)
     create_date: Optional[datetime] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('TIMESTAMP')")

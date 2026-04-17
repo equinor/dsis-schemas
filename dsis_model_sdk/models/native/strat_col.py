@@ -3,7 +3,7 @@ StratCol Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.StratCol
-Generated on: 2025-10-09T21:15:04.961246
+Generated on: 2026-04-17T09:03:28.993558
 """
 
 from typing import Optional, Dict, Any

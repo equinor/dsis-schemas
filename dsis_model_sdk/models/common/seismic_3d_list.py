@@ -3,7 +3,7 @@ Seismic3DList Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.Seismic3DList
-Generated on: 2025-10-09T21:14:54.957276
+Generated on: 2026-04-17T09:03:28.293418
 """
 
 from typing import Optional, Dict, Any

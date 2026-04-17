@@ -3,7 +3,7 @@ RefTrajectoryShape Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.RefTrajectoryShape
-Generated on: 2025-10-09T21:14:54.953333
+Generated on: 2026-04-17T09:03:28.283758
 """
 
 from typing import Optional, Dict, Any

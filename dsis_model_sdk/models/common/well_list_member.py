@@ -3,7 +3,7 @@ WellListMember Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.WellListMember
-Generated on: 2025-10-09T21:14:54.978178
+Generated on: 2026-04-17T09:03:28.339745
 """
 
 from typing import Optional, Dict, Any

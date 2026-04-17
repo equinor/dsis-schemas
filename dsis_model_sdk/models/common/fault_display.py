@@ -3,7 +3,7 @@ FaultDisplay Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.FaultDisplay
-Generated on: 2025-10-09T21:14:54.909836
+Generated on: 2026-04-17T09:03:28.200552
 """
 
 from typing import Optional, Dict, Any

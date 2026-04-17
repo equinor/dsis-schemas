@@ -3,7 +3,7 @@ LogCurveQualifier Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.LogCurveQualifier
-Generated on: 2025-10-09T21:14:54.931741
+Generated on: 2026-04-17T09:03:28.235250
 """
 
 from typing import Optional, Dict, Any

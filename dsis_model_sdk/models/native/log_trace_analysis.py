@@ -3,7 +3,7 @@ LogTraceAnalysis Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.LogTraceAnalysis
-Generated on: 2025-10-09T21:15:04.782444
+Generated on: 2026-04-17T09:03:28.728831
 """
 
 from typing import Optional, Dict, Any

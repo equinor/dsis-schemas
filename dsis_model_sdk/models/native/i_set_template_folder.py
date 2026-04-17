@@ -3,7 +3,7 @@ ISetTemplateFolder Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.ISetTemplateFolder
-Generated on: 2025-10-09T21:15:04.753586
+Generated on: 2026-04-17T09:03:28.687787
 """
 
 from typing import Optional, Dict, Any

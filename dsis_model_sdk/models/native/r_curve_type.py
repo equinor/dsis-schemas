@@ -3,7 +3,7 @@ RCurveType Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.RCurveType
-Generated on: 2025-10-09T21:15:04.871204
+Generated on: 2026-04-17T09:03:28.848475
 """
 
 from typing import Optional, Dict, Any

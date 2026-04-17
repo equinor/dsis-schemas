@@ -3,7 +3,7 @@ ISetFolder Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.ISetFolder
-Generated on: 2025-10-09T21:15:04.752695
+Generated on: 2026-04-17T09:03:28.685783
 """
 
 from typing import Optional, Dict, Any

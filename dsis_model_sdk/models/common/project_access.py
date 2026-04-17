@@ -3,7 +3,7 @@ ProjectAccess Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.ProjectAccess
-Generated on: 2025-10-09T21:14:54.942727
+Generated on: 2026-04-17T09:03:28.263950
 """
 
 from typing import Optional, Dict, Any

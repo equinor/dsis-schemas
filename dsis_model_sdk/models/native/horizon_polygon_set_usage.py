@@ -3,7 +3,7 @@ HorizonPolygonSetUsage Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.HorizonPolygonSetUsage
-Generated on: 2025-10-09T21:15:04.739004
+Generated on: 2026-04-17T09:03:28.663689
 """
 
 from typing import Optional, Dict, Any

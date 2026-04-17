@@ -2,7 +2,7 @@
 DSIS SDK Common Models
 
 Auto-generated model imports for all common entities.
-Generated on: 2025-10-09T21:14:54.994020
+Generated on: 2026-04-17T09:03:28.365711
 """
 
 from .base import BaseModel

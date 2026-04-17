@@ -3,7 +3,7 @@ FracturePropertyAll Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OW5000.FracturePropertyAll
-Generated on: 2025-10-09T21:15:04.704436
+Generated on: 2026-04-17T09:03:28.612436
 """
 
 from typing import Optional, Dict, Any
