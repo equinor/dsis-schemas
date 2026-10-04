@@ -170,6 +170,7 @@
     "npts",
     "md_unit",
     "tvd_unit",
-    "xy_offset_unit"
+    "xy_offset_unit",
+    "data"
   ]
 }

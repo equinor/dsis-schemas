@@ -16,37 +16,37 @@
     },
     "map_data_set_name": {
       "type": "string",
-      "maxLength": 24,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "geo_type": {
       "type": "string",
-      "maxLength": 10,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "geo_name": {
       "type": "string",
-      "maxLength": 255,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "attribute": {
       "type": "string",
-      "maxLength": 40,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "data_source": {
       "type": "string",
-      "maxLength": 5,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "geologic_feature": {
       "type": "string",
-      "maxLength": 40,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "fault_set_type": {
       "type": "string",
-      "maxLength": 12,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "crs": {
@@ -56,12 +56,12 @@
     },
     "data_domain": {
       "type": "string",
-      "maxLength": 12,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "z_domain_qualifier": {
       "type": "string",
-      "maxLength": 24,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "x_min": {

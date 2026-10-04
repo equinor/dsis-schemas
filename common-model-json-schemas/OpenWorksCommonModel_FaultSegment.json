@@ -265,6 +265,7 @@
     "max_z",
     "crs",
     "z_domain",
-    "z_unit"
+    "z_unit",
+    "data"
   ]
 }

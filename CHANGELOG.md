@@ -2,6 +2,18 @@
 
 All notable changes to `dsis-schemas` will be documented in this file.
 
+## [0.0.11] - 2026-10-04
+
+### Fixed
+- Re-validated `common-model-json-schemas/` against a fresh `OpenWorksCommonModel_10_7.ddl` re-export and corrected drift found in 12 entities:
+  - `data` is `NOT NULL` in the DDL but was missing from `required`: `DirectionalSurvey`, `PositionLog`, `TimeDepthTable`, `WellCoreAnalysis`, `WellCoreDescription`, `FaultSegment`, `MappingPolygon`.
+  - `maxLength` widened from stale values to `4000` to match the DDL's `VARCHAR(4000)`: `HorizonData3D`, `HorizonProperties3D`, `SurfaceGrid`, `SurfaceGridProperties`.
+  - `SeismicDataSet3D.file_exists` was typed `integer`; DDL declares it `BOOLEAN` — now typed `boolean`.
+- Regenerated the 12 affected Pydantic models in `dsis_model_sdk/models/common/` to match.
+
+### Known gaps
+- Several fields present in the current schemas/SDK are absent from the `10_7` DDL re-export and were intentionally left unchanged pending confirmation they're actually deprecated: `Wellbore.edm_wb_elevation`/`.edm_wb_elevation_unit`, `WellCoreAnalysis.wellbore_uwi`, `WellListMember.wellbore_name`, `HorizonData2D`/`HorizonData3D.name_state`, `SiteTemplates.use_letters`, and 12 `PlannedWell.wrp_*` fields.
+
 ## [0.0.10] - 2026-10-04
 
 ### Fixed

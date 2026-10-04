@@ -16,27 +16,27 @@
     },
     "horizon_name": {
       "type": "string",
-      "maxLength": 60,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "data_source": {
       "type": "string",
-      "maxLength": 5,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "horizon_attribute_name": {
       "type": "string",
-      "maxLength": 40,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "interpretation_version_name": {
       "type": "string",
-      "maxLength": 40,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "interpretation_status": {
       "type": "string",
-      "maxLength": 12,
+      "maxLength": 4000,
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "horizon_class": {
