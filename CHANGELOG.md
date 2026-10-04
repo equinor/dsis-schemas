@@ -8,6 +8,9 @@ All notable changes to `dsis-schemas` will be documented in this file.
 - Complex-type BLOB fields (`isComplexType=true` in the DDL) were mis-typed as `bytes`/binary instead of the decoded JSON objects DSIS actually serves, causing `ValidationError` on `Model(**row)`. Affected fields now type as `Optional[Dict[str, Any]]`: `FaultSegment.data`, `FaultPlaneTrimesh.vertices`/`.triangles`, `FaultTrimesh.vertices`/`.triangles`, `MappingPolygon.data`/`.spatial`, `Project.spatial`, `Well.surface_location_point`, `Wellbore.bh_location_point`, `DirectionalSurvey.data`, `PositionLog.data`, `TimeDepthTable.data`, `WellCoreAnalysis.data`, `WellCoreDescription.data`, `BinsetGrid3DGrid.spatial`, `Seis2DLine.shotpoints`/`.orig_shotpoints`/`.mappings`/`.spatial`, `wellplanlocation.spatial`. Also dropped `data` from `required` on entities where it isn't returned without an explicit `$select`.
 - Truly-binary BLOBs (e.g. `HorizonData3D`, `LogCurve`, `SeismicData`, served as protobuf) are unaffected and remain `bytes`.
 
+### Security
+- Updated `uv.lock` to pull in Dependabot-flagged fixes for `idna`, `urllib3`, `virtualenv`, `black`, `pytest`, `requests`, and `filelock`. Note: for Python 3.9 environments specifically, `black`/`filelock`/`pytest`/`requests`/`urllib3` remain pinned to older, still-vulnerable releases because their patched versions dropped Python 3.9 support — fully closing those requires raising `requires-python` past 3.9.
+
 ### Added
 - `test_complex_blob_fields.py`: regression test asserting the affected JSON schemas stay typed as `object` and that each generated model accepts a dict payload for the fixed fields.
 
