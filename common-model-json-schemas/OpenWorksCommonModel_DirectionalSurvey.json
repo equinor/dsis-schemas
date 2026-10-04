@@ -397,6 +397,7 @@
     "npts",
     "md_unit",
     "inclination_unit",
-    "azimuth_unit"
+    "azimuth_unit",
+    "data"
   ]
 }

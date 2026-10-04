@@ -176,6 +176,7 @@
     "wellbore_native_uid",
     "wellcore_native_uid",
     "core_id",
-    "data_source"
+    "data_source",
+    "data"
   ]
 }

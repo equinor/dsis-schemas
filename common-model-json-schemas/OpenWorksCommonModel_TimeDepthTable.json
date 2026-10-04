@@ -242,6 +242,7 @@
     "datum",
     "npts",
     "depth_unit",
-    "time_unit"
+    "time_unit",
+    "data"
   ]
 }

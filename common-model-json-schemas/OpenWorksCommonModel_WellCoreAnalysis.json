@@ -445,6 +445,7 @@
     "core_id",
     "data_source",
     "analysis_obs_no",
-    "sample_analysis_obs_no"
+    "sample_analysis_obs_no",
+    "data"
   ]
 }

@@ -179,6 +179,7 @@
     "mappingpolygonset_native_uid",
     "polygon_seq_no",
     "num_points",
-    "crs"
+    "crs",
+    "data"
   ]
 }

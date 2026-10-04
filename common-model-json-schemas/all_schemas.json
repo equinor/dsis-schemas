@@ -3196,7 +3196,8 @@
       "npts",
       "md_unit",
       "inclination_unit",
-      "azimuth_unit"
+      "azimuth_unit",
+      "data"
     ]
   },
   "OpenWorksCommonModel.DrillersEstimatorPoint": {
@@ -5501,7 +5502,8 @@
       "max_z",
       "crs",
       "z_domain",
-      "z_unit"
+      "z_unit",
+      "data"
     ]
   },
   "OpenWorksCommonModel.FaultTrimesh": {
@@ -7600,22 +7602,22 @@
       },
       "horizon_name": {
         "type": "string",
-        "maxLength": 60,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 5,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_attribute_name": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_version_name": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "seismicdataset3d_native_uid": {
@@ -7630,12 +7632,12 @@
       },
       "seismic_survey_name": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_status": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_class": {
@@ -8198,27 +8200,27 @@
       },
       "horizon_name": {
         "type": "string",
-        "maxLength": 60,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 5,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_attribute_name": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_version_name": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "interpretation_status": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "horizon_class": {
@@ -11324,7 +11326,8 @@
       "mappingpolygonset_native_uid",
       "polygon_seq_no",
       "num_points",
-      "crs"
+      "crs",
+      "data"
     ]
   },
   "OpenWorksCommonModel.MappingPolygonSet": {
@@ -14281,7 +14284,8 @@
       "npts",
       "md_unit",
       "tvd_unit",
-      "xy_offset_unit"
+      "xy_offset_unit",
+      "data"
     ]
   },
   "OpenWorksCommonModel.PreferredTDCurve": {
@@ -18330,7 +18334,7 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "file_exists": {
-        "type": "integer",
+        "type": "boolean",
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "create_date": {
@@ -19453,37 +19457,37 @@
       },
       "map_data_set_name": {
         "type": "string",
-        "maxLength": 24,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geo_type": {
         "type": "string",
-        "maxLength": 10,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geo_name": {
         "type": "string",
-        "maxLength": 255,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "attribute": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 5,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geologic_feature": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "fault_set_type": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "crs": {
@@ -19493,12 +19497,12 @@
       },
       "data_domain": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "z_domain_qualifier": {
         "type": "string",
-        "maxLength": 24,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "x_min": {
@@ -19705,37 +19709,37 @@
       },
       "map_data_set_name": {
         "type": "string",
-        "maxLength": 24,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geo_type": {
         "type": "string",
-        "maxLength": 10,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geo_name": {
         "type": "string",
-        "maxLength": 255,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "attribute": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data_source": {
         "type": "string",
-        "maxLength": 5,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "geologic_feature": {
         "type": "string",
-        "maxLength": 40,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "fault_set_type": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "crs": {
@@ -19745,12 +19749,12 @@
       },
       "data_domain": {
         "type": "string",
-        "maxLength": 12,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "z_domain_qualifier": {
         "type": "string",
-        "maxLength": 24,
+        "maxLength": 4000,
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "x_min": {
@@ -21976,7 +21980,8 @@
       "datum",
       "npts",
       "depth_unit",
-      "time_unit"
+      "time_unit",
+      "data"
     ]
   },
   "OpenWorksCommonModel.TurnPoint": {
@@ -23470,7 +23475,8 @@
       "core_id",
       "data_source",
       "analysis_obs_no",
-      "sample_analysis_obs_no"
+      "sample_analysis_obs_no",
+      "data"
     ]
   },
   "OpenWorksCommonModel.WellCoreDescription": {
@@ -23651,7 +23657,8 @@
       "wellbore_native_uid",
       "wellcore_native_uid",
       "core_id",
-      "data_source"
+      "data_source",
+      "data"
     ]
   },
   "OpenWorksCommonModel.WellDailyProduction": {
