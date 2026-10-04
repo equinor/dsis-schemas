@@ -9,7 +9,10 @@ All notable changes to `dsis-schemas` will be documented in this file.
 - Truly-binary BLOBs (e.g. `HorizonData3D`, `LogCurve`, `SeismicData`, served as protobuf) are unaffected and remain `bytes`.
 
 ### Security
-- Updated `uv.lock` to pull in Dependabot-flagged fixes for `idna`, `urllib3`, `virtualenv`, `black`, `pytest`, `requests`, and `filelock`. Note: for Python 3.9 environments specifically, `black`/`filelock`/`pytest`/`requests`/`urllib3` remain pinned to older, still-vulnerable releases because their patched versions dropped Python 3.9 support — fully closing those requires raising `requires-python` past 3.9.
+- Updated `uv.lock` to pull in Dependabot-flagged fixes for `idna`, `urllib3`, `virtualenv`, `black`, `pytest`, `requests`, and `filelock`.
+
+### Changed
+- Dropped support for Python 3.9 (`requires-python` raised to `>=3.10`). The patched releases of `black`/`filelock`/`pytest`/`requests`/`urllib3` above all dropped Python 3.9 support, so this was required to fully close the remaining Dependabot alerts — `uv.lock` no longer carries any vulnerable fallback resolution for older Python.
 
 ### Added
 - `test_complex_blob_fields.py`: regression test asserting the affected JSON schemas stay typed as `object` and that each generated model accepts a dict payload for the fixed fields.
