@@ -30,9 +30,118 @@
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "data": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: WellCoreDescription.",
+      "properties": {
+        "well_status": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "litho_class": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "porosity_type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "show_type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "core_description_company": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "porosity_quality": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lithology_description": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description_date": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "original_data_source": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "remark": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description_obs_no": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "well_symbol": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "top_depth": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "base_depth": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "interval_thickness": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "show_length": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "porosity_length": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "dip_angle": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "create_date": {
@@ -67,7 +176,6 @@
     "wellbore_native_uid",
     "wellcore_native_uid",
     "core_id",
-    "data_source",
-    "data"
+    "data_source"
   ]
 }

@@ -101,15 +101,25 @@
       "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
     },
     "data": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: MappingPolygonData.",
+      "properties": {
+        "x_coord": {"type": "array", "items": {"type": "number"}},
+        "y_coord": {"type": "array", "items": {"type": "number"}},
+        "z_value": {"type": "array", "items": {"type": "number"}},
+        "throw_direction": {"type": "array", "items": {"type": "string"}}
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "spatial": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex spatial BLOB served as decoded JSON (not binary). Metadata type: LINESTRING.",
+      "properties": {
+        "x": {"type": "array", "items": {"type": "number"}},
+        "y": {"type": "array", "items": {"type": "number"}},
+        "z": {"type": "array", "items": {"type": "number"}},
+        "geo_type": {"type": "string"}
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "crs": {
@@ -169,7 +179,6 @@
     "mappingpolygonset_native_uid",
     "polygon_seq_no",
     "num_points",
-    "data",
     "crs"
   ]
 }

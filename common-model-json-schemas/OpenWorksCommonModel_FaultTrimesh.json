@@ -74,9 +74,28 @@
       "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
     },
     "vertices": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: ThreeSpaceCoordinate.",
+      "properties": {
+        "x": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "y": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "z": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "vertices_unit": {
@@ -90,9 +109,28 @@
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "triangles": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: TriangleVertices.",
+      "properties": {
+        "vertex_1": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "vertex_2": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "vertex_3": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "remark": {

@@ -43,9 +43,292 @@
       "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
     },
     "data": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: WellCoreAnalysis.",
+      "properties": {
+        "sample_number": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prob_production": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "original_data_source": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "remark": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "top_depth": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "interval_depth": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "interval_length": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_volume": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_volume_oil_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_mass_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "irr_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "critical_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "cation_exchange_cap": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "porosity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "pore_volume_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "pore_volume_oil_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "oil_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "grain_mass_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "grain_mass_oil_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "grain_density": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "gas_sat_pore_vol": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "gas_sat_bulk_vol": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "combustible_gas": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "effective_porosity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "helium_porosity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "kvert": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "kmax": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "khoriz": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "k90": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_volume_water_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_density": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_mass_oil_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "bulk_mass_sand_sat": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "confine_sat_press": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "confine_perm_press": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "confine_por_press": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "water_resistivity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "water_resistivity_temp": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "resistivity_index": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "skin_factor": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "klinkenberg_kvert": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "klinkenberg_khoriz": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "klinkenberg_kmax": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "klinkenberg_k90": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "oil_gravity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "property_value": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "analyzing_company": {
@@ -162,7 +445,6 @@
     "core_id",
     "data_source",
     "analysis_obs_no",
-    "sample_analysis_obs_no",
-    "data"
+    "sample_analysis_obs_no"
   ]
 }

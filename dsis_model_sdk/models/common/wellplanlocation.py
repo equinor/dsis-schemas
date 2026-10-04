@@ -3,7 +3,7 @@ Wellplanlocation Model
 
 Auto-generated from OpenWorks Common Model JSON Schema.
 Schema: OpenWorksCommonModel.wellplanlocation
-Generated on: 2026-04-17T09:03:28.364710
+Generated on: 2026-10-04T18:51:25.788638
 """
 
 from typing import Optional, Dict, Any
@@ -26,4 +26,4 @@ class Wellplanlocation(BaseModel):
 
     # Model fields
     native_uid: Optional[str] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')", max_length=20)
-    spatial: Optional[bytes] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')", max_length=2147483647)
+    spatial: Optional[Dict[str, Any]] = Field(default=None, description="SQL Type: DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')")

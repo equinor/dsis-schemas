@@ -399,9 +399,16 @@
       "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
     },
     "bh_location_point": {
-      "type": "string",
-      "format": "binary",
-      "maxLength": 2147483647,
+      "type": "object",
+      "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POINT.",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
       "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
     },
     "remark": {

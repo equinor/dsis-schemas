@@ -502,9 +502,30 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "spatial": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POLYGONZM.",
+        "properties": {
+          "linestringzm": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "z": {
+                  "type": "number"
+                },
+                "m": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -2983,9 +3004,100 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: DirectionalSurveyData.",
+        "properties": {
+          "md": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "tvd": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "azimuth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "inclination": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x_bias": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y_bias": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z_bias": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_xx": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_xy": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_xz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_yy": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_yz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "covariant_zz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "md_unit": {
@@ -3082,7 +3194,6 @@
       "survey_calc_method",
       "north_reference",
       "npts",
-      "data",
       "md_unit",
       "inclination_unit",
       "azimuth_unit"
@@ -5002,9 +5113,28 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "vertices": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: ThreeSpaceCoordinate.",
+        "properties": {
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "vertices_unit": {
@@ -5018,9 +5148,28 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "triangles": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: TriangleVertices.",
+        "properties": {
+          "vertex_1": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "vertex_2": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "vertex_3": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -5286,9 +5435,28 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: ThreeSpaceCoordinate.",
+        "properties": {
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -5333,8 +5501,7 @@
       "max_z",
       "crs",
       "z_domain",
-      "z_unit",
-      "data"
+      "z_unit"
     ]
   },
   "OpenWorksCommonModel.FaultTrimesh": {
@@ -5413,9 +5580,28 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "vertices": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: ThreeSpaceCoordinate.",
+        "properties": {
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "vertices_unit": {
@@ -5429,9 +5615,28 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "triangles": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: TriangleVertices.",
+        "properties": {
+          "vertex_1": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "vertex_2": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "vertex_3": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -11004,15 +11209,62 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: MappingPolygonData.",
+        "properties": {
+          "x_coord": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y_coord": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z_value": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "throw_direction": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "spatial": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex spatial BLOB served as decoded JSON (not binary). Metadata type: LINESTRING.",
+        "properties": {
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "z": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "geo_type": {
+            "type": "string"
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "crs": {
@@ -11072,7 +11324,6 @@
       "mappingpolygonset_native_uid",
       "polygon_seq_no",
       "num_points",
-      "data",
       "crs"
     ]
   },
@@ -13947,9 +14198,34 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: PositionLogData.",
+        "properties": {
+          "md": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "tvd": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "md_unit": {
@@ -14003,7 +14279,6 @@
     "required": [
       "wellbore_native_uid",
       "npts",
-      "data",
       "md_unit",
       "tvd_unit",
       "xy_offset_unit"
@@ -14268,9 +14543,24 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "spatial": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POLYGON.",
+        "properties": {
+          "linestring": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "create_date": {
@@ -16675,9 +16965,28 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "shotpoints": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: Shotpoint.",
+        "properties": {
+          "shotpoint": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "num_orig_shotpoints": {
@@ -16685,9 +16994,28 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "orig_shotpoints": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: Shotpoint.",
+        "properties": {
+          "shotpoint": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "orig_shotpoints_xy_unit": {
@@ -16716,9 +17044,22 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "mappings": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: ShptTraceMap.",
+        "properties": {
+          "shotpoint": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "trace": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "directory_name": {
@@ -16732,9 +17073,22 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "spatial": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: LINESTRINGZM.",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "z": {
+            "type": "number"
+          },
+          "m": {
+            "type": "number"
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "create_date": {
@@ -21514,9 +21868,40 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: TimeDepthTableData.",
+        "properties": {
+          "md": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "time": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "depth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "x_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "y_offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "depth_unit": {
@@ -21590,7 +21975,6 @@
       "td_name",
       "datum",
       "npts",
-      "data",
       "depth_unit",
       "time_unit"
     ]
@@ -22150,9 +22534,16 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "surface_location_point": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POINT.",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -22677,9 +23068,292 @@
         "sqlType": "DBAPITYPEOBJECT('BOOLEAN', 'BIGINT', 'BIT', 'INTEGER', 'SMALLINT', 'TINYINT')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: WellCoreAnalysis.",
+        "properties": {
+          "sample_number": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prob_production": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "original_data_source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "remark": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "top_depth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "interval_depth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "interval_length": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_volume": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_volume_oil_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_mass_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "irr_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "critical_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "cation_exchange_cap": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "porosity": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "pore_volume_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "pore_volume_oil_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "oil_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "grain_mass_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "grain_mass_oil_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "grain_density": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "gas_sat_pore_vol": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "gas_sat_bulk_vol": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "combustible_gas": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "effective_porosity": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "helium_porosity": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "kvert": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "kmax": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "khoriz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "k90": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_volume_water_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_density": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_mass_oil_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "bulk_mass_sand_sat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "confine_sat_press": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "confine_perm_press": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "confine_por_press": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "water_resistivity": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "water_resistivity_temp": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "resistivity_index": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "skin_factor": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "klinkenberg_kvert": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "klinkenberg_khoriz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "klinkenberg_kmax": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "klinkenberg_k90": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "oil_gravity": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "property_value": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "analyzing_company": {
@@ -22796,8 +23470,7 @@
       "core_id",
       "data_source",
       "analysis_obs_no",
-      "sample_analysis_obs_no",
-      "data"
+      "sample_analysis_obs_no"
     ]
   },
   "OpenWorksCommonModel.WellCoreDescription": {
@@ -22832,9 +23505,118 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "data": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: WellCoreDescription.",
+        "properties": {
+          "well_status": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "litho_class": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "porosity_type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "show_type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "core_description_company": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "porosity_quality": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lithology_description": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description_date": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "original_data_source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "remark": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description_obs_no": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "well_symbol": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "top_depth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "base_depth": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "interval_thickness": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "show_length": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "porosity_length": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "dip_angle": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "create_date": {
@@ -22869,8 +23651,7 @@
       "wellbore_native_uid",
       "wellcore_native_uid",
       "core_id",
-      "data_source",
-      "data"
+      "data_source"
     ]
   },
   "OpenWorksCommonModel.WellDailyProduction": {
@@ -30950,9 +31731,16 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "bh_location_point": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POINT.",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       },
       "remark": {
@@ -32018,9 +32806,16 @@
         "sqlType": "DBAPITYPEOBJECT('CHAR', 'NCHAR', 'NVARCHAR', 'VARCHAR', 'OTHER')"
       },
       "spatial": {
-        "type": "string",
-        "format": "binary",
-        "maxLength": 2147483647,
+        "type": "object",
+        "description": "Complex-type BLOB served as decoded JSON (not binary). Metadata type: POINT.",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
         "sqlType": "DBAPITYPEOBJECT('BINARY', 'BLOB', 'LONGVARBINARY', 'VARBINARY')"
       }
     }
