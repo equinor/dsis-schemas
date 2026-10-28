@@ -2,7 +2,7 @@
 
 A plain-language guide to the 119 entities of the OpenWorks Common Model (DSIS), grouped by what they mean to a geoscientist or developer rather than by table.
 
-For column-level detail (types, keys, source mappings), see the generated reference [common-model-ddl-metadata.md](../../common-model-ddl-metadata.md), produced by `scripts/extract_ddl_metadata.py`.
+For column-level detail (types, keys, source mappings), run `python scripts/extract_ddl_metadata.py` to generate `common-model-ddl-metadata.json` and `common-model-ddl-metadata.md` in the repository root.
 
 ## Domains
 
